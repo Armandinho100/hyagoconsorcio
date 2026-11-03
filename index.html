@@ -37,13 +37,13 @@
     </script>
     <style>
         .glow-blue {
-            box-shadow: 0 0 30px rgba(0, 176, 255, 0.35);
+            box-shadow: 0 10px 25px -5px rgba(0, 176, 255, 0.4);
         }
         .glow-green {
-            box-shadow: 0 0 25px rgba(34, 197, 94, 0.45);
+            box-shadow: 0 10px 25px -5px rgba(34, 197, 94, 0.5);
         }
         .glow-gold {
-            box-shadow: 0 0 25px rgba(255, 183, 3, 0.4);
+            box-shadow: 0 10px 25px -5px rgba(255, 183, 3, 0.4);
         }
         .bg-grid {
             background-image: radial-gradient(rgba(0, 176, 255, 0.12) 1px, transparent 0);
@@ -57,6 +57,18 @@
         }
         .badge-flame {
             background: linear-gradient(135deg, #FFB703 0%, #FF5500 100%);
+        }
+        /* Estilos universais para transformar botões em elementos flutuantes */
+        .btn-floating {
+            transition: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+            transform: translateY(0);
+        }
+        .btn-floating:hover {
+            transform: translateY(-4px) scale(1.02);
+            box-shadow: 0 14px 28px rgba(0, 0, 0, 0.35);
+        }
+        .btn-floating:active {
+            transform: translateY(-1px) scale(0.98);
         }
     </style>
 </head>
@@ -72,7 +84,7 @@
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
             <!-- Brand / Logo -->
             <div class="flex items-center space-x-3">
-                <div class="w-12 h-12 rounded-2xl bg-gradient-to-tr from-vw-blue to-vw-accent flex items-center justify-center font-black text-2xl text-white shadow-lg border border-vw-accent/50 glow-blue">
+                <div class="w-12 h-12 rounded-2xl bg-gradient-to-tr from-vw-blue to-vw-accent flex items-center justify-center font-black text-2xl text-white shadow-lg border border-vw-accent/50 glow-blue btn-floating cursor-pointer">
                     VW
                 </div>
                 <div>
@@ -85,11 +97,11 @@
 
             <!-- Social Links & Action -->
             <div class="flex items-center space-x-3 sm:space-x-4">
-                <a href="https://www.instagram.com/hyagogrupolibra/" target="_blank" rel="noopener noreferrer" class="hidden sm:flex items-center space-x-2 bg-slate-900/90 hover:bg-slate-800 text-slate-200 px-4 py-2.5 rounded-xl text-sm font-semibold border border-slate-700/80 transition-all shadow-sm">
+                <a href="https://www.instagram.com/hyagogrupolibra/" target="_blank" rel="noopener noreferrer" class="btn-floating hidden sm:flex items-center space-x-2 bg-slate-900/90 hover:bg-slate-800 text-slate-200 px-4 py-2.5 rounded-2xl text-sm font-semibold border border-slate-700/80 shadow-md">
                     <i class="fa-brands fa-instagram text-pink-500 text-lg"></i>
                     <span>@hyagogrupolibra</span>
                 </a>
-                <a href="https://wa.me/5598981578787?text=Ol%C3%A1%20Hyago!%20Vim%20pelo%20site%20e%20gostaria%20de%20mais%20informa%C3%A7%C3%B5es%20sobre%20o%20Cons%C3%B3rcio%20Volkswagen." target="_blank" rel="noopener noreferrer" class="bg-emerald-600 hover:bg-emerald-500 text-white font-extrabold px-5 sm:px-6 py-2.5 rounded-xl text-sm transition-all flex items-center space-x-2 shadow-lg glow-green">
+                <a href="https://wa.me/5598981578787?text=Ol%C3%A1%20Hyago!%20Vim%20pelo%20site%20e%20gostaria%20de%20mais%20informa%C3%A7%C3%B5es%20sobre%20o%20Cons%C3%B3rcio%20Volkswagen." target="_blank" rel="noopener noreferrer" class="btn-floating bg-emerald-600 hover:bg-emerald-500 text-white font-extrabold px-5 sm:px-6 py-2.5 rounded-2xl text-sm flex items-center space-x-2 shadow-lg glow-green">
                     <i class="fa-brands fa-whatsapp text-lg"></i>
                     <span class="hidden sm:inline">Falar com Hyago</span>
                     <span class="sm:hidden">Contato</span>
@@ -106,12 +118,12 @@
             <div class="text-center max-w-4xl mx-auto space-y-6">
                 
                 <!-- Central Bank & Pé Quente Badges -->
-                <div class="flex flex-wrap justify-center items-center gap-2">
-                    <div class="inline-flex items-center space-x-2 bg-vw-blue/90 border border-vw-accent/40 text-vw-accent px-4 py-1.5 rounded-full text-xs sm:text-sm font-bold shadow-inner">
+                <div class="flex flex-wrap justify-center items-center gap-3">
+                    <div class="btn-floating inline-flex items-center space-x-2 bg-vw-blue/90 border border-vw-accent/40 text-vw-accent px-4 py-1.5 rounded-full text-xs sm:text-sm font-bold shadow-md cursor-default">
                         <i class="fa-solid fa-shield-halved text-vw-accent"></i>
                         <span>REGULAMENTADO PELO BANCO CENTRAL DO BRASIL</span>
                     </div>
-                    <div class="inline-flex items-center space-x-1.5 badge-flame text-slate-950 px-4 py-1.5 rounded-full text-xs sm:text-sm font-black shadow-lg glow-gold">
+                    <div class="btn-floating inline-flex items-center space-x-1.5 badge-flame text-slate-950 px-4 py-1.5 rounded-full text-xs sm:text-sm font-black shadow-lg glow-gold cursor-default">
                         <i class="fa-solid fa-fire text-slate-950"></i>
                         <span>PÉ QUENTE DE CONTEMPLAÇÃO</span>
                     </div>
@@ -129,11 +141,11 @@
 
                 <!-- CTA Buttons -->
                 <div class="pt-4 flex flex-col sm:flex-row items-center justify-center gap-4">
-                    <a href="#planos" class="w-full sm:w-auto bg-gradient-to-r from-vw-light via-blue-600 to-vw-accent hover:opacity-95 text-white font-black px-8 py-4 rounded-2xl shadow-xl glow-blue transition-all duration-300 flex items-center justify-center space-x-3 text-lg">
+                    <a href="#planos" class="btn-floating w-full sm:w-auto bg-gradient-to-r from-vw-light via-blue-600 to-vw-accent hover:opacity-95 text-white font-black px-8 py-4 rounded-2xl shadow-xl glow-blue flex items-center justify-center space-x-3 text-lg">
                         <span>Ver Tabela de Parcelas</span>
                         <i class="fa-solid fa-arrow-down"></i>
                     </a>
-                    <a href="#apresentacao" class="w-full sm:w-auto bg-slate-900/90 hover:bg-slate-800 text-amber-400 font-bold px-8 py-4 rounded-2xl border border-amber-500/40 transition-all flex items-center justify-center space-x-3 text-lg">
+                    <a href="#apresentacao" class="btn-floating w-full sm:w-auto bg-slate-900/90 hover:bg-slate-800 text-amber-400 font-bold px-8 py-4 rounded-2xl border border-amber-500/40 flex items-center justify-center space-x-3 text-lg shadow-lg">
                         <i class="fa-solid fa-user-tie text-amber-400"></i>
                         <span>Conhecer o Consultor</span>
                     </a>
@@ -141,7 +153,7 @@
 
                 <!-- Fast Highlights Badges -->
                 <div class="pt-8 grid grid-cols-2 md:grid-cols-4 gap-3 sm:gap-4 max-w-4xl mx-auto text-left">
-                    <div class="glass-card p-4 rounded-2xl flex items-center space-x-3">
+                    <div class="glass-card btn-floating p-4 rounded-2xl flex items-center space-x-3 border border-slate-700/50">
                         <div class="w-10 h-10 rounded-xl bg-vw-accent/10 border border-vw-accent/30 flex items-center justify-center text-vw-accent text-xl">
                             <i class="fa-solid fa-percent"></i>
                         </div>
@@ -150,7 +162,7 @@
                             <div class="text-sm sm:text-base font-bold text-white">ZERO Juros</div>
                         </div>
                     </div>
-                    <div class="glass-card p-4 rounded-2xl flex items-center space-x-3">
+                    <div class="glass-card btn-floating p-4 rounded-2xl flex items-center space-x-3 border border-slate-700/50">
                         <div class="w-10 h-10 rounded-xl bg-vw-accent/10 border border-vw-accent/30 flex items-center justify-center text-vw-accent text-xl">
                             <i class="fa-solid fa-industry"></i>
                         </div>
@@ -159,7 +171,7 @@
                             <div class="text-sm sm:text-base font-bold text-white">Direto de Fábrica</div>
                         </div>
                     </div>
-                    <div class="glass-card p-4 rounded-2xl flex items-center space-x-3">
+                    <div class="glass-card btn-floating p-4 rounded-2xl flex items-center space-x-3 border border-slate-700/50">
                         <div class="w-10 h-10 rounded-xl bg-vw-accent/10 border border-vw-accent/30 flex items-center justify-center text-vw-accent text-xl">
                             <i class="fa-solid fa-calendar-check"></i>
                         </div>
@@ -168,7 +180,7 @@
                             <div class="text-sm sm:text-base font-bold text-white">36x a 100x</div>
                         </div>
                     </div>
-                    <div class="glass-card p-4 rounded-2xl flex items-center space-x-3">
+                    <div class="glass-card btn-floating p-4 rounded-2xl flex items-center space-x-3 border border-slate-700/50">
                         <div class="w-10 h-10 rounded-xl bg-vw-accent/10 border border-vw-accent/30 flex items-center justify-center text-vw-accent text-xl">
                             <i class="fa-solid fa-shield-cat"></i>
                         </div>
@@ -188,14 +200,14 @@
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
                 
-                <!-- Left: Profile Image (4th Image provided) -->
+                <!-- Left: Profile Image -->
                 <div class="lg:col-span-5 relative">
                     <div class="absolute -inset-2 bg-gradient-to-r from-vw-light to-amber-500 rounded-3xl blur-lg opacity-30"></div>
                     <div class="relative glass-card p-3 rounded-3xl overflow-hidden border border-slate-700 shadow-2xl">
-                        <div class="aspect-[4/5] rounded-2xl overflow-hidden bg-slate-950 cursor-pointer" onclick="openLightbox('WhatsApp Image 2026-11-03 at 18.43.22.jpeg', 'Hyago Matheus - Consultor de Consórcio Grupo Libra')">
-                            <img src="WhatsApp Image 2026-11-03 at 18.43.22.jpeg" alt="Hyago Matheus Consultor Grupo Libra" class="w-full h-full object-cover hover:scale-105 transition-transform duration-500">
+                        <div class="aspect-[4/5] rounded-2xl overflow-hidden bg-slate-950 cursor-pointer btn-floating" onclick="openLightbox('WhatsApp Image 2026-11-03 at 18.43.22.jpeg', 'Hyago Matheus - Consultor de Consórcio Grupo Libra')">
+                            <img src="WhatsApp Image 2026-11-03 at 18.43.22.jpeg" alt="Hyago Matheus Consultor Grupo Libra" class="w-full h-full object-cover">
                         </div>
-                        <div class="absolute bottom-6 left-6 right-6 bg-vw-dark/90 backdrop-blur-md p-4 rounded-2xl border border-vw-accent/30 text-center">
+                        <div class="absolute bottom-6 left-6 right-6 bg-vw-dark/90 backdrop-blur-md p-4 rounded-2xl border border-vw-accent/30 text-center shadow-lg">
                             <span class="text-amber-400 font-bold text-xs uppercase tracking-wider block">CONSULTOR AUTORIZADO</span>
                             <h3 class="text-white font-black text-lg">Hyago Matheus</h3>
                             <span class="text-slate-400 text-xs">Grupo Libra • Consórcio Volkswagen</span>
@@ -205,7 +217,7 @@
 
                 <!-- Right: Bio and Presentation Text -->
                 <div class="lg:col-span-7 space-y-6">
-                    <div class="inline-flex items-center space-x-2 bg-vw-blue/80 border border-vw-accent/40 text-vw-accent px-4 py-1.5 rounded-full text-xs font-bold">
+                    <div class="btn-floating inline-flex items-center space-x-2 bg-vw-blue/80 border border-vw-accent/40 text-vw-accent px-4 py-1.5 rounded-full text-xs font-bold cursor-default shadow-md">
                         <i class="fa-solid fa-user-check text-vw-accent"></i>
                         <span>ATENDIMENTO EXCLUSIVO E PERSONALIZADO</span>
                     </div>
@@ -222,7 +234,7 @@
                         Acredito que grandes conquistas começam com planejamento e boas escolhas. Por isso, ofereço um atendimento personalizado, transparente e focado em entender suas necessidades, acompanhando você em cada etapa dessa jornada.
                     </p>
 
-                    <div class="p-5 rounded-2xl bg-gradient-to-r from-vw-blue/40 to-slate-900 border border-vw-accent/30 flex items-center space-x-4">
+                    <div class="btn-floating p-5 rounded-2xl bg-gradient-to-r from-vw-blue/40 to-slate-900 border border-vw-accent/30 flex items-center space-x-4 shadow-lg">
                         <div class="w-12 h-12 rounded-xl badge-flame flex items-center justify-center text-slate-950 text-2xl font-black shrink-0 glow-gold">
                             <i class="fa-solid fa-quote-left"></i>
                         </div>
@@ -233,11 +245,11 @@
                     </div>
 
                     <div class="pt-2 flex flex-wrap gap-4">
-                        <a href="https://wa.me/5598981578787?text=Ol%C3%A1%20Hyago!%20Li%20sua%20apresenta%C3%e7%C3%a3o%20no%20site%20e%20quero%20conversar%20sobre%20um%20plano." target="_blank" rel="noopener noreferrer" class="bg-emerald-600 hover:bg-emerald-500 text-white font-extrabold px-6 py-3.5 rounded-xl text-sm transition-all flex items-center space-x-2 shadow-lg glow-green">
+                        <a href="https://wa.me/5598981578787?text=Ol%C3%A1%20Hyago!%20Li%20sua%20apresenta%C3%e7%C3%a3o%20no%20site%20e%20quero%20conversar%20sobre%20um%20plano." target="_blank" rel="noopener noreferrer" class="btn-floating bg-emerald-600 hover:bg-emerald-500 text-white font-extrabold px-6 py-3.5 rounded-2xl text-sm flex items-center space-x-2 shadow-lg glow-green">
                             <i class="fa-brands fa-whatsapp text-lg"></i>
                             <span>Falar Diretamente com o Hyago</span>
                         </a>
-                        <a href="https://www.instagram.com/hyagogrupolibra/" target="_blank" rel="noopener noreferrer" class="bg-slate-900 hover:bg-slate-800 text-slate-200 font-bold px-6 py-3.5 rounded-xl border border-slate-700 text-sm transition-all flex items-center space-x-2">
+                        <a href="https://www.instagram.com/hyagogrupolibra/" target="_blank" rel="noopener noreferrer" class="btn-floating bg-slate-900 hover:bg-slate-800 text-slate-200 font-bold px-6 py-3.5 rounded-2xl border border-slate-700 text-sm flex items-center space-x-2 shadow-md">
                             <i class="fa-brands fa-instagram text-pink-500 text-lg"></i>
                             <span>@hyagogrupolibra</span>
                         </a>
@@ -248,13 +260,13 @@
         </div>
     </section>
 
-    <!-- SECTION: VENDEDOR PÉ QUENTE - CLIENTES CONTEMPLADOS (TODAS AS FOTOS) -->
+    <!-- SECTION: VENDEDOR PÉ QUENTE - CLIENTES CONTEMPLADOS -->
     <section id="entregas" class="py-16 bg-slate-950 border-t border-slate-800/80 relative">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             
             <!-- Section Header -->
             <div class="text-center max-w-3xl mx-auto mb-12 space-y-3">
-                <div class="inline-flex items-center space-x-2 badge-flame text-slate-950 font-black px-4 py-1.5 rounded-full text-xs uppercase tracking-wider shadow-lg">
+                <div class="btn-floating inline-flex items-center space-x-2 badge-flame text-slate-950 font-black px-4 py-1.5 rounded-full text-xs uppercase tracking-wider shadow-lg cursor-default">
                     <i class="fa-solid fa-fire text-slate-950"></i>
                     <span>PROVA SOCIAL & AUTORIDADE</span>
                 </div>
@@ -264,13 +276,13 @@
                 </p>
             </div>
 
-            <!-- Deliveries Photo Gallery (All 8 photos) -->
+            <!-- Deliveries Photo Gallery -->
             <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
                 
                 <!-- Client 1 -->
-                <div class="glass-card rounded-3xl overflow-hidden group hover:border-amber-400/50 transition-all duration-300 shadow-xl flex flex-col justify-between">
+                <div class="glass-card btn-floating rounded-3xl overflow-hidden shadow-xl flex flex-col justify-between">
                     <div class="relative aspect-[4/5] overflow-hidden bg-slate-900 cursor-pointer" onclick="openLightbox('hyagoecasal.jpeg', 'Entrega Fiat Argo - Cliente Contemplado')">
-                        <img src="hyagoecasal.jpeg" alt="Entrega Fiat Argo" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                        <img src="hyagoecasal.jpeg" alt="Entrega Fiat Argo" class="w-full h-full object-cover">
                         <div class="absolute inset-0 bg-gradient-to-t from-vw-dark via-transparent to-transparent opacity-80"></div>
                         <span class="absolute top-4 left-4 bg-emerald-500 text-white font-extrabold text-xs px-3 py-1 rounded-full shadow-lg flex items-center gap-1">
                             <i class="fa-solid fa-circle-check"></i> ENTREGUE
@@ -283,9 +295,9 @@
                 </div>
 
                 <!-- Client 2 -->
-                <div class="glass-card rounded-3xl overflow-hidden group hover:border-amber-400/50 transition-all duration-300 shadow-xl flex flex-col justify-between">
+                <div class="glass-card btn-floating rounded-3xl overflow-hidden shadow-xl flex flex-col justify-between">
                     <div class="relative aspect-[4/5] overflow-hidden bg-slate-900 cursor-pointer" onclick="openLightbox('WhatsApp Image 2026-11-03 at 18.21.32.jpeg', 'Entrega Veículo Família - Contemplado')">
-                        <img src="WhatsApp Image 2026-11-03 at 18.21.32.jpeg" alt="Entrega Veículo Família" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                        <img src="WhatsApp Image 2026-11-03 at 18.21.32.jpeg" alt="Entrega Veículo Família" class="w-full h-full object-cover">
                         <div class="absolute inset-0 bg-gradient-to-t from-vw-dark via-transparent to-transparent opacity-80"></div>
                         <span class="absolute top-4 left-4 bg-emerald-500 text-white font-extrabold text-xs px-3 py-1 rounded-full shadow-lg flex items-center gap-1">
                             <i class="fa-solid fa-circle-check"></i> ENTREGUE
@@ -298,9 +310,9 @@
                 </div>
 
                 <!-- Client 3 -->
-                <div class="glass-card rounded-3xl overflow-hidden group hover:border-amber-400/50 transition-all duration-300 shadow-xl flex flex-col justify-between">
+                <div class="glass-card btn-floating rounded-3xl overflow-hidden shadow-xl flex flex-col justify-between">
                     <div class="relative aspect-[4/5] overflow-hidden bg-slate-900 cursor-pointer" onclick="openLightbox('argo.jpeg', 'Entrega Veículo com Chave na Mão')">
-                        <img src="argo.jpeg" alt="Entrega Veículo Chave na Mão" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                        <img src="argo.jpeg" alt="Entrega Veículo Chave na Mão" class="w-full h-full object-cover">
                         <div class="absolute inset-0 bg-gradient-to-t from-vw-dark via-transparent to-transparent opacity-80"></div>
                         <span class="absolute top-4 left-4 bg-emerald-500 text-white font-extrabold text-xs px-3 py-1 rounded-full shadow-lg flex items-center gap-1">
                             <i class="fa-solid fa-circle-check"></i> ENTREGUE
@@ -313,9 +325,9 @@
                 </div>
 
                 <!-- Client 4 -->
-                <div class="glass-card rounded-3xl overflow-hidden group hover:border-amber-400/50 transition-all duration-300 shadow-xl flex flex-col justify-between">
+                <div class="glass-card btn-floating rounded-3xl overflow-hidden shadow-xl flex flex-col justify-between">
                     <div class="relative aspect-[4/5] overflow-hidden bg-slate-900 cursor-pointer" onclick="openLightbox('WhatsApp Image 2026-11-03 at 18.21.33.jpeg', 'Entrega Toyota Corolla Branco')">
-                        <img src="WhatsApp Image 2026-11-03 at 18.21.33.jpeg" alt="Entrega Toyota Corolla" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                        <img src="WhatsApp Image 2026-11-03 at 18.21.33.jpeg" alt="Entrega Toyota Corolla" class="w-full h-full object-cover">
                         <div class="absolute inset-0 bg-gradient-to-t from-vw-dark via-transparent to-transparent opacity-80"></div>
                         <span class="absolute top-4 left-4 bg-emerald-500 text-white font-extrabold text-xs px-3 py-1 rounded-full shadow-lg flex items-center gap-1">
                             <i class="fa-solid fa-circle-check"></i> ENTREGUE
@@ -328,9 +340,9 @@
                 </div>
 
                 <!-- Client 5 -->
-                <div class="glass-card rounded-3xl overflow-hidden group hover:border-amber-400/50 transition-all duration-300 shadow-xl flex flex-col justify-between">
+                <div class="glass-card btn-floating rounded-3xl overflow-hidden shadow-xl flex flex-col justify-between">
                     <div class="relative aspect-[4/5] overflow-hidden bg-slate-900 cursor-pointer" onclick="openLightbox('hyago2.jpeg', 'Entrega Yamaha XTZ Lander 250 Zero KM')">
-                        <img src="hyago2.jpeg" alt="Entrega Yamaha Lander 250" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                        <img src="hyago2.jpeg" alt="Entrega Yamaha Lander 250" class="w-full h-full object-cover">
                         <div class="absolute inset-0 bg-gradient-to-t from-vw-dark via-transparent to-transparent opacity-80"></div>
                         <span class="absolute top-4 left-4 bg-emerald-500 text-white font-extrabold text-xs px-3 py-1 rounded-full shadow-lg flex items-center gap-1">
                             <i class="fa-solid fa-circle-check"></i> ENTREGUE
@@ -343,9 +355,9 @@
                 </div>
 
                 <!-- Client 6 -->
-                <div class="glass-card rounded-3xl overflow-hidden group hover:border-amber-400/50 transition-all duration-300 shadow-xl flex flex-col justify-between">
+                <div class="glass-card btn-floating rounded-3xl overflow-hidden shadow-xl flex flex-col justify-between">
                     <div class="relative aspect-[4/5] overflow-hidden bg-slate-900 cursor-pointer" onclick="openLightbox('hyagocronos.jpeg', 'Entrega Fiat Cronos Branco')">
-                        <img src="hyagocronos.jpeg" alt="Entrega Fiat Cronos" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                        <img src="hyagocronos.jpeg" alt="Entrega Fiat Cronos" class="w-full h-full object-cover">
                         <div class="absolute inset-0 bg-gradient-to-t from-vw-dark via-transparent to-transparent opacity-80"></div>
                         <span class="absolute top-4 left-4 bg-emerald-500 text-white font-extrabold text-xs px-3 py-1 rounded-full shadow-lg flex items-center gap-1">
                             <i class="fa-solid fa-circle-check"></i> ENTREGUE
@@ -358,22 +370,22 @@
                 </div>
 
                 <!-- Client 7 -->
-                <div class="glass-card rounded-3xl overflow-hidden group hover:border-amber-400/50 transition-all duration-300 shadow-xl flex flex-col justify-between">
+                <div class="glass-card btn-floating rounded-3xl overflow-hidden shadow-xl flex flex-col justify-between">
                     <div class="relative aspect-[4/5] overflow-hidden bg-slate-900 cursor-pointer" onclick="openLightbox('hyagofazer.jpeg', 'Entrega Yamaha Fazer 250')">
-                        <img src="hyagofazer.jpeg" alt="Entrega Yamaha Fazer 250" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                        <img src="hyagofazer.jpeg" alt="Entrega Yamaha Fazer 250" class="w-full h-full object-cover">
                         <div class="absolute inset-0 bg-gradient-to-t from-vw-dark via-transparent to-transparent opacity-80"></div>
                         <span class="absolute top-4 left-4 bg-emerald-500 text-white font-extrabold text-xs px-3 py-1 rounded-full shadow-lg flex items-center gap-1">
                             <i class="fa-solid fa-circle-check"></i> ENTREGUE
                         </span>
                         <div class="absolute bottom-4 left-4 right-4">
-                            <span class="text-xs text-amber-400 font-bold tracking-widest uppercase block mb-1">ESTILO & VELocidade</span>
+                            <span class="text-xs text-amber-400 font-bold tracking-widest uppercase block mb-1">ESTILO & VELOCIDADE</span>
                             <h3 class="text-base font-black text-white">Yamaha Fazer 250</h3>
                         </div>
                     </div>
                 </div>
 
                 <!-- RESERVED CARD FOR NEXT CLIENT -->
-                <div class="border-2 border-dashed border-amber-500/50 rounded-3xl p-6 bg-amber-500/5 flex flex-col items-center justify-center text-center space-y-4 hover:bg-amber-500/10 transition-all aspect-[4/5]">
+                <div class="btn-floating border-2 border-dashed border-amber-500/50 rounded-3xl p-6 bg-amber-500/5 flex flex-col items-center justify-center text-center space-y-4 hover:bg-amber-500/10 shadow-xl aspect-[4/5]">
                     <div class="w-16 h-16 rounded-full badge-flame flex items-center justify-center text-slate-950 text-2xl shadow-lg glow-gold">
                         <i class="fa-solid fa-user-plus"></i>
                     </div>
@@ -384,7 +396,7 @@
                             Seja o próximo cliente contemplado do Hyago Pé Quente.
                         </p>
                     </div>
-                    <a href="https://wa.me/5598981578787?text=Ol%C3%A1%20Hyago!%20Quero%20ser%20o%20pr%C3%B3ximo%20cliente%20contemplado%20do%20cons%C3%B3rcio." target="_blank" rel="noopener noreferrer" class="w-full bg-amber-500 hover:bg-amber-400 text-slate-950 font-black py-2.5 px-3 rounded-xl text-xs uppercase tracking-wider transition-all shadow-md">
+                    <a href="https://wa.me/5598981578787?text=Ol%C3%A1%20Hyago!%20Quero%20ser%20o%20pr%C3%B3ximo%20cliente%20contemplado%20do%20cons%C3%B3rcio." target="_blank" rel="noopener noreferrer" class="btn-floating w-full bg-amber-500 hover:bg-amber-400 text-slate-950 font-black py-3 px-4 rounded-2xl text-xs uppercase tracking-wider shadow-lg">
                         <i class="fa-solid fa-key mr-1"></i> Quero Ser o Próximo
                     </a>
                 </div>
@@ -405,16 +417,16 @@
             </div>
 
             <!-- TAB CONTROLS -->
-            <div class="flex flex-col sm:flex-row justify-center items-center gap-2 sm:gap-4 mb-10 max-w-3xl mx-auto bg-slate-900/90 p-2 rounded-2xl border border-slate-800 shadow-xl">
-                <button onclick="switchTab('polo0km')" id="tab-polo0km" class="w-full sm:w-1/3 py-3.5 px-4 rounded-xl text-sm font-bold transition-all flex items-center justify-center space-x-2 bg-vw-light text-white shadow-md">
+            <div class="flex flex-col sm:flex-row justify-center items-center gap-3 sm:gap-4 mb-10 max-w-3xl mx-auto bg-slate-900/90 p-2.5 rounded-3xl border border-slate-800 shadow-xl">
+                <button onclick="switchTab('polo0km')" id="tab-polo0km" class="btn-floating w-full sm:w-1/3 py-3.5 px-4 rounded-2xl text-sm font-bold flex items-center justify-center space-x-2 bg-vw-light text-white shadow-lg">
                     <i class="fa-solid fa-car text-base"></i>
                     <span>Polo 0km (2026/27)</span>
                 </button>
-                <button onclick="switchTab('polo2025')" id="tab-polo2025" class="w-full sm:w-1/3 py-3.5 px-4 rounded-xl text-sm font-bold text-slate-400 hover:text-white transition-all flex items-center justify-center space-x-2">
+                <button onclick="switchTab('polo2025')" id="tab-polo2025" class="btn-floating w-full sm:w-1/3 py-3.5 px-4 rounded-2xl text-sm font-bold text-slate-400 hover:text-white flex items-center justify-center space-x-2">
                     <i class="fa-solid fa-car-side text-base"></i>
                     <span>Polo 2025 Seminovo</span>
                 </button>
-                <button onclick="switchTab('polo2024')" id="tab-polo2024" class="w-full sm:w-1/3 py-3.5 px-4 rounded-xl text-sm font-bold text-slate-400 hover:text-white transition-all flex items-center justify-center space-x-2">
+                <button onclick="switchTab('polo2024')" id="tab-polo2024" class="btn-floating w-full sm:w-1/3 py-3.5 px-4 rounded-2xl text-sm font-bold text-slate-400 hover:text-white flex items-center justify-center space-x-2">
                     <i class="fa-solid fa-car-rear text-base"></i>
                     <span>Polo 2024/2025</span>
                 </button>
@@ -429,7 +441,7 @@
                             <h3 class="text-2xl sm:text-3xl font-black text-white">Volkswagen Polo 0km (2026/2027)</h3>
                             <p class="text-slate-400 text-sm mt-1">Proposta exclusiva Consórcio Volkswagen Grupo Libra.</p>
                         </div>
-                        <div class="text-right flex items-center space-x-2 bg-slate-900/80 px-4 py-2 rounded-xl border border-slate-800">
+                        <div class="btn-floating text-right flex items-center space-x-2 bg-slate-900/80 px-4 py-2 rounded-2xl border border-slate-800 shadow-md cursor-default">
                             <i class="fa-solid fa-fire text-amber-500"></i>
                             <span class="text-xs text-amber-400 font-bold uppercase tracking-wider">Vagas Garantidas por Reserva</span>
                         </div>
@@ -438,7 +450,7 @@
                     <!-- Pricing Cards Grid -->
                     <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
                         <!-- 100x -->
-                        <div class="bg-slate-900/90 border border-slate-800 hover:border-vw-accent p-5 rounded-2xl transition-all duration-300 flex flex-col justify-between group">
+                        <div class="btn-floating bg-slate-900/90 border border-slate-800 hover:border-vw-accent p-5 rounded-3xl flex flex-col justify-between shadow-xl">
                             <div>
                                 <span class="text-xs font-bold text-vw-accent bg-vw-accent/10 px-2.5 py-1 rounded-md">100 MESES</span>
                                 <div class="mt-4 mb-2">
@@ -446,13 +458,13 @@
                                     <div class="text-2xl sm:text-3xl font-black text-white">R$ 730<span class="text-lg text-slate-300">,13</span></div>
                                 </div>
                             </div>
-                            <a href="https://wa.me/5598981578787?text=Ol%C3%A1%20Hyago!%20Vi%20no%20site%20o%20Polo%200km%20(2026/2027)%20em%20100x%20de%20R$%20730,13%20e%20quero%20reservar." target="_blank" rel="noopener noreferrer" class="mt-4 w-full bg-emerald-600 hover:bg-emerald-500 text-white font-bold py-3 px-4 rounded-xl text-center text-sm transition-all flex items-center justify-center space-x-2 shadow-md">
+                            <a href="https://wa.me/5598981578787?text=Ol%C3%A1%20Hyago!%20Vi%20no%20site%20o%20Polo%200km%20(2026/2027)%20em%20100x%20de%20R$%20730,13%20e%20quero%20reservar." target="_blank" rel="noopener noreferrer" class="btn-floating mt-4 w-full bg-emerald-600 hover:bg-emerald-500 text-white font-bold py-3 px-4 rounded-2xl text-center text-sm flex items-center justify-center space-x-2 shadow-lg glow-green">
                                 <i class="fa-brands fa-whatsapp text-lg"></i>
                                 <span>Reservar no WhatsApp</span>
                             </a>
                         </div>
                         <!-- 90x -->
-                        <div class="bg-slate-900/90 border border-slate-800 hover:border-vw-accent p-5 rounded-2xl transition-all duration-300 flex flex-col justify-between group">
+                        <div class="btn-floating bg-slate-900/90 border border-slate-800 hover:border-vw-accent p-5 rounded-3xl flex flex-col justify-between shadow-xl">
                             <div>
                                 <span class="text-xs font-bold text-vw-accent bg-vw-accent/10 px-2.5 py-1 rounded-md">90 MESES</span>
                                 <div class="mt-4 mb-2">
@@ -460,13 +472,13 @@
                                     <div class="text-2xl sm:text-3xl font-black text-white">R$ 803<span class="text-lg text-slate-300">,63</span></div>
                                 </div>
                             </div>
-                            <a href="https://wa.me/5598981578787?text=Ol%C3%A1%20Hyago!%20Vi%20no%20site%20o%20Polo%200km%20(2026/2027)%20em%2090x%20de%20R$%20803,63%20e%20quero%20reservar." target="_blank" rel="noopener noreferrer" class="mt-4 w-full bg-emerald-600 hover:bg-emerald-500 text-white font-bold py-3 px-4 rounded-xl text-center text-sm transition-all flex items-center justify-center space-x-2 shadow-md">
+                            <a href="https://wa.me/5598981578787?text=Ol%C3%A1%20Hyago!%20Vi%20no%20site%20o%20Polo%200km%20(2026/2027)%20em%2090x%20de%20R$%20803,63%20e%20quero%20reservar." target="_blank" rel="noopener noreferrer" class="btn-floating mt-4 w-full bg-emerald-600 hover:bg-emerald-500 text-white font-bold py-3 px-4 rounded-2xl text-center text-sm flex items-center justify-center space-x-2 shadow-lg glow-green">
                                 <i class="fa-brands fa-whatsapp text-lg"></i>
                                 <span>Reservar no WhatsApp</span>
                             </a>
                         </div>
                         <!-- 80x -->
-                        <div class="bg-slate-900/90 border border-slate-800 hover:border-vw-accent p-5 rounded-2xl transition-all duration-300 flex flex-col justify-between group">
+                        <div class="btn-floating bg-slate-900/90 border border-slate-800 hover:border-vw-accent p-5 rounded-3xl flex flex-col justify-between shadow-xl">
                             <div>
                                 <span class="text-xs font-bold text-vw-accent bg-vw-accent/10 px-2.5 py-1 rounded-md">80 MESES</span>
                                 <div class="mt-4 mb-2">
@@ -474,13 +486,13 @@
                                     <div class="text-2xl sm:text-3xl font-black text-white">R$ 1.173<span class="text-lg text-slate-300">,39</span></div>
                                 </div>
                             </div>
-                            <a href="https://wa.me/5598981578787?text=Ol%C3%A1%20Hyago!%20Vi%20no%20site%20o%20Polo%200km%20(2026/2027)%20em%2080x%20de%20R$%201.173,39%20e%20quero%20reservar." target="_blank" rel="noopener noreferrer" class="mt-4 w-full bg-emerald-600 hover:bg-emerald-500 text-white font-bold py-3 px-4 rounded-xl text-center text-sm transition-all flex items-center justify-center space-x-2 shadow-md">
+                            <a href="https://wa.me/5598981578787?text=Ol%C3%A1%20Hyago!%20Vi%20no%20site%20o%20Polo%200km%20(2026/2027)%20em%2080x%20de%20R$%201.173,39%20e%20quero%20reservar." target="_blank" rel="noopener noreferrer" class="btn-floating mt-4 w-full bg-emerald-600 hover:bg-emerald-500 text-white font-bold py-3 px-4 rounded-2xl text-center text-sm flex items-center justify-center space-x-2 shadow-lg glow-green">
                                 <i class="fa-brands fa-whatsapp text-lg"></i>
                                 <span>Reservar no WhatsApp</span>
                             </a>
                         </div>
                         <!-- 70x -->
-                        <div class="bg-slate-900/90 border border-slate-800 hover:border-vw-accent p-5 rounded-2xl transition-all duration-300 flex flex-col justify-between group">
+                        <div class="btn-floating bg-slate-900/90 border border-slate-800 hover:border-vw-accent p-5 rounded-3xl flex flex-col justify-between shadow-xl">
                             <div>
                                 <span class="text-xs font-bold text-vw-accent bg-vw-accent/10 px-2.5 py-1 rounded-md">70 MESES</span>
                                 <div class="mt-4 mb-2">
@@ -488,13 +500,13 @@
                                     <div class="text-2xl sm:text-3xl font-black text-white">R$ 1.331<span class="text-lg text-slate-300">,29</span></div>
                                 </div>
                             </div>
-                            <a href="https://wa.me/5598981578787?text=Ol%C3%A1%20Hyago!%20Vi%20no%20site%20o%20Polo%200km%20(2026/2027)%20em%2070x%20de%20R$%201.331,29%20e%20quero%20reservar." target="_blank" rel="noopener noreferrer" class="mt-4 w-full bg-emerald-600 hover:bg-emerald-500 text-white font-bold py-3 px-4 rounded-xl text-center text-sm transition-all flex items-center justify-center space-x-2 shadow-md">
+                            <a href="https://wa.me/5598981578787?text=Ol%C3%A1%20Hyago!%20Vi%20no%20site%20o%20Polo%200km%20(2026/2027)%20em%2070x%20de%20R$%201.331,29%20e%20quero%20reservar." target="_blank" rel="noopener noreferrer" class="btn-floating mt-4 w-full bg-emerald-600 hover:bg-emerald-500 text-white font-bold py-3 px-4 rounded-2xl text-center text-sm flex items-center justify-center space-x-2 shadow-lg glow-green">
                                 <i class="fa-brands fa-whatsapp text-lg"></i>
                                 <span>Reservar no WhatsApp</span>
                             </a>
                         </div>
                         <!-- 60x -->
-                        <div class="bg-slate-900/90 border border-slate-800 hover:border-vw-accent p-5 rounded-2xl transition-all duration-300 flex flex-col justify-between group">
+                        <div class="btn-floating bg-slate-900/90 border border-slate-800 hover:border-vw-accent p-5 rounded-3xl flex flex-col justify-between shadow-xl">
                             <div>
                                 <span class="text-xs font-bold text-vw-accent bg-vw-accent/10 px-2.5 py-1 rounded-md">60 MESES</span>
                                 <div class="mt-4 mb-2">
@@ -502,13 +514,13 @@
                                     <div class="text-2xl sm:text-3xl font-black text-white">R$ 1.541<span class="text-lg text-slate-300">,83</span></div>
                                 </div>
                             </div>
-                            <a href="https://wa.me/5598981578787?text=Ol%C3%A1%20Hyago!%20Vi%20no%20site%20o%20Polo%200km%20(2026/2027)%20em%2060x%20de%20R$%201.541,83%20e%20quero%20reservar." target="_blank" rel="noopener noreferrer" class="mt-4 w-full bg-emerald-600 hover:bg-emerald-500 text-white font-bold py-3 px-4 rounded-xl text-center text-sm transition-all flex items-center justify-center space-x-2 shadow-md">
+                            <a href="https://wa.me/5598981578787?text=Ol%C3%A1%20Hyago!%20Vi%20no%20site%20o%20Polo%200km%20(2026/2027)%20em%2060x%20de%20R$%201.541,83%20e%20quero%20reservar." target="_blank" rel="noopener noreferrer" class="btn-floating mt-4 w-full bg-emerald-600 hover:bg-emerald-500 text-white font-bold py-3 px-4 rounded-2xl text-center text-sm flex items-center justify-center space-x-2 shadow-lg glow-green">
                                 <i class="fa-brands fa-whatsapp text-lg"></i>
                                 <span>Reservar no WhatsApp</span>
                             </a>
                         </div>
                         <!-- 50x -->
-                        <div class="bg-slate-900/90 border border-slate-800 hover:border-vw-accent p-5 rounded-2xl transition-all duration-300 flex flex-col justify-between group">
+                        <div class="btn-floating bg-slate-900/90 border border-slate-800 hover:border-vw-accent p-5 rounded-3xl flex flex-col justify-between shadow-xl">
                             <div>
                                 <span class="text-xs font-bold text-vw-accent bg-vw-accent/10 px-2.5 py-1 rounded-md">50 MESES</span>
                                 <div class="mt-4 mb-2">
@@ -516,13 +528,13 @@
                                     <div class="text-2xl sm:text-3xl font-black text-white">R$ 1.836<span class="text-lg text-slate-300">,58</span></div>
                                 </div>
                             </div>
-                            <a href="https://wa.me/5598981578787?text=Ol%C3%A1%20Hyago!%20Vi%20no%20site%20o%20Polo%200km%20(2026/2027)%20em%2050x%20de%20R$%201.836,58%20e%20quero%20reservar." target="_blank" rel="noopener noreferrer" class="mt-4 w-full bg-emerald-600 hover:bg-emerald-500 text-white font-bold py-3 px-4 rounded-xl text-center text-sm transition-all flex items-center justify-center space-x-2 shadow-md">
+                            <a href="https://wa.me/5598981578787?text=Ol%C3%A1%20Hyago!%20Vi%20no%20site%20o%20Polo%200km%20(2026/2027)%20em%2050x%20de%20R$%201.836,58%20e%20quero%20reservar." target="_blank" rel="noopener noreferrer" class="btn-floating mt-4 w-full bg-emerald-600 hover:bg-emerald-500 text-white font-bold py-3 px-4 rounded-2xl text-center text-sm flex items-center justify-center space-x-2 shadow-lg glow-green">
                                 <i class="fa-brands fa-whatsapp text-lg"></i>
                                 <span>Reservar no WhatsApp</span>
                             </a>
                         </div>
                         <!-- 36x -->
-                        <div class="bg-slate-900/90 border border-vw-light hover:border-vw-accent p-5 rounded-2xl transition-all duration-300 flex flex-col justify-between group sm:col-span-2 lg:col-span-1">
+                        <div class="btn-floating bg-slate-900/90 border border-vw-light hover:border-vw-accent p-5 rounded-3xl flex flex-col justify-between sm:col-span-2 lg:col-span-1 shadow-xl">
                             <div>
                                 <span class="text-xs font-bold text-white bg-vw-light px-2.5 py-1 rounded-md">PLANO ACELERADO 36X</span>
                                 <div class="mt-4 mb-2">
@@ -530,7 +542,7 @@
                                     <div class="text-2xl sm:text-3xl font-black text-white">R$ 2.524<span class="text-lg text-slate-300">,33</span></div>
                                 </div>
                             </div>
-                            <a href="https://wa.me/5598981578787?text=Ol%C3%A1%20Hyago!%20Vi%20no%20site%20o%20Polo%200km%20(2026/2027)%20em%2036x%20de%20R$%202.524,33%20e%20quero%20reservar." target="_blank" rel="noopener noreferrer" class="mt-4 w-full bg-emerald-600 hover:bg-emerald-500 text-white font-bold py-3 px-4 rounded-xl text-center text-sm transition-all flex items-center justify-center space-x-2 shadow-md">
+                            <a href="https://wa.me/5598981578787?text=Ol%C3%A1%20Hyago!%20Vi%20no%20site%20o%20Polo%200km%20(2026/2027)%20em%2036x%20de%20R$%202.524,33%20e%20quero%20reservar." target="_blank" rel="noopener noreferrer" class="btn-floating mt-4 w-full bg-emerald-600 hover:bg-emerald-500 text-white font-bold py-3 px-4 rounded-2xl text-center text-sm flex items-center justify-center space-x-2 shadow-lg glow-green">
                                 <i class="fa-brands fa-whatsapp text-lg"></i>
                                 <span>Reservar no WhatsApp</span>
                             </a>
@@ -548,7 +560,7 @@
                             <h3 class="text-2xl sm:text-3xl font-black text-white">Volkswagen Polo 2025 Seminovo</h3>
                             <p class="text-slate-400 text-sm mt-1">Condições especiais com baixa quilometragem e garantia.</p>
                         </div>
-                        <div class="text-right flex items-center space-x-2 bg-slate-900/80 px-4 py-2 rounded-xl border border-slate-800">
+                        <div class="btn-floating text-right flex items-center space-x-2 bg-slate-900/80 px-4 py-2 rounded-2xl border border-slate-800 shadow-md cursor-default">
                             <i class="fa-solid fa-tags text-sky-400"></i>
                             <span class="text-xs text-sky-300 font-bold uppercase tracking-wider">Parcelas Reduzidas</span>
                         </div>
@@ -556,7 +568,7 @@
 
                     <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
                         <!-- 100x -->
-                        <div class="bg-slate-900/90 border border-slate-800 hover:border-vw-accent p-5 rounded-2xl transition-all duration-300 flex flex-col justify-between">
+                        <div class="btn-floating bg-slate-900/90 border border-slate-800 hover:border-vw-accent p-5 rounded-3xl flex flex-col justify-between shadow-xl">
                             <div>
                                 <span class="text-xs font-bold text-vw-accent bg-vw-accent/10 px-2.5 py-1 rounded-md">100 MESES</span>
                                 <div class="mt-4 mb-2">
@@ -564,13 +576,13 @@
                                     <div class="text-2xl sm:text-3xl font-black text-white">R$ 649<span class="text-lg text-slate-300">,00</span></div>
                                 </div>
                             </div>
-                            <a href="https://wa.me/5598981578787?text=Ol%C3%A1%20Hyago!%20Vi%20no%20site%20o%20Polo%202025%20Seminovo%20em%20100x%20de%20R$%20649,00%20e%20quero%20reservar." target="_blank" rel="noopener noreferrer" class="mt-4 w-full bg-emerald-600 hover:bg-emerald-500 text-white font-bold py-3 px-4 rounded-xl text-center text-sm transition-all flex items-center justify-center space-x-2">
+                            <a href="https://wa.me/5598981578787?text=Ol%C3%A1%20Hyago!%20Vi%20no%20site%20o%20Polo%202025%20Seminovo%20em%20100x%20de%20R$%20649,00%20e%20quero%20reservar." target="_blank" rel="noopener noreferrer" class="btn-floating mt-4 w-full bg-emerald-600 hover:bg-emerald-500 text-white font-bold py-3 px-4 rounded-2xl text-center text-sm flex items-center justify-center space-x-2 shadow-lg glow-green">
                                 <i class="fa-brands fa-whatsapp text-lg"></i>
                                 <span>Reservar no WhatsApp</span>
                             </a>
                         </div>
                         <!-- 90x -->
-                        <div class="bg-slate-900/90 border border-slate-800 hover:border-vw-accent p-5 rounded-2xl transition-all duration-300 flex flex-col justify-between">
+                        <div class="btn-floating bg-slate-900/90 border border-slate-800 hover:border-vw-accent p-5 rounded-3xl flex flex-col justify-between shadow-xl">
                             <div>
                                 <span class="text-xs font-bold text-vw-accent bg-vw-accent/10 px-2.5 py-1 rounded-md">90 MESES</span>
                                 <div class="mt-4 mb-2">
@@ -578,13 +590,13 @@
                                     <div class="text-2xl sm:text-3xl font-black text-white">R$ 714<span class="text-lg text-slate-300">,33</span></div>
                                 </div>
                             </div>
-                            <a href="https://wa.me/5598981578787?text=Ol%C3%A1%20Hyago!%20Vi%20no%20site%20o%20Polo%202025%20Seminovo%20em%2090x%20de%20R$%20714,33%20e%20quero%20reservar." target="_blank" rel="noopener noreferrer" class="mt-4 w-full bg-emerald-600 hover:bg-emerald-500 text-white font-bold py-3 px-4 rounded-xl text-center text-sm transition-all flex items-center justify-center space-x-2">
+                            <a href="https://wa.me/5598981578787?text=Ol%C3%A1%20Hyago!%20Vi%20no%20site%20o%20Polo%202025%20Seminovo%20em%2090x%20de%20R$%20714,33%20e%20quero%20reservar." target="_blank" rel="noopener noreferrer" class="btn-floating mt-4 w-full bg-emerald-600 hover:bg-emerald-500 text-white font-bold py-3 px-4 rounded-2xl text-center text-sm flex items-center justify-center space-x-2 shadow-lg glow-green">
                                 <i class="fa-brands fa-whatsapp text-lg"></i>
                                 <span>Reservar no WhatsApp</span>
                             </a>
                         </div>
                         <!-- 80x -->
-                        <div class="bg-slate-900/90 border border-slate-800 hover:border-vw-accent p-5 rounded-2xl transition-all duration-300 flex flex-col justify-between">
+                        <div class="btn-floating bg-slate-900/90 border border-slate-800 hover:border-vw-accent p-5 rounded-3xl flex flex-col justify-between shadow-xl">
                             <div>
                                 <span class="text-xs font-bold text-vw-accent bg-vw-accent/10 px-2.5 py-1 rounded-md">80 MESES</span>
                                 <div class="mt-4 mb-2">
@@ -592,13 +604,13 @@
                                     <div class="text-2xl sm:text-3xl font-black text-white">R$ 1.043<span class="text-lg text-slate-300">,01</span></div>
                                 </div>
                             </div>
-                            <a href="https://wa.me/5598981578787?text=Ol%C3%A1%20Hyago!%20Vi%20no%20site%20o%20Polo%202025%20Seminovo%20em%2080x%20de%20R$%201.043,01%20e%20quero%20reservar." target="_blank" rel="noopener noreferrer" class="mt-4 w-full bg-emerald-600 hover:bg-emerald-500 text-white font-bold py-3 px-4 rounded-xl text-center text-sm transition-all flex items-center justify-center space-x-2">
+                            <a href="https://wa.me/5598981578787?text=Ol%C3%A1%20Hyago!%20Vi%20no%20site%20o%20Polo%202025%20Seminovo%20em%2080x%20de%20R$%201.043,01%20e%20quero%20reservar." target="_blank" rel="noopener noreferrer" class="btn-floating mt-4 w-full bg-emerald-600 hover:bg-emerald-500 text-white font-bold py-3 px-4 rounded-2xl text-center text-sm flex items-center justify-center space-x-2 shadow-lg glow-green">
                                 <i class="fa-brands fa-whatsapp text-lg"></i>
                                 <span>Reservar no WhatsApp</span>
                             </a>
                         </div>
                         <!-- 70x -->
-                        <div class="bg-slate-900/90 border border-slate-800 hover:border-vw-accent p-5 rounded-2xl transition-all duration-300 flex flex-col justify-between">
+                        <div class="btn-floating bg-slate-900/90 border border-slate-800 hover:border-vw-accent p-5 rounded-3xl flex flex-col justify-between shadow-xl">
                             <div>
                                 <span class="text-xs font-bold text-vw-accent bg-vw-accent/10 px-2.5 py-1 rounded-md">70 MESES</span>
                                 <div class="mt-4 mb-2">
@@ -606,13 +618,13 @@
                                     <div class="text-2xl sm:text-3xl font-black text-white">R$ 1.183<span class="text-lg text-slate-300">,37</span></div>
                                 </div>
                             </div>
-                            <a href="https://wa.me/5598981578787?text=Ol%C3%A1%20Hyago!%20Vi%20no%20site%20o%20Polo%202025%20Seminovo%20em%2070x%20de%20R$%201.183,37%20e%20quero%20reservar." target="_blank" rel="noopener noreferrer" class="mt-4 w-full bg-emerald-600 hover:bg-emerald-500 text-white font-bold py-3 px-4 rounded-xl text-center text-sm transition-all flex items-center justify-center space-x-2">
+                            <a href="https://wa.me/5598981578787?text=Ol%C3%A1%20Hyago!%20Vi%20no%20site%20o%20Polo%202025%20Seminovo%20em%2070x%20de%20R$%201.183,37%20e%20quero%20reservar." target="_blank" rel="noopener noreferrer" class="btn-floating mt-4 w-full bg-emerald-600 hover:bg-emerald-500 text-white font-bold py-3 px-4 rounded-2xl text-center text-sm flex items-center justify-center space-x-2 shadow-lg glow-green">
                                 <i class="fa-brands fa-whatsapp text-lg"></i>
                                 <span>Reservar no WhatsApp</span>
                             </a>
                         </div>
                         <!-- 60x -->
-                        <div class="bg-slate-900/90 border border-slate-800 hover:border-vw-accent p-5 rounded-2xl transition-all duration-300 flex flex-col justify-between">
+                        <div class="btn-floating bg-slate-900/90 border border-slate-800 hover:border-vw-accent p-5 rounded-3xl flex flex-col justify-between shadow-xl">
                             <div>
                                 <span class="text-xs font-bold text-vw-accent bg-vw-accent/10 px-2.5 py-1 rounded-md">60 MESES</span>
                                 <div class="mt-4 mb-2">
@@ -620,13 +632,13 @@
                                     <div class="text-2xl sm:text-3xl font-black text-white">R$ 1.370<span class="text-lg text-slate-300">,51</span></div>
                                 </div>
                             </div>
-                            <a href="https://wa.me/5598981578787?text=Ol%C3%A1%20Hyago!%20Vi%20no%20site%20o%20Polo%202025%20Seminovo%20em%2060x%20de%20R$%201.370,51%20e%20quero%20reservar." target="_blank" rel="noopener noreferrer" class="mt-4 w-full bg-emerald-600 hover:bg-emerald-500 text-white font-bold py-3 px-4 rounded-xl text-center text-sm transition-all flex items-center justify-center space-x-2">
+                            <a href="https://wa.me/5598981578787?text=Ol%C3%A1%20Hyago!%20Vi%20no%20site%20o%20Polo%202025%20Seminovo%20em%2060x%20de%20R$%201.370,51%20e%20quero%20reservar." target="_blank" rel="noopener noreferrer" class="btn-floating mt-4 w-full bg-emerald-600 hover:bg-emerald-500 text-white font-bold py-3 px-4 rounded-2xl text-center text-sm flex items-center justify-center space-x-2 shadow-lg glow-green">
                                 <i class="fa-brands fa-whatsapp text-lg"></i>
                                 <span>Reservar no WhatsApp</span>
                             </a>
                         </div>
                         <!-- 50x -->
-                        <div class="bg-slate-900/90 border border-slate-800 hover:border-vw-accent p-5 rounded-2xl transition-all duration-300 flex flex-col justify-between">
+                        <div class="btn-floating bg-slate-900/90 border border-slate-800 hover:border-vw-accent p-5 rounded-3xl flex flex-col justify-between shadow-xl">
                             <div>
                                 <span class="text-xs font-bold text-vw-accent bg-vw-accent/10 px-2.5 py-1 rounded-md">50 MESES</span>
                                 <div class="mt-4 mb-2">
@@ -634,13 +646,13 @@
                                     <div class="text-2xl sm:text-3xl font-black text-white">R$ 1.632<span class="text-lg text-slate-300">,51</span></div>
                                 </div>
                             </div>
-                            <a href="https://wa.me/5598981578787?text=Ol%C3%A1%20Hyago!%20Vi%20no%20site%20o%20Polo%202025%20Seminovo%20em%2050x%20de%20R$%201.632,51%20e%20quero%20reservar." target="_blank" rel="noopener noreferrer" class="mt-4 w-full bg-emerald-600 hover:bg-emerald-500 text-white font-bold py-3 px-4 rounded-xl text-center text-sm transition-all flex items-center justify-center space-x-2">
+                            <a href="https://wa.me/5598981578787?text=Ol%C3%A1%20Hyago!%20Vi%20no%20site%20o%20Polo%202025%20Seminovo%20em%2050x%20de%20R$%201.632,51%20e%20quero%20reservar." target="_blank" rel="noopener noreferrer" class="btn-floating mt-4 w-full bg-emerald-600 hover:bg-emerald-500 text-white font-bold py-3 px-4 rounded-2xl text-center text-sm flex items-center justify-center space-x-2 shadow-lg glow-green">
                                 <i class="fa-brands fa-whatsapp text-lg"></i>
                                 <span>Reservar no WhatsApp</span>
                             </a>
                         </div>
                         <!-- 36x -->
-                        <div class="bg-slate-900/90 border border-vw-light hover:border-vw-accent p-5 rounded-2xl transition-all duration-300 flex flex-col justify-between sm:col-span-2 lg:col-span-1">
+                        <div class="btn-floating bg-slate-900/90 border border-vw-light hover:border-vw-accent p-5 rounded-3xl flex flex-col justify-between sm:col-span-2 lg:col-span-1 shadow-xl">
                             <div>
                                 <span class="text-xs font-bold text-white bg-vw-light px-2.5 py-1 rounded-md">PLANO ACELERADO 36X</span>
                                 <div class="mt-4 mb-2">
@@ -648,7 +660,7 @@
                                     <div class="text-2xl sm:text-3xl font-black text-white">R$ 2.243<span class="text-lg text-slate-300">,85</span></div>
                                 </div>
                             </div>
-                            <a href="https://wa.me/5598981578787?text=Ol%C3%A1%20Hyago!%20Vi%20no%20site%20o%20Polo%202025%20Seminovo%20em%2036x%20de%20R$%202.243,85%20e%20quero%20reservar." target="_blank" rel="noopener noreferrer" class="mt-4 w-full bg-emerald-600 hover:bg-emerald-500 text-white font-bold py-3 px-4 rounded-xl text-center text-sm transition-all flex items-center justify-center space-x-2">
+                            <a href="https://wa.me/5598981578787?text=Ol%C3%A1%20Hyago!%20Vi%20no%20site%20o%20Polo%202025%20Seminovo%20em%2036x%20de%20R$%202.243,85%20e%20quero%20reservar." target="_blank" rel="noopener noreferrer" class="btn-floating mt-4 w-full bg-emerald-600 hover:bg-emerald-500 text-white font-bold py-3 px-4 rounded-2xl text-center text-sm flex items-center justify-center space-x-2 shadow-lg glow-green">
                                 <i class="fa-brands fa-whatsapp text-lg"></i>
                                 <span>Reservar no WhatsApp</span>
                             </a>
@@ -666,7 +678,7 @@
                             <h3 class="text-2xl sm:text-3xl font-black text-white">Volkswagen Polo 2024/2025</h3>
                             <p class="text-slate-400 text-sm mt-1">Valores super reduzidos com extrema facilidade de aprovação.</p>
                         </div>
-                        <div class="text-right flex items-center space-x-2 bg-slate-900/80 px-4 py-2 rounded-xl border border-slate-800">
+                        <div class="btn-floating text-right flex items-center space-x-2 bg-slate-900/80 px-4 py-2 rounded-2xl border border-slate-800 shadow-md cursor-default">
                             <i class="fa-solid fa-star text-emerald-400"></i>
                             <span class="text-xs text-emerald-300 font-bold uppercase tracking-wider">Super Economia</span>
                         </div>
@@ -674,7 +686,7 @@
 
                     <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
                         <!-- 100x -->
-                        <div class="bg-slate-900/90 border border-slate-800 hover:border-vw-accent p-5 rounded-2xl transition-all duration-300 flex flex-col justify-between">
+                        <div class="btn-floating bg-slate-900/90 border border-slate-800 hover:border-vw-accent p-5 rounded-3xl flex flex-col justify-between shadow-xl">
                             <div>
                                 <span class="text-xs font-bold text-vw-accent bg-vw-accent/10 px-2.5 py-1 rounded-md">100 MESES</span>
                                 <div class="mt-4 mb-2">
@@ -682,13 +694,13 @@
                                     <div class="text-2xl sm:text-3xl font-black text-white">R$ 567<span class="text-lg text-slate-300">,88</span></div>
                                 </div>
                             </div>
-                            <a href="https://wa.me/5598981578787?text=Ol%C3%A1%20Hyago!%20Vi%20no%20site%20o%20Polo%202024/2025%20em%20100x%20de%20R$%20567,88%20e%20quero%20reservar." target="_blank" rel="noopener noreferrer" class="mt-4 w-full bg-emerald-600 hover:bg-emerald-500 text-white font-bold py-3 px-4 rounded-xl text-center text-sm transition-all flex items-center justify-center space-x-2">
+                            <a href="https://wa.me/5598981578787?text=Ol%C3%A1%20Hyago!%20Vi%20no%20site%20o%20Polo%202024/2025%20em%20100x%20de%20R$%20567,88%20e%20quero%20reservar." target="_blank" rel="noopener noreferrer" class="btn-floating mt-4 w-full bg-emerald-600 hover:bg-emerald-500 text-white font-bold py-3 px-4 rounded-2xl text-center text-sm flex items-center justify-center space-x-2 shadow-lg glow-green">
                                 <i class="fa-brands fa-whatsapp text-lg"></i>
                                 <span>Reservar no WhatsApp</span>
                             </a>
                         </div>
                         <!-- 90x -->
-                        <div class="bg-slate-900/90 border border-slate-800 hover:border-vw-accent p-5 rounded-2xl transition-all duration-300 flex flex-col justify-between">
+                        <div class="btn-floating bg-slate-900/90 border border-slate-800 hover:border-vw-accent p-5 rounded-3xl flex flex-col justify-between shadow-xl">
                             <div>
                                 <span class="text-xs font-bold text-vw-accent bg-vw-accent/10 px-2.5 py-1 rounded-md">90 MESES</span>
                                 <div class="mt-4 mb-2">
@@ -696,13 +708,13 @@
                                     <div class="text-2xl sm:text-3xl font-black text-white">R$ 625<span class="text-lg text-slate-300">,04</span></div>
                                 </div>
                             </div>
-                            <a href="https://wa.me/5598981578787?text=Ol%C3%A1%20Hyago!%20Vi%20no%20site%20o%20Polo%202024/2025%20em%2090x%20de%20R$%20625,04%20e%20quero%20reservar." target="_blank" rel="noopener noreferrer" class="mt-4 w-full bg-emerald-600 hover:bg-emerald-500 text-white font-bold py-3 px-4 rounded-xl text-center text-sm transition-all flex items-center justify-center space-x-2">
+                            <a href="https://wa.me/5598981578787?text=Ol%C3%A1%20Hyago!%20Vi%20no%20site%20o%20Polo%202024/2025%20em%2090x%20de%20R$%20625,04%20e%20quero%20reservar." target="_blank" rel="noopener noreferrer" class="btn-floating mt-4 w-full bg-emerald-600 hover:bg-emerald-500 text-white font-bold py-3 px-4 rounded-2xl text-center text-sm flex items-center justify-center space-x-2 shadow-lg glow-green">
                                 <i class="fa-brands fa-whatsapp text-lg"></i>
                                 <span>Reservar no WhatsApp</span>
                             </a>
                         </div>
                         <!-- 80x -->
-                        <div class="bg-slate-900/90 border border-slate-800 hover:border-vw-accent p-5 rounded-2xl transition-all duration-300 flex flex-col justify-between">
+                        <div class="btn-floating bg-slate-900/90 border border-slate-800 hover:border-vw-accent p-5 rounded-3xl flex flex-col justify-between shadow-xl">
                             <div>
                                 <span class="text-xs font-bold text-vw-accent bg-vw-accent/10 px-2.5 py-1 rounded-md">80 MESES</span>
                                 <div class="mt-4 mb-2">
@@ -710,13 +722,13 @@
                                     <div class="text-2xl sm:text-3xl font-black text-white">R$ 912<span class="text-lg text-slate-300">,64</span></div>
                                 </div>
                             </div>
-                            <a href="https://wa.me/5598981578787?text=Ol%C3%A1%20Hyago!%20Vi%20no%20site%20o%20Polo%202024/2025%20em%2080x%20de%20R$%20912,64%20e%20quero%20reservar." target="_blank" rel="noopener noreferrer" class="mt-4 w-full bg-emerald-600 hover:bg-emerald-500 text-white font-bold py-3 px-4 rounded-xl text-center text-sm transition-all flex items-center justify-center space-x-2">
+                            <a href="https://wa.me/5598981578787?text=Ol%C3%A1%20Hyago!%20Vi%20no%20site%20o%20Polo%202024/2025%20em%2080x%20de%20R$%20912,64%20e%20quero%20reservar." target="_blank" rel="noopener noreferrer" class="btn-floating mt-4 w-full bg-emerald-600 hover:bg-emerald-500 text-white font-bold py-3 px-4 rounded-2xl text-center text-sm flex items-center justify-center space-x-2 shadow-lg glow-green">
                                 <i class="fa-brands fa-whatsapp text-lg"></i>
                                 <span>Reservar no WhatsApp</span>
                             </a>
                         </div>
                         <!-- 70x -->
-                        <div class="bg-slate-900/90 border border-slate-800 hover:border-vw-accent p-5 rounded-2xl transition-all duration-300 flex flex-col justify-between">
+                        <div class="btn-floating bg-slate-900/90 border border-slate-800 hover:border-vw-accent p-5 rounded-3xl flex flex-col justify-between shadow-xl">
                             <div>
                                 <span class="text-xs font-bold text-vw-accent bg-vw-accent/10 px-2.5 py-1 rounded-md">70 MESES</span>
                                 <div class="mt-4 mb-2">
@@ -724,13 +736,13 @@
                                     <div class="text-2xl sm:text-3xl font-black text-white">R$ 1.035<span class="text-lg text-slate-300">,45</span></div>
                                 </div>
                             </div>
-                            <a href="https://wa.me/5598981578787?text=Ol%C3%A1%20Hyago!%20Vi%20no%20site%20o%20Polo%202024/2025%20em%2070x%20de%20R$%201.035,45%20e%20quero%20reservar." target="_blank" rel="noopener noreferrer" class="mt-4 w-full bg-emerald-600 hover:bg-emerald-500 text-white font-bold py-3 px-4 rounded-xl text-center text-sm transition-all flex items-center justify-center space-x-2">
+                            <a href="https://wa.me/5598981578787?text=Ol%C3%A1%20Hyago!%20Vi%20no%20site%20o%20Polo%202024/2025%20em%2070x%20de%20R$%201.035,45%20e%20quero%20reservar." target="_blank" rel="noopener noreferrer" class="btn-floating mt-4 w-full bg-emerald-600 hover:bg-emerald-500 text-white font-bold py-3 px-4 rounded-2xl text-center text-sm flex items-center justify-center space-x-2 shadow-lg glow-green">
                                 <i class="fa-brands fa-whatsapp text-lg"></i>
                                 <span>Reservar no WhatsApp</span>
                             </a>
                         </div>
                         <!-- 60x -->
-                        <div class="bg-slate-900/90 border border-slate-800 hover:border-vw-accent p-5 rounded-2xl transition-all duration-300 flex flex-col justify-between">
+                        <div class="btn-floating bg-slate-900/90 border border-slate-800 hover:border-vw-accent p-5 rounded-3xl flex flex-col justify-between shadow-xl">
                             <div>
                                 <span class="text-xs font-bold text-vw-accent bg-vw-accent/10 px-2.5 py-1 rounded-md">60 MESES</span>
                                 <div class="mt-4 mb-2">
@@ -738,13 +750,13 @@
                                     <div class="text-2xl sm:text-3xl font-black text-white">R$ 1.199<span class="text-lg text-slate-300">,20</span></div>
                                 </div>
                             </div>
-                            <a href="https://wa.me/5598981578787?text=Ol%C3%A1%20Hyago!%20Vi%20no%20site%20o%20Polo%202024/2025%20em%2060x%20de%20R$%201.199,20%20e%20quero%20reservar." target="_blank" rel="noopener noreferrer" class="mt-4 w-full bg-emerald-600 hover:bg-emerald-500 text-white font-bold py-3 px-4 rounded-xl text-center text-sm transition-all flex items-center justify-center space-x-2">
+                            <a href="https://wa.me/5598981578787?text=Ol%C3%A1%20Hyago!%20Vi%20no%20site%20o%20Polo%202024/2025%20em%2060x%20de%20R$%201.199,20%20e%20quero%20reservar." target="_blank" rel="noopener noreferrer" class="btn-floating mt-4 w-full bg-emerald-600 hover:bg-emerald-500 text-white font-bold py-3 px-4 rounded-2xl text-center text-sm flex items-center justify-center space-x-2 shadow-lg glow-green">
                                 <i class="fa-brands fa-whatsapp text-lg"></i>
                                 <span>Reservar no WhatsApp</span>
                             </a>
                         </div>
                         <!-- 50x -->
-                        <div class="bg-slate-900/90 border border-slate-800 hover:border-vw-accent p-5 rounded-2xl transition-all duration-300 flex flex-col justify-between">
+                        <div class="btn-floating bg-slate-900/90 border border-slate-800 hover:border-vw-accent p-5 rounded-3xl flex flex-col justify-between shadow-xl">
                             <div>
                                 <span class="text-xs font-bold text-vw-accent bg-vw-accent/10 px-2.5 py-1 rounded-md">50 MESES</span>
                                 <div class="mt-4 mb-2">
@@ -752,13 +764,13 @@
                                     <div class="text-2xl sm:text-3xl font-black text-white">R$ 1.428<span class="text-lg text-slate-300">,45</span></div>
                                 </div>
                             </div>
-                            <a href="https://wa.me/5598981578787?text=Ol%C3%A1%20Hyago!%20Vi%20no%20site%20o%20Polo%202024/2025%20em%2050x%20de%20R$%201.428,45%20e%20quero%20reservar." target="_blank" rel="noopener noreferrer" class="mt-4 w-full bg-emerald-600 hover:bg-emerald-500 text-white font-bold py-3 px-4 rounded-xl text-center text-sm transition-all flex items-center justify-center space-x-2">
+                            <a href="https://wa.me/5598981578787?text=Ol%C3%A1%20Hyago!%20Vi%20no%20site%20o%20Polo%202024/2025%20em%2050x%20de%20R$%201.428,45%20e%20quero%20reservar." target="_blank" rel="noopener noreferrer" class="btn-floating mt-4 w-full bg-emerald-600 hover:bg-emerald-500 text-white font-bold py-3 px-4 rounded-2xl text-center text-sm flex items-center justify-center space-x-2 shadow-lg glow-green">
                                 <i class="fa-brands fa-whatsapp text-lg"></i>
                                 <span>Reservar no WhatsApp</span>
                             </a>
                         </div>
                         <!-- 36x -->
-                        <div class="bg-slate-900/90 border border-vw-light hover:border-vw-accent p-5 rounded-2xl transition-all duration-300 flex flex-col justify-between sm:col-span-2 lg:col-span-1">
+                        <div class="btn-floating bg-slate-900/90 border border-vw-light hover:border-vw-accent p-5 rounded-3xl flex flex-col justify-between sm:col-span-2 lg:col-span-1 shadow-xl">
                             <div>
                                 <span class="text-xs font-bold text-white bg-vw-light px-2.5 py-1 rounded-md">PLANO ACELERADO 36X</span>
                                 <div class="mt-4 mb-2">
@@ -766,7 +778,7 @@
                                     <div class="text-2xl sm:text-3xl font-black text-white">R$ 1.963<span class="text-lg text-slate-300">,36</span></div>
                                 </div>
                             </div>
-                            <a href="https://wa.me/5598981578787?text=Ol%C3%A1%20Hyago!%20Vi%20no%20site%20o%20Polo%202024/2025%20em%2036x%20de%20R$%201.963,36%20e%20quero%20reservar." target="_blank" rel="noopener noreferrer" class="mt-4 w-full bg-emerald-600 hover:bg-emerald-500 text-white font-bold py-3 px-4 rounded-xl text-center text-sm transition-all flex items-center justify-center space-x-2">
+                            <a href="https://wa.me/5598981578787?text=Ol%C3%A1%20Hyago!%20Vi%20no%20site%20o%20Polo%202024/2025%20em%2036x%20de%20R$%201.963,36%20e%20quero%20reservar." target="_blank" rel="noopener noreferrer" class="btn-floating mt-4 w-full bg-emerald-600 hover:bg-emerald-500 text-white font-bold py-3 px-4 rounded-2xl text-center text-sm flex items-center justify-center space-x-2 shadow-lg glow-green">
                                 <i class="fa-brands fa-whatsapp text-lg"></i>
                                 <span>Reservar no WhatsApp</span>
                             </a>
@@ -783,8 +795,8 @@
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
                 <!-- Card 1 -->
-                <div class="glass-card p-6 rounded-3xl space-y-4 hover:border-vw-accent/50 transition-all">
-                    <div class="w-12 h-12 rounded-2xl bg-vw-blue border border-vw-accent/30 flex items-center justify-center text-vw-accent text-2xl font-bold">
+                <div class="glass-card btn-floating p-6 rounded-3xl space-y-4 hover:border-vw-accent/50 shadow-xl">
+                    <div class="w-12 h-12 rounded-2xl bg-vw-blue border border-vw-accent/30 flex items-center justify-center text-vw-accent text-2xl font-bold shadow-inner">
                         <i class="fa-solid fa-building-columns"></i>
                     </div>
                     <h3 class="text-xl font-bold text-white">Banco Central do Brasil</h3>
@@ -794,9 +806,9 @@
                 </div>
 
                 <!-- Card 2 -->
-                <div class="glass-card p-6 rounded-3xl space-y-4 hover:border-vw-accent/50 transition-all">
-                    <div class="w-12 h-12 rounded-2xl bg-vw-blue border border-vw-accent/30 flex items-center justify-center text-vw-accent text-2xl font-bold">
-                        <i class="fa-solid fa-[#001E50] fa-handshake-angle"></i>
+                <div class="glass-card btn-floating p-6 rounded-3xl space-y-4 hover:border-vw-accent/50 shadow-xl">
+                    <div class="w-12 h-12 rounded-2xl bg-vw-blue border border-vw-accent/30 flex items-center justify-center text-vw-accent text-2xl font-bold shadow-inner">
+                        <i class="fa-solid fa-handshake-angle"></i>
                     </div>
                     <h3 class="text-xl font-bold text-white">Grupo Libra & VW</h3>
                     <p class="text-slate-400 text-sm leading-relaxed">
@@ -805,8 +817,8 @@
                 </div>
 
                 <!-- Card 3 -->
-                <div class="glass-card p-6 rounded-3xl space-y-4 hover:border-vw-accent/50 transition-all">
-                    <div class="w-12 h-12 rounded-2xl bg-vw-blue border border-vw-accent/30 flex items-center justify-center text-vw-accent text-2xl font-bold">
+                <div class="glass-card btn-floating p-6 rounded-3xl space-y-4 hover:border-vw-accent/50 shadow-xl">
+                    <div class="w-12 h-12 rounded-2xl bg-vw-blue border border-vw-accent/30 flex items-center justify-center text-vw-accent text-2xl font-bold shadow-inner">
                         <i class="fa-solid fa-fire text-amber-400"></i>
                     </div>
                     <h3 class="text-xl font-bold text-white">Consultoria Pé Quente</h3>
@@ -822,7 +834,7 @@
     <div id="lightboxModal" class="fixed inset-0 z-50 bg-black/90 backdrop-blur-md hidden flex items-center justify-center p-4 transition-all duration-300">
         <div class="relative max-w-4xl w-full bg-slate-900 border border-slate-700 rounded-3xl overflow-hidden shadow-2xl">
             <!-- Modal Close Button -->
-            <button onclick="closeLightbox()" class="absolute top-4 right-4 z-10 w-10 h-10 rounded-full bg-slate-800/90 text-white hover:bg-slate-700 flex items-center justify-center text-xl transition-colors">
+            <button onclick="closeLightbox()" class="btn-floating absolute top-4 right-4 z-10 w-10 h-10 rounded-full bg-slate-800/90 text-white hover:bg-slate-700 flex items-center justify-center text-xl shadow-lg">
                 <i class="fa-solid fa-xmark"></i>
             </button>
             <div class="max-h-[80vh] overflow-hidden flex items-center justify-center bg-black">
@@ -839,7 +851,7 @@
     <footer class="bg-slate-950 py-10 border-t border-slate-900 text-slate-500 text-sm">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row items-center justify-between gap-6">
             <div class="flex items-center space-x-3">
-                <div class="w-9 h-9 rounded-xl bg-vw-blue flex items-center justify-center font-black text-white text-xs border border-vw-accent/40">
+                <div class="btn-floating w-9 h-9 rounded-xl bg-vw-blue flex items-center justify-center font-black text-white text-xs border border-vw-accent/40 shadow-md">
                     VW
                 </div>
                 <div>
@@ -849,8 +861,8 @@
             </div>
             
             <div class="flex items-center space-x-6 text-xs text-slate-400">
-                <a href="https://wa.me/5598981578787" target="_blank" class="hover:text-white transition-colors"><i class="fa-brands fa-whatsapp text-emerald-400 mr-1"></i>(98) 98157-8787</a>
-                <a href="https://www.instagram.com/hyagogrupolibra/" target="_blank" class="hover:text-white transition-colors"><i class="fa-brands fa-instagram text-pink-500 mr-1"></i>@hyagogrupolibra</a>
+                <a href="https://wa.me/5598981578787" target="_blank" class="btn-floating hover:text-white"><i class="fa-brands fa-whatsapp text-emerald-400 mr-1"></i>(98) 98157-8787</a>
+                <a href="https://www.instagram.com/hyagogrupolibra/" target="_blank" class="btn-floating hover:text-white"><i class="fa-brands fa-instagram text-pink-500 mr-1"></i>@hyagogrupolibra</a>
             </div>
 
             <div class="text-xs text-slate-600 text-center md:text-right">
@@ -860,12 +872,20 @@
         </div>
     </footer>
 
-    <!-- FLOATING BUTTONS -->
-    <div class="fixed bottom-6 right-6 z-40 flex flex-col space-y-3">
-        <a href="https://www.instagram.com/hyagogrupolibra/" target="_blank" rel="noopener noreferrer" class="w-14 h-14 rounded-full bg-gradient-to-tr from-yellow-500 via-pink-500 to-purple-600 text-white flex items-center justify-center text-2xl shadow-xl hover:scale-110 transition-transform" title="Instagram Hyago">
+    <!-- FLOATING ACTION BUTTONS MENU (FIXED AT BOTTOM RIGHT) -->
+    <div class="fixed bottom-6 right-6 z-50 flex flex-col items-end space-y-3">
+        <!-- Scroll to Top Floating Button -->
+        <button onclick="window.scrollTo({top: 0, behavior: 'smooth'})" class="btn-floating w-12 h-12 rounded-2xl bg-slate-800/90 hover:bg-slate-700 text-slate-200 border border-slate-600/80 flex items-center justify-center text-lg shadow-xl backdrop-blur-md" title="Voltar ao Topo">
+            <i class="fa-solid fa-arrow-up"></i>
+        </button>
+
+        <!-- Instagram Floating Button -->
+        <a href="https://www.instagram.com/hyagogrupolibra/" target="_blank" rel="noopener noreferrer" class="btn-floating w-14 h-14 rounded-2xl bg-gradient-to-tr from-yellow-500 via-pink-500 to-purple-600 text-white flex items-center justify-center text-2xl shadow-xl hover:scale-110 transition-transform" title="Instagram Hyago">
             <i class="fa-brands fa-instagram"></i>
         </a>
-        <a href="https://wa.me/5598981578787?text=Ol%C3%A1%20Hyago!%20Vim%20pelo%20site%20e%20gostaria%20de%20fazer%20uma%20simula%C3%A7%C3%A3o." target="_blank" rel="noopener noreferrer" class="w-14 h-14 rounded-full bg-emerald-500 text-white flex items-center justify-center text-2xl shadow-2xl glow-green hover:scale-110 transition-transform" title="Falar no WhatsApp">
+
+        <!-- WhatsApp Floating Button -->
+        <a href="https://wa.me/5598981578787?text=Ol%C3%A1%20Hyago!%20Vim%20pelo%20site%20e%20gostaria%20de%20fazer%20uma%20simula%C3%A7%C3%A3o." target="_blank" rel="noopener noreferrer" class="btn-floating w-14 h-14 rounded-2xl bg-emerald-500 text-white flex items-center justify-center text-2xl shadow-2xl glow-green hover:scale-110 transition-transform" title="Falar no WhatsApp">
             <i class="fa-brands fa-whatsapp"></i>
         </a>
     </div>
@@ -886,7 +906,7 @@
             ];
             
             buttons.forEach(btn => {
-                btn.classList.remove('bg-vw-light', 'text-white', 'shadow-md');
+                btn.classList.remove('bg-vw-light', 'text-white', 'shadow-lg');
                 btn.classList.add('text-slate-400');
             });
 
@@ -898,7 +918,7 @@
 
             const activeBtn = document.getElementById('tab-' + tabId);
             if (activeBtn) {
-                activeBtn.classList.add('bg-vw-light', 'text-white', 'shadow-md');
+                activeBtn.classList.add('bg-vw-light', 'text-white', 'shadow-lg');
                 activeBtn.classList.remove('text-slate-400');
             }
         }
