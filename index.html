@@ -1,950 +1,338 @@
 <!DOCTYPE html>
-<html lang="pt-BR" class="scroll-smooth">
+<html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hyago | Vendedor Pé Quente - Consórcio Volkswagen Grupo Libra</title>
-    <!-- Tailwind CSS CDN -->
-    <script src="https://cdn.tailwindcss.com"></script>
-    <!-- FontAwesome Icons -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <!-- Google Fonts Inter -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
-    
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    fontFamily: {
-                        sans: ['Inter', 'sans-serif'],
-                    },
-                    colors: {
-                        vw: {
-                            blue: '#001E50',
-                            light: '#1B63C7',
-                            accent: '#00B0FF',
-                            dark: '#030E26',
-                            card: '#0A192F',
-                            gold: '#FFB703',
-                            goldDark: '#D49700'
-                        }
-                    }
-                }
-            }
-        }
-    </script>
-    <style>
-        .glow-blue {
-            box-shadow: 0 10px 25px -5px rgba(0, 176, 255, 0.4);
-        }
-        .glow-green {
-            box-shadow: 0 10px 25px -5px rgba(34, 197, 94, 0.5);
-        }
-        .glow-gold {
-            box-shadow: 0 10px 25px -5px rgba(255, 183, 3, 0.4);
-        }
-        .bg-grid {
-            background-image: radial-gradient(rgba(0, 176, 255, 0.12) 1px, transparent 0);
-            background-size: 28px 28px;
-        }
-        .glass-card {
-            background: rgba(10, 25, 47, 0.75);
-            backdrop-filter: blur(16px);
-            -webkit-backdrop-filter: blur(16px);
-            border: 1px solid rgba(27, 99, 199, 0.25);
-        }
-        .badge-flame {
-            background: linear-gradient(135deg, #FFB703 0%, #FF5500 100%);
-        }
-        /* Estilos universais para transformar botões em elementos flutuantes */
-        .btn-floating {
-            transition: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
-            transform: translateY(0);
-        }
-        .btn-floating:hover {
-            transform: translateY(-4px) scale(1.02);
-            box-shadow: 0 14px 28px rgba(0, 0, 0, 0.35);
-        }
-        .btn-floating:active {
-            transform: translateY(-1px) scale(0.98);
-        }
-    </style>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#0e1f33">
+<title>Hyago Matheus | Consultor Grupo Libra Consórcio em São Luís</title>
+<meta name="description" content="Chegou a hora de tirar seu plano do papel. Consórcio de carros e motos com o Grupo Libra. Faça uma simulação com o consultor Hyago Matheus.">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="pt_BR">
+<meta property="og:title" content="Hyago Matheus | Consultor Grupo Libra Consórcio">
+<meta property="og:description" content="Chegou a hora de tirar seu plano do papel. Faça uma simulação.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500..700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{--ink:#0e1f33;--ink2:#16314f;--azul:#2f5d8a;--papel:#f6f3ed;--cobre:#c4601a;--cobre2:#a94e12;--texto:#1b2635;--muda:#5a6676;--linha:#e3ddd2;
+  --serif:"Fraunces",Georgia,"Times New Roman",serif;--sans:"Manrope","Segoe UI",Roboto,Arial,sans-serif;color-scheme:light}
+*,*::before,*::after{box-sizing:border-box}*{margin:0;padding:0}
+html{scroll-behavior:smooth;scroll-padding-top:5rem;-webkit-text-size-adjust:100%}
+body{font:500 1.0625rem/1.65 var(--sans);color:var(--texto);background:#fff;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+img{max-width:100%;display:block}a{color:inherit}
+:focus-visible{outline:3px solid var(--cobre);outline-offset:3px;border-radius:6px}
+.wrap{width:min(100% - 2.4rem,1120px);margin-inline:auto}
+h1,h2,h3{font-family:var(--serif);font-weight:600;line-height:1.1;letter-spacing:-.01em}
+h2{font-size:clamp(1.9rem,1.3rem + 2.8vw,3rem);margin-bottom:.6rem;text-wrap:balance}
+p{text-wrap:pretty}
+.lead{color:var(--muda);max-width:56ch;margin-bottom:2rem}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:.5rem;min-height:52px;padding:.85rem 1.6rem;border:0;border-radius:10px;background:var(--cobre);color:#fff;font:700 1rem var(--sans);text-decoration:none;cursor:pointer;transition:background .2s,transform .15s;-webkit-tap-highlight-color:transparent}
+.btn:hover{background:var(--cobre2)}.btn:active{transform:scale(.98)}
+.btn.sec{background:transparent;color:inherit;box-shadow:inset 0 0 0 2px currentColor}.btn.sec:hover{background:rgba(255,255,255,.1)}
+.btn.peq{min-height:44px;padding:.5rem 1.1rem;font-size:.95rem}
+
+header{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.94);-webkit-backdrop-filter:blur(10px);backdrop-filter:blur(10px);border-bottom:1px solid var(--linha)}
+.barra{display:flex;align-items:center;justify-content:space-between;gap:1rem;padding:.6rem 0}
+.marca{display:flex;align-items:center;gap:.6rem;text-decoration:none}
+.marca svg{width:34px;height:34px;color:var(--ink)}
+.marca b{display:block;font:700 1.15rem/1 var(--serif);color:var(--ink)}.marca small{display:block;font-size:.72rem;letter-spacing:.14em;color:var(--muda);font-weight:700}
+.nav{display:flex;gap:1.6rem;align-items:center}.nav a{text-decoration:none;font-weight:600;font-size:.95rem}.nav a:not(.btn):hover{color:var(--cobre)}
+.nav a:not(.btn){display:none}
+@media(min-width:860px){.nav a:not(.btn){display:inline}}
+
+/* topo */
+.hero{background:linear-gradient(160deg,var(--ink),var(--ink2));color:#fff;position:relative;overflow:hidden;padding:clamp(2.6rem,7vw,5.5rem) 0}
+.hero::after{content:"";position:absolute;right:-8%;bottom:-18%;width:min(560px,90vw);aspect-ratio:1;background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64' fill='none' stroke='white' stroke-width='1.2'%3E%3Cpath d='M32 8v46M20 54h24M10 18h44M10 18l-6 16h12zM54 18l-6 16h12z'/%3E%3C/svg%3E") center/contain no-repeat;opacity:.05;pointer-events:none}
+.hero-grid{display:grid;gap:2.2rem;align-items:center;position:relative;z-index:1}
+@media(min-width:900px){.hero-grid{grid-template-columns:1.1fr .9fr}}
+.hero h1{font-size:clamp(2.4rem,1rem + 5.6vw,4.6rem);margin-bottom:1rem;text-wrap:balance}
+.hero p.sub{font-size:1.15rem;color:#cfd8e3;max-width:46ch;margin-bottom:1.6rem}
+.ofertas{display:flex;flex-wrap:wrap;gap:.6rem;margin-bottom:.7rem}
+.ofertas span{padding:.55rem 1rem;border:1px solid rgba(255,255,255,.25);border-radius:10px;font-weight:700;font-size:.95rem;background:rgba(255,255,255,.06)}
+.ofertas b{color:#ffb785}
+.nota{font-size:.82rem;color:#9fb0c4}
+.sim{background:#fff;color:var(--texto);border-radius:18px;padding:1.6rem;box-shadow:0 30px 60px -30px rgba(0,0,0,.6)}
+.sim h2{font-size:1.6rem;margin-bottom:.3rem}.sim p{color:var(--muda);font-size:.95rem;margin-bottom:1.1rem}
+.sim label{display:block;font-weight:700;font-size:.9rem;margin-bottom:.9rem}
+.sim input,.sim select{display:block;width:100%;min-height:50px;margin-top:.3rem;padding:.7rem .9rem;font:600 1rem var(--sans);color:var(--texto);background:var(--papel);border:2px solid transparent;border-radius:10px}
+.sim input:focus,.sim select:focus{outline:0;border-color:var(--azul)}
+.sim .btn{width:100%}.sim .aviso{min-height:1.3em;color:var(--cobre2);font-weight:700;font-size:.9rem;margin-bottom:.6rem}
+
+section{padding:clamp(3rem,8vw,5.5rem) 0}.papel{background:var(--papel)}
+
+/* como funciona */
+.passos{display:grid;gap:1rem;list-style:none;counter-reset:p}
+@media(min-width:760px){.passos{grid-template-columns:repeat(2,1fr)}}@media(min-width:1000px){.passos{grid-template-columns:repeat(4,1fr)}}
+.passos li{counter-increment:p;background:#fff;border:1px solid var(--linha);border-radius:14px;padding:1.4rem}
+.passos li::before{content:counter(p);display:grid;place-items:center;width:2.2rem;height:2.2rem;border-radius:50%;background:var(--ink);color:#fff;font:600 1.1rem var(--serif);margin-bottom:.8rem}
+.passos h3{font-size:1.3rem;margin-bottom:.3rem}.passos p{color:var(--muda);font-size:.97rem}
+.custos{margin-top:1.4rem;padding:1.2rem 1.4rem;border-left:4px solid var(--cobre);background:#fff;border-radius:0 12px 12px 0;color:var(--muda)}
+.custos b{color:var(--texto)}
+
+/* planos */
+.abas{display:flex;gap:.4rem;flex-wrap:wrap;margin-bottom:1.4rem}
+.abas button{min-height:46px;padding:.5rem 1.1rem;border:2px solid var(--ink);background:transparent;color:var(--ink);border-radius:10px;font:700 .95rem var(--sans);cursor:pointer}
+.abas button[aria-selected="true"]{background:var(--ink);color:#fff}
+.tab{width:100%;border-collapse:collapse;background:#fff;border:1px solid var(--linha);border-radius:14px;overflow:hidden}
+.tab th,.tab td{padding:.9rem 1.1rem;text-align:left;border-bottom:1px solid var(--linha)}
+.tab th{font-size:.8rem;letter-spacing:.08em;color:var(--muda);background:#faf8f4}
+.tab tr:last-child td{border-bottom:0}
+.tab td:nth-child(2){font:600 1.35rem var(--serif)}.tab td:last-child{text-align:right}
+.rodape-plano{margin-top:1rem;font-size:.88rem;color:var(--muda);max-width:70ch}
+
+/* consultor */
+.cons{display:grid;gap:2rem;align-items:center}
+@media(min-width:820px){.cons{grid-template-columns:.8fr 1.2fr}}
+.foto{width:min(380px,100%);margin-inline:auto;aspect-ratio:4/5;border-radius:16px;overflow:hidden;background:var(--ink);box-shadow:0 24px 48px -28px rgba(14,31,51,.6)}
+.foto img{width:100%;height:100%;object-fit:cover}
+.foto .ini{height:100%;display:grid;place-items:center;color:#fff;font:600 4rem var(--serif)}
+.cons p{max-width:54ch;color:var(--muda)}.cons p+p{margin-top:1rem}
+.assina{margin-top:1.6rem;padding-left:1rem;border-left:4px solid var(--cobre);font:600 1.3rem/1.3 var(--serif);color:var(--ink)!important}
+
+/* entregas */
+.galeria{display:flex;gap:1rem;overflow-x:auto;scroll-snap-type:x mandatory;padding-bottom:1rem;-webkit-overflow-scrolling:touch}
+.galeria figure{flex:0 0 min(72%,280px);scroll-snap-align:start;cursor:zoom-in}
+.galeria button{all:unset;display:block;width:100%;cursor:zoom-in;border-radius:14px;overflow:hidden;aspect-ratio:4/5;background:var(--ink)}
+.galeria img{width:100%;height:100%;object-fit:cover;transition:transform .5s}.galeria button:hover img{transform:scale(1.04)}
+.galeria button:focus-visible{outline:3px solid var(--cobre);outline-offset:3px}
+.galeria figcaption{margin-top:.5rem;font-weight:700;font-size:.95rem}
+@media(min-width:900px){.galeria{display:grid;grid-template-columns:repeat(4,1fr);overflow:visible}.galeria figure{flex:none}}
+
+/* faq */
+.faq{max-width:800px}
+details{border-bottom:1px solid var(--linha)}
+summary{cursor:pointer;list-style:none;display:flex;justify-content:space-between;gap:1rem;align-items:center;padding:1.1rem 0;font:700 1.05rem var(--sans);min-height:56px}
+summary::-webkit-details-marker{display:none}
+summary::after{content:"+";font:400 1.7rem var(--serif);color:var(--cobre);transition:transform .3s}
+details[open] summary::after{transform:rotate(45deg)}
+details p{padding:0 0 1.2rem;color:var(--muda);max-width:64ch}
+
+/* contato e rodapé */
+.contato{background:var(--ink);color:#fff}
+.contato h2{color:#fff}.contato .lead{color:#cfd8e3}
+.cgrid{display:grid;gap:2rem}
+@media(min-width:860px){.cgrid{grid-template-columns:1fr 1fr;align-items:start}}
+.cartao{padding:1.4rem;border:1px solid rgba(255,255,255,.18);border-radius:14px;background:rgba(255,255,255,.04)}
+.cartao h3{font-size:1.25rem;margin-bottom:.6rem}.cartao p,.cartao a{color:#cfd8e3;font-size:.97rem}.cartao a{display:block;margin-top:.2rem;text-decoration:none;font-weight:700;color:#fff}
+.cartao a:hover{color:#ffb785}
+footer{background:#08141f;color:#9fb0c4;font-size:.85rem;padding:2rem 0 2.6rem}
+footer .wrap{display:grid;gap:1rem}footer b{color:#fff}footer p{max-width:90ch}
+
+.fab{position:fixed;right:1rem;bottom:calc(1rem + env(safe-area-inset-bottom,0px));z-index:45;display:grid;place-items:center;width:58px;height:58px;border-radius:50%;background:var(--cobre);color:#fff;box-shadow:0 10px 24px rgba(0,0,0,.3);transition:transform .3s,opacity .3s}
+.fab svg{width:28px;height:28px;fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+.fab.some{transform:scale(.6);opacity:0;pointer-events:none}
+dialog{margin:auto;border:0;border-radius:14px;background:#000;max-width:min(92vw,560px);max-height:92vh;overflow:auto;color:#fff}
+dialog::backdrop{background:rgba(5,12,20,.85)}
+dialog img{width:100%;height:auto}
+.lb-rod{display:flex;justify-content:space-between;align-items:center;gap:1rem;padding:.8rem 1rem}
+dialog button{min-height:44px;padding:.4rem 1rem;border:0;border-radius:8px;background:var(--cobre);color:#fff;font:700 .95rem var(--sans);cursor:pointer}
+.js .rev{opacity:0;transform:translateY(14px);transition:opacity .7s,transform .7s}.js .rev.vis{opacity:1;transform:none}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.js .rev{transform:none;transition:opacity .01s}*{transition-duration:.01ms!important}}
+</style>
+<script>document.documentElement.className+=" js";</script>
 </head>
-<body class="bg-vw-dark text-slate-100 font-sans antialiased selection:bg-vw-accent selection:text-vw-dark bg-grid">
+<body>
 
-    <!-- TOP ANNOUNCEMENT BAR -->
-    <div class="bg-gradient-to-r from-vw-blue via-vw-light to-vw-blue text-white text-xs sm:text-sm py-2.5 px-4 text-center font-bold tracking-wide border-b border-vw-accent/30 shadow-md">
-        <i class="fa-solid fa-fire text-amber-400 mr-2 animate-bounce"></i> VENDEDOR PÉ QUENTE: As melhores taxas e entrega garantida pelo Consórcio Volkswagen!
-    </div>
-
-    <!-- NAVBAR -->
-    <nav class="sticky top-0 z-40 bg-vw-dark/95 backdrop-blur-md border-b border-slate-800/90 shadow-xl">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
-            <!-- Brand / Logo -->
-            <div class="flex items-center space-x-3">
-                <div class="w-12 h-12 rounded-2xl bg-gradient-to-tr from-vw-blue to-vw-accent flex items-center justify-center font-black text-2xl text-white shadow-lg border border-vw-accent/50 glow-blue btn-floating cursor-pointer">
-                    VW
-                </div>
-                <div>
-                    <span class="block font-black text-lg tracking-wider text-white leading-tight">HYAGO <span class="text-vw-accent">LIBRA</span></span>
-                    <span class="block text-xs text-amber-400 font-bold flex items-center gap-1">
-                        <i class="fa-solid fa-fire text-amber-400"></i> Vendedor Pé Quente
-                    </span>
-                </div>
-            </div>
-
-            <!-- Social Links & Action -->
-            <div class="flex items-center space-x-3 sm:space-x-4">
-                <a href="https://www.instagram.com/hyagogrupolibra/" target="_blank" rel="noopener noreferrer" class="btn-floating hidden sm:flex items-center space-x-2 bg-slate-900/90 hover:bg-slate-800 text-slate-200 px-4 py-2.5 rounded-2xl text-sm font-semibold border border-slate-700/80 shadow-md">
-                    <i class="fa-brands fa-instagram text-pink-500 text-lg"></i>
-                    <span>@hyagogrupolibra</span>
-                </a>
-                <a href="https://wa.me/5598981578787?text=Ol%C3%A1%20Hyago!%20Vim%20pelo%20site%20e%20gostaria%20de%20mais%20informa%C3%A7%C3%B5es%20sobre%20o%20Cons%C3%B3rcio%20Volkswagen." target="_blank" rel="noopener noreferrer" class="btn-floating bg-emerald-600 hover:bg-emerald-500 text-white font-extrabold px-5 sm:px-6 py-2.5 rounded-2xl text-sm flex items-center space-x-2 shadow-lg glow-green">
-                    <i class="fa-brands fa-whatsapp text-lg"></i>
-                    <span class="hidden sm:inline">Falar com Hyago</span>
-                    <span class="sm:hidden">Contato</span>
-                </a>
-            </div>
-        </div>
+<header>
+  <div class="wrap barra">
+    <a class="marca" href="#topo" aria-label="Grupo Libra Consórcio, início">
+      <svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M32 8v46M20 54h24M10 18h44M10 18l-6 16h12zM54 18l-6 16h12z"/></svg>
+      <span><b>Grupo Libra</b><small>CONSÓRCIO</small></span>
+    </a>
+    <nav class="nav" aria-label="Principal">
+      <a href="#como">Como funciona</a><a href="#planos">Planos</a><a href="#consultor">Consultor</a><a href="#duvidas">Dúvidas</a>
+      <a class="btn peq" href="#simular">Simular</a>
     </nav>
+  </div>
+</header>
 
-    <!-- HERO SECTION -->
-    <header class="relative pt-10 pb-16 lg:pt-16 lg:pb-24 overflow-hidden">
-        <div class="absolute top-1/3 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-vw-accent/10 rounded-full blur-3xl pointer-events-none"></div>
-        
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
-            <div class="text-center max-w-4xl mx-auto space-y-6">
-                
-                <!-- Central Bank & Pé Quente Badges -->
-                <div class="flex flex-wrap justify-center items-center gap-3">
-                    <div class="btn-floating inline-flex items-center space-x-2 bg-vw-blue/90 border border-vw-accent/40 text-vw-accent px-4 py-1.5 rounded-full text-xs sm:text-sm font-bold shadow-md cursor-default">
-                        <i class="fa-solid fa-shield-halved text-vw-accent"></i>
-                        <span>REGULAMENTADO PELO BANCO CENTRAL DO BRASIL</span>
-                    </div>
-                    <div class="btn-floating inline-flex items-center space-x-1.5 badge-flame text-slate-950 px-4 py-1.5 rounded-full text-xs sm:text-sm font-black shadow-lg glow-gold cursor-default">
-                        <i class="fa-solid fa-fire text-slate-950"></i>
-                        <span>PÉ QUENTE DE CONTEMPLAÇÃO</span>
-                    </div>
-                </div>
-
-                <!-- Main Title -->
-                <h1 class="text-3xl sm:text-5xl lg:text-6xl font-black text-white leading-tight tracking-tight">
-                    Conquiste seu Polo 0km ou Seminovo <span class="bg-gradient-to-r from-vw-accent via-sky-300 to-vw-light bg-clip-text text-transparent">Direto de Fábrica</span>
-                </h1>
-
-                <!-- Subtitle -->
-                <p class="text-slate-300 text-base sm:text-xl font-normal max-w-2xl mx-auto leading-relaxed">
-                    Com a consultoria do Hyago no Grupo Libra, você garante a melhor estratégia de lance e parcelas acessíveis sem juros abusivos.
-                </p>
-
-                <!-- CTA Buttons -->
-                <div class="pt-4 flex flex-col sm:flex-row items-center justify-center gap-4">
-                    <a href="#planos" class="btn-floating w-full sm:w-auto bg-gradient-to-r from-vw-light via-blue-600 to-vw-accent hover:opacity-95 text-white font-black px-8 py-4 rounded-2xl shadow-xl glow-blue flex items-center justify-center space-x-3 text-lg">
-                        <span>Ver Tabela de Parcelas</span>
-                        <i class="fa-solid fa-arrow-down"></i>
-                    </a>
-                    <a href="#apresentacao" class="btn-floating w-full sm:w-auto bg-slate-900/90 hover:bg-slate-800 text-amber-400 font-bold px-8 py-4 rounded-2xl border border-amber-500/40 flex items-center justify-center space-x-3 text-lg shadow-lg">
-                        <i class="fa-solid fa-user-tie text-amber-400"></i>
-                        <span>Conhecer o Consultor</span>
-                    </a>
-                </div>
-
-                <!-- Fast Highlights Badges -->
-                <div class="pt-8 grid grid-cols-2 md:grid-cols-4 gap-3 sm:gap-4 max-w-4xl mx-auto text-left">
-                    <div class="glass-card btn-floating p-4 rounded-2xl flex items-center space-x-3 border border-slate-700/50">
-                        <div class="w-10 h-10 rounded-xl bg-vw-accent/10 border border-vw-accent/30 flex items-center justify-center text-vw-accent text-xl">
-                            <i class="fa-solid fa-percent"></i>
-                        </div>
-                        <div>
-                            <div class="text-xs text-slate-400 font-medium">Financiamento</div>
-                            <div class="text-sm sm:text-base font-bold text-white">ZERO Juros</div>
-                        </div>
-                    </div>
-                    <div class="glass-card btn-floating p-4 rounded-2xl flex items-center space-x-3 border border-slate-700/50">
-                        <div class="w-10 h-10 rounded-xl bg-vw-accent/10 border border-vw-accent/30 flex items-center justify-center text-vw-accent text-xl">
-                            <i class="fa-solid fa-industry"></i>
-                        </div>
-                        <div>
-                            <div class="text-xs text-slate-400 font-medium">Origem da Cota</div>
-                            <div class="text-sm sm:text-base font-bold text-white">Direto de Fábrica</div>
-                        </div>
-                    </div>
-                    <div class="glass-card btn-floating p-4 rounded-2xl flex items-center space-x-3 border border-slate-700/50">
-                        <div class="w-10 h-10 rounded-xl bg-vw-accent/10 border border-vw-accent/30 flex items-center justify-center text-vw-accent text-xl">
-                            <i class="fa-solid fa-calendar-check"></i>
-                        </div>
-                        <div>
-                            <div class="text-xs text-slate-400 font-medium">Prazos</div>
-                            <div class="text-sm sm:text-base font-bold text-white">36x a 100x</div>
-                        </div>
-                    </div>
-                    <div class="glass-card btn-floating p-4 rounded-2xl flex items-center space-x-3 border border-slate-700/50">
-                        <div class="w-10 h-10 rounded-xl bg-vw-accent/10 border border-vw-accent/30 flex items-center justify-center text-vw-accent text-xl">
-                            <i class="fa-solid fa-shield-cat"></i>
-                        </div>
-                        <div>
-                            <div class="text-xs text-slate-400 font-medium">Garantia</div>
-                            <div class="text-sm sm:text-base font-bold text-white">Banco Central</div>
-                        </div>
-                    </div>
-                </div>
-
-            </div>
+<main id="topo">
+  <section class="hero" id="simular" style="padding-top:clamp(2.6rem,7vw,5rem)">
+    <div class="wrap hero-grid">
+      <div>
+        <h1>Chegou a hora de tirar seu plano do papel.</h1>
+        <p class="sub">Conquiste o seu carro com o Grupo Libra Consórcio. Fale com nossa equipe e faça uma simulação.</p>
+        <div class="ofertas">
+          <span>Carros a partir de <b>R$ 446</b></span>
+          <span>Motos a partir de <b>R$ 327</b></span>
+          <span>Sem entrada, juros ou análise de crédito</span>
         </div>
-    </header>
-
-    <!-- SECTION: APRESENTAÇÃO DO CONSULTOR HYAGO MATHEUS -->
-    <section id="apresentacao" class="py-16 bg-slate-900 border-t border-b border-slate-800 relative">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
-                
-                <!-- Left: Profile Image -->
-                <div class="lg:col-span-5 relative">
-                    <div class="absolute -inset-2 bg-gradient-to-r from-vw-light to-amber-500 rounded-3xl blur-lg opacity-30"></div>
-                    <div class="relative glass-card p-3 rounded-3xl overflow-hidden border border-slate-700 shadow-2xl">
-                        <div class="aspect-[4/5] rounded-2xl overflow-hidden bg-slate-950 cursor-pointer btn-floating" onclick="openLightbox('WhatsApp Image 2026-11-03 at 18.43.22.jpeg', 'Hyago Matheus - Consultor de Consórcio Grupo Libra')">
-                            <img src="WhatsApp Image 2026-11-03 at 18.43.22.jpeg" alt="Hyago Matheus Consultor Grupo Libra" class="w-full h-full object-cover">
-                        </div>
-                        <div class="absolute bottom-6 left-6 right-6 bg-vw-dark/90 backdrop-blur-md p-4 rounded-2xl border border-vw-accent/30 text-center shadow-lg">
-                            <span class="text-amber-400 font-bold text-xs uppercase tracking-wider block">CONSULTOR AUTORIZADO</span>
-                            <h3 class="text-white font-black text-lg">Hyago Matheus</h3>
-                            <span class="text-slate-400 text-xs">Grupo Libra • Consórcio Volkswagen</span>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Right: Bio and Presentation Text -->
-                <div class="lg:col-span-7 space-y-6">
-                    <div class="btn-floating inline-flex items-center space-x-2 bg-vw-blue/80 border border-vw-accent/40 text-vw-accent px-4 py-1.5 rounded-full text-xs font-bold cursor-default shadow-md">
-                        <i class="fa-solid fa-user-check text-vw-accent"></i>
-                        <span>ATENDIMENTO EXCLUSIVO E PERSONALIZADO</span>
-                    </div>
-
-                    <h2 class="text-3xl sm:text-4xl font-black text-white leading-tight">
-                        Olá, sou Hyago Matheus!
-                    </h2>
-
-                    <p class="text-slate-300 text-base sm:text-lg leading-relaxed">
-                        Meu trabalho é ajudar você a transformar seus planos em conquistas por meio do consórcio. Seja para adquirir seu primeiro veículo, conquistar sua casa própria ou investir em novos projetos, estou aqui para encontrar a melhor solução para seus objetivos.
-                    </p>
-
-                    <p class="text-slate-300 text-base sm:text-lg leading-relaxed">
-                        Acredito que grandes conquistas começam com planejamento e boas escolhas. Por isso, ofereço um atendimento personalizado, transparente e focado em entender suas necessidades, acompanhando você em cada etapa dessa jornada.
-                    </p>
-
-                    <div class="btn-floating p-5 rounded-2xl bg-gradient-to-r from-vw-blue/40 to-slate-900 border border-vw-accent/30 flex items-center space-x-4 shadow-lg">
-                        <div class="w-12 h-12 rounded-xl badge-flame flex items-center justify-center text-slate-950 text-2xl font-black shrink-0 glow-gold">
-                            <i class="fa-solid fa-quote-left"></i>
-                        </div>
-                        <div>
-                            <span class="text-amber-400 font-extrabold text-sm block">Seu sonho merece um plano.</span>
-                            <span class="text-white font-bold text-lg">Vamos tirar seus projetos do papel?</span>
-                        </div>
-                    </div>
-
-                    <div class="pt-2 flex flex-wrap gap-4">
-                        <a href="https://wa.me/5598981578787?text=Ol%C3%A1%20Hyago!%20Li%20sua%20apresenta%C3%e7%C3%a3o%20no%20site%20e%20quero%20conversar%20sobre%20um%20plano." target="_blank" rel="noopener noreferrer" class="btn-floating bg-emerald-600 hover:bg-emerald-500 text-white font-extrabold px-6 py-3.5 rounded-2xl text-sm flex items-center space-x-2 shadow-lg glow-green">
-                            <i class="fa-brands fa-whatsapp text-lg"></i>
-                            <span>Falar Diretamente com o Hyago</span>
-                        </a>
-                        <a href="https://www.instagram.com/hyagogrupolibra/" target="_blank" rel="noopener noreferrer" class="btn-floating bg-slate-900 hover:bg-slate-800 text-slate-200 font-bold px-6 py-3.5 rounded-2xl border border-slate-700 text-sm flex items-center space-x-2 shadow-md">
-                            <i class="fa-brands fa-instagram text-pink-500 text-lg"></i>
-                            <span>@hyagogrupolibra</span>
-                        </a>
-                    </div>
-                </div>
-
-            </div>
-        </div>
-    </section>
-
-    <!-- SECTION: VENDEDOR PÉ QUENTE - CLIENTES CONTEMPLADOS -->
-    <section id="entregas" class="py-16 bg-slate-950 border-t border-slate-800/80 relative">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            
-            <!-- Section Header -->
-            <div class="text-center max-w-3xl mx-auto mb-12 space-y-3">
-                <div class="btn-floating inline-flex items-center space-x-2 badge-flame text-slate-950 font-black px-4 py-1.5 rounded-full text-xs uppercase tracking-wider shadow-lg cursor-default">
-                    <i class="fa-solid fa-fire text-slate-950"></i>
-                    <span>PROVA SOCIAL & AUTORIDADE</span>
-                </div>
-                <h2 class="text-3xl sm:text-4xl font-black text-white">Hyago: O Vendedor Pé Quente</h2>
-                <p class="text-slate-300 text-sm sm:text-base">
-                    Confira a galeria completa com nossos clientes contemplados que já realizaram o sonho do veículo ou moto própria através da nossa consultoria. Clique em qualquer foto para ampliar!
-                </p>
-            </div>
-
-            <!-- Deliveries Photo Gallery -->
-            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-                
-                <!-- Client 1 -->
-                <div class="glass-card btn-floating rounded-3xl overflow-hidden shadow-xl flex flex-col justify-between">
-                    <div class="relative aspect-[4/5] overflow-hidden bg-slate-900 cursor-pointer" onclick="openLightbox('hyagoecasal.jpeg', 'Entrega Fiat Argo - Cliente Contemplado')">
-                        <img src="hyagoecasal.jpeg" alt="Entrega Fiat Argo" class="w-full h-full object-cover">
-                        <div class="absolute inset-0 bg-gradient-to-t from-vw-dark via-transparent to-transparent opacity-80"></div>
-                        <span class="absolute top-4 left-4 bg-emerald-500 text-white font-extrabold text-xs px-3 py-1 rounded-full shadow-lg flex items-center gap-1">
-                            <i class="fa-solid fa-circle-check"></i> ENTREGUE
-                        </span>
-                        <div class="absolute bottom-4 left-4 right-4">
-                            <span class="text-xs text-amber-400 font-bold tracking-widest uppercase block mb-1">CONQUISTA REALIZADA</span>
-                            <h3 class="text-base font-black text-white">Entrega Fiat Argo</h3>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Client 2 -->
-                <div class="glass-card btn-floating rounded-3xl overflow-hidden shadow-xl flex flex-col justify-between">
-                    <div class="relative aspect-[4/5] overflow-hidden bg-slate-900 cursor-pointer" onclick="openLightbox('WhatsApp Image 2026-11-03 at 18.21.32.jpeg', 'Entrega Veículo Família - Contemplado')">
-                        <img src="WhatsApp Image 2026-11-03 at 18.21.32.jpeg" alt="Entrega Veículo Família" class="w-full h-full object-cover">
-                        <div class="absolute inset-0 bg-gradient-to-t from-vw-dark via-transparent to-transparent opacity-80"></div>
-                        <span class="absolute top-4 left-4 bg-emerald-500 text-white font-extrabold text-xs px-3 py-1 rounded-full shadow-lg flex items-center gap-1">
-                            <i class="fa-solid fa-circle-check"></i> ENTREGUE
-                        </span>
-                        <div class="absolute bottom-4 left-4 right-4">
-                            <span class="text-xs text-amber-400 font-bold tracking-widest uppercase block mb-1">SONHO EM FAMÍLIA</span>
-                            <h3 class="text-base font-black text-white">Carro na Garantia</h3>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Client 3 -->
-                <div class="glass-card btn-floating rounded-3xl overflow-hidden shadow-xl flex flex-col justify-between">
-                    <div class="relative aspect-[4/5] overflow-hidden bg-slate-900 cursor-pointer" onclick="openLightbox('argo.jpeg', 'Entrega Veículo com Chave na Mão')">
-                        <img src="argo.jpeg" alt="Entrega Veículo Chave na Mão" class="w-full h-full object-cover">
-                        <div class="absolute inset-0 bg-gradient-to-t from-vw-dark via-transparent to-transparent opacity-80"></div>
-                        <span class="absolute top-4 left-4 bg-emerald-500 text-white font-extrabold text-xs px-3 py-1 rounded-full shadow-lg flex items-center gap-1">
-                            <i class="fa-solid fa-circle-check"></i> ENTREGUE
-                        </span>
-                        <div class="absolute bottom-4 left-4 right-4">
-                            <span class="text-xs text-amber-400 font-bold tracking-widest uppercase block mb-1">CHAVE NA MÃO</span>
-                            <h3 class="text-base font-black text-white">Cliente Contemplado</h3>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Client 4 -->
-                <div class="glass-card btn-floating rounded-3xl overflow-hidden shadow-xl flex flex-col justify-between">
-                    <div class="relative aspect-[4/5] overflow-hidden bg-slate-900 cursor-pointer" onclick="openLightbox('WhatsApp Image 2026-11-03 at 18.21.33.jpeg', 'Entrega Toyota Corolla Branco')">
-                        <img src="WhatsApp Image 2026-11-03 at 18.21.33.jpeg" alt="Entrega Toyota Corolla" class="w-full h-full object-cover">
-                        <div class="absolute inset-0 bg-gradient-to-t from-vw-dark via-transparent to-transparent opacity-80"></div>
-                        <span class="absolute top-4 left-4 bg-emerald-500 text-white font-extrabold text-xs px-3 py-1 rounded-full shadow-lg flex items-center gap-1">
-                            <i class="fa-solid fa-circle-check"></i> ENTREGUE
-                        </span>
-                        <div class="absolute bottom-4 left-4 right-4">
-                            <span class="text-xs text-amber-400 font-bold tracking-widest uppercase block mb-1">SEDAN PREMIUM</span>
-                            <h3 class="text-base font-black text-white">Entrega Corolla</h3>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Client 5 -->
-                <div class="glass-card btn-floating rounded-3xl overflow-hidden shadow-xl flex flex-col justify-between">
-                    <div class="relative aspect-[4/5] overflow-hidden bg-slate-900 cursor-pointer" onclick="openLightbox('hyago2.jpeg', 'Entrega Yamaha XTZ Lander 250 Zero KM')">
-                        <img src="hyago2.jpeg" alt="Entrega Yamaha Lander 250" class="w-full h-full object-cover">
-                        <div class="absolute inset-0 bg-gradient-to-t from-vw-dark via-transparent to-transparent opacity-80"></div>
-                        <span class="absolute top-4 left-4 bg-emerald-500 text-white font-extrabold text-xs px-3 py-1 rounded-full shadow-lg flex items-center gap-1">
-                            <i class="fa-solid fa-circle-check"></i> ENTREGUE
-                        </span>
-                        <div class="absolute bottom-4 left-4 right-4">
-                            <span class="text-xs text-amber-400 font-bold tracking-widest uppercase block mb-1">DUAS RODAS ZERO KM</span>
-                            <h3 class="text-base font-black text-white">Yamaha Lander 250</h3>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Client 6 -->
-                <div class="glass-card btn-floating rounded-3xl overflow-hidden shadow-xl flex flex-col justify-between">
-                    <div class="relative aspect-[4/5] overflow-hidden bg-slate-900 cursor-pointer" onclick="openLightbox('hyagocronos.jpeg', 'Entrega Fiat Cronos Branco')">
-                        <img src="hyagocronos.jpeg" alt="Entrega Fiat Cronos" class="w-full h-full object-cover">
-                        <div class="absolute inset-0 bg-gradient-to-t from-vw-dark via-transparent to-transparent opacity-80"></div>
-                        <span class="absolute top-4 left-4 bg-emerald-500 text-white font-extrabold text-xs px-3 py-1 rounded-full shadow-lg flex items-center gap-1">
-                            <i class="fa-solid fa-circle-check"></i> ENTREGUE
-                        </span>
-                        <div class="absolute bottom-4 left-4 right-4">
-                            <span class="text-xs text-amber-400 font-bold tracking-widest uppercase block mb-1">SEDAN ESPAÇOSO</span>
-                            <h3 class="text-base font-black text-white">Fiat Cronos Contemplado</h3>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Client 7 -->
-                <div class="glass-card btn-floating rounded-3xl overflow-hidden shadow-xl flex flex-col justify-between">
-                    <div class="relative aspect-[4/5] overflow-hidden bg-slate-900 cursor-pointer" onclick="openLightbox('hyagofazer.jpeg', 'Entrega Yamaha Fazer 250')">
-                        <img src="hyagofazer.jpeg" alt="Entrega Yamaha Fazer 250" class="w-full h-full object-cover">
-                        <div class="absolute inset-0 bg-gradient-to-t from-vw-dark via-transparent to-transparent opacity-80"></div>
-                        <span class="absolute top-4 left-4 bg-emerald-500 text-white font-extrabold text-xs px-3 py-1 rounded-full shadow-lg flex items-center gap-1">
-                            <i class="fa-solid fa-circle-check"></i> ENTREGUE
-                        </span>
-                        <div class="absolute bottom-4 left-4 right-4">
-                            <span class="text-xs text-amber-400 font-bold tracking-widest uppercase block mb-1">ESTILO & VELOCIDADE</span>
-                            <h3 class="text-base font-black text-white">Yamaha Fazer 250</h3>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- RESERVED CARD FOR NEXT CLIENT -->
-                <div class="btn-floating border-2 border-dashed border-amber-500/50 rounded-3xl p-6 bg-amber-500/5 flex flex-col items-center justify-center text-center space-y-4 hover:bg-amber-500/10 shadow-xl aspect-[4/5]">
-                    <div class="w-16 h-16 rounded-full badge-flame flex items-center justify-center text-slate-950 text-2xl shadow-lg glow-gold">
-                        <i class="fa-solid fa-user-plus"></i>
-                    </div>
-                    <div>
-                        <span class="text-amber-400 text-xs font-bold uppercase tracking-wider block">RESERVA ABERTA</span>
-                        <h3 class="text-lg font-extrabold text-white">Sua Foto Estará Aqui!</h3>
-                        <p class="text-slate-400 text-xs mt-2 leading-relaxed">
-                            Seja o próximo cliente contemplado do Hyago Pé Quente.
-                        </p>
-                    </div>
-                    <a href="https://wa.me/5598981578787?text=Ol%C3%A1%20Hyago!%20Quero%20ser%20o%20pr%C3%B3ximo%20cliente%20contemplado%20do%20cons%C3%B3rcio." target="_blank" rel="noopener noreferrer" class="btn-floating w-full bg-amber-500 hover:bg-amber-400 text-slate-950 font-black py-3 px-4 rounded-2xl text-xs uppercase tracking-wider shadow-lg">
-                        <i class="fa-solid fa-key mr-1"></i> Quero Ser o Próximo
-                    </a>
-                </div>
-
-            </div>
-
-        </div>
-    </section>
-
-    <!-- INTERACTIVE SIMULATOR / PRICING TABLES -->
-    <section id="planos" class="py-16 bg-vw-dark border-t border-b border-slate-800/80 relative">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            
-            <div class="text-center max-w-3xl mx-auto mb-12 space-y-3">
-                <span class="text-vw-accent font-bold tracking-widest text-xs uppercase">Tabela de Condições Exclusivas</span>
-                <h2 class="text-3xl sm:text-4xl font-extrabold text-white">Escolha a Proposta Ideal para Você</h2>
-                <p class="text-slate-400 text-sm sm:text-base">Navegue pelas abas abaixo e selecione a parcela que cabe no seu bolso.</p>
-            </div>
-
-            <!-- TAB CONTROLS -->
-            <div class="flex flex-col sm:flex-row justify-center items-center gap-3 sm:gap-4 mb-10 max-w-3xl mx-auto bg-slate-900/90 p-2.5 rounded-3xl border border-slate-800 shadow-xl">
-                <button onclick="switchTab('polo0km')" id="tab-polo0km" class="btn-floating w-full sm:w-1/3 py-3.5 px-4 rounded-2xl text-sm font-bold flex items-center justify-center space-x-2 bg-vw-light text-white shadow-lg">
-                    <i class="fa-solid fa-car text-base"></i>
-                    <span>Polo 0km (2026/27)</span>
-                </button>
-                <button onclick="switchTab('polo2025')" id="tab-polo2025" class="btn-floating w-full sm:w-1/3 py-3.5 px-4 rounded-2xl text-sm font-bold text-slate-400 hover:text-white flex items-center justify-center space-x-2">
-                    <i class="fa-solid fa-car-side text-base"></i>
-                    <span>Polo 2025 Seminovo</span>
-                </button>
-                <button onclick="switchTab('polo2024')" id="tab-polo2024" class="btn-floating w-full sm:w-1/3 py-3.5 px-4 rounded-2xl text-sm font-bold text-slate-400 hover:text-white flex items-center justify-center space-x-2">
-                    <i class="fa-solid fa-car-rear text-base"></i>
-                    <span>Polo 2024/2025</span>
-                </button>
-            </div>
-
-            <!-- TAB 1 CONTENT: POLO 0KM 2026/27 -->
-            <div id="content-polo0km" class="tab-content block">
-                <div class="glass-card border border-vw-light/40 rounded-3xl p-6 sm:p-8 max-w-5xl mx-auto shadow-2xl relative overflow-hidden">
-                    <div class="flex flex-col md:flex-row items-center justify-between border-b border-slate-800 pb-6 mb-8 gap-4">
-                        <div>
-                            <span class="inline-block bg-vw-accent/20 text-vw-accent text-xs font-bold px-3 py-1 rounded-full mb-2">MODELO ZERO KM DIRETO DE FÁBRICA</span>
-                            <h3 class="text-2xl sm:text-3xl font-black text-white">Volkswagen Polo 0km (2026/2027)</h3>
-                            <p class="text-slate-400 text-sm mt-1">Proposta exclusiva Consórcio Volkswagen Grupo Libra.</p>
-                        </div>
-                        <div class="btn-floating text-right flex items-center space-x-2 bg-slate-900/80 px-4 py-2 rounded-2xl border border-slate-800 shadow-md cursor-default">
-                            <i class="fa-solid fa-fire text-amber-500"></i>
-                            <span class="text-xs text-amber-400 font-bold uppercase tracking-wider">Vagas Garantidas por Reserva</span>
-                        </div>
-                    </div>
-
-                    <!-- Pricing Cards Grid -->
-                    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
-                        <!-- 100x -->
-                        <div class="btn-floating bg-slate-900/90 border border-slate-800 hover:border-vw-accent p-5 rounded-3xl flex flex-col justify-between shadow-xl">
-                            <div>
-                                <span class="text-xs font-bold text-vw-accent bg-vw-accent/10 px-2.5 py-1 rounded-md">100 MESES</span>
-                                <div class="mt-4 mb-2">
-                                    <span class="text-slate-400 text-xs">Parcela de</span>
-                                    <div class="text-2xl sm:text-3xl font-black text-white">R$ 730<span class="text-lg text-slate-300">,13</span></div>
-                                </div>
-                            </div>
-                            <a href="https://wa.me/5598981578787?text=Ol%C3%A1%20Hyago!%20Vi%20no%20site%20o%20Polo%200km%20(2026/2027)%20em%20100x%20de%20R$%20730,13%20e%20quero%20reservar." target="_blank" rel="noopener noreferrer" class="btn-floating mt-4 w-full bg-emerald-600 hover:bg-emerald-500 text-white font-bold py-3 px-4 rounded-2xl text-center text-sm flex items-center justify-center space-x-2 shadow-lg glow-green">
-                                <i class="fa-brands fa-whatsapp text-lg"></i>
-                                <span>Reservar no WhatsApp</span>
-                            </a>
-                        </div>
-                        <!-- 90x -->
-                        <div class="btn-floating bg-slate-900/90 border border-slate-800 hover:border-vw-accent p-5 rounded-3xl flex flex-col justify-between shadow-xl">
-                            <div>
-                                <span class="text-xs font-bold text-vw-accent bg-vw-accent/10 px-2.5 py-1 rounded-md">90 MESES</span>
-                                <div class="mt-4 mb-2">
-                                    <span class="text-slate-400 text-xs">Parcela de</span>
-                                    <div class="text-2xl sm:text-3xl font-black text-white">R$ 803<span class="text-lg text-slate-300">,63</span></div>
-                                </div>
-                            </div>
-                            <a href="https://wa.me/5598981578787?text=Ol%C3%A1%20Hyago!%20Vi%20no%20site%20o%20Polo%200km%20(2026/2027)%20em%2090x%20de%20R$%20803,63%20e%20quero%20reservar." target="_blank" rel="noopener noreferrer" class="btn-floating mt-4 w-full bg-emerald-600 hover:bg-emerald-500 text-white font-bold py-3 px-4 rounded-2xl text-center text-sm flex items-center justify-center space-x-2 shadow-lg glow-green">
-                                <i class="fa-brands fa-whatsapp text-lg"></i>
-                                <span>Reservar no WhatsApp</span>
-                            </a>
-                        </div>
-                        <!-- 80x -->
-                        <div class="btn-floating bg-slate-900/90 border border-slate-800 hover:border-vw-accent p-5 rounded-3xl flex flex-col justify-between shadow-xl">
-                            <div>
-                                <span class="text-xs font-bold text-vw-accent bg-vw-accent/10 px-2.5 py-1 rounded-md">80 MESES</span>
-                                <div class="mt-4 mb-2">
-                                    <span class="text-slate-400 text-xs">Parcela de</span>
-                                    <div class="text-2xl sm:text-3xl font-black text-white">R$ 1.173<span class="text-lg text-slate-300">,39</span></div>
-                                </div>
-                            </div>
-                            <a href="https://wa.me/5598981578787?text=Ol%C3%A1%20Hyago!%20Vi%20no%20site%20o%20Polo%200km%20(2026/2027)%20em%2080x%20de%20R$%201.173,39%20e%20quero%20reservar." target="_blank" rel="noopener noreferrer" class="btn-floating mt-4 w-full bg-emerald-600 hover:bg-emerald-500 text-white font-bold py-3 px-4 rounded-2xl text-center text-sm flex items-center justify-center space-x-2 shadow-lg glow-green">
-                                <i class="fa-brands fa-whatsapp text-lg"></i>
-                                <span>Reservar no WhatsApp</span>
-                            </a>
-                        </div>
-                        <!-- 70x -->
-                        <div class="btn-floating bg-slate-900/90 border border-slate-800 hover:border-vw-accent p-5 rounded-3xl flex flex-col justify-between shadow-xl">
-                            <div>
-                                <span class="text-xs font-bold text-vw-accent bg-vw-accent/10 px-2.5 py-1 rounded-md">70 MESES</span>
-                                <div class="mt-4 mb-2">
-                                    <span class="text-slate-400 text-xs">Parcela de</span>
-                                    <div class="text-2xl sm:text-3xl font-black text-white">R$ 1.331<span class="text-lg text-slate-300">,29</span></div>
-                                </div>
-                            </div>
-                            <a href="https://wa.me/5598981578787?text=Ol%C3%A1%20Hyago!%20Vi%20no%20site%20o%20Polo%200km%20(2026/2027)%20em%2070x%20de%20R$%201.331,29%20e%20quero%20reservar." target="_blank" rel="noopener noreferrer" class="btn-floating mt-4 w-full bg-emerald-600 hover:bg-emerald-500 text-white font-bold py-3 px-4 rounded-2xl text-center text-sm flex items-center justify-center space-x-2 shadow-lg glow-green">
-                                <i class="fa-brands fa-whatsapp text-lg"></i>
-                                <span>Reservar no WhatsApp</span>
-                            </a>
-                        </div>
-                        <!-- 60x -->
-                        <div class="btn-floating bg-slate-900/90 border border-slate-800 hover:border-vw-accent p-5 rounded-3xl flex flex-col justify-between shadow-xl">
-                            <div>
-                                <span class="text-xs font-bold text-vw-accent bg-vw-accent/10 px-2.5 py-1 rounded-md">60 MESES</span>
-                                <div class="mt-4 mb-2">
-                                    <span class="text-slate-400 text-xs">Parcela de</span>
-                                    <div class="text-2xl sm:text-3xl font-black text-white">R$ 1.541<span class="text-lg text-slate-300">,83</span></div>
-                                </div>
-                            </div>
-                            <a href="https://wa.me/5598981578787?text=Ol%C3%A1%20Hyago!%20Vi%20no%20site%20o%20Polo%200km%20(2026/2027)%20em%2060x%20de%20R$%201.541,83%20e%20quero%20reservar." target="_blank" rel="noopener noreferrer" class="btn-floating mt-4 w-full bg-emerald-600 hover:bg-emerald-500 text-white font-bold py-3 px-4 rounded-2xl text-center text-sm flex items-center justify-center space-x-2 shadow-lg glow-green">
-                                <i class="fa-brands fa-whatsapp text-lg"></i>
-                                <span>Reservar no WhatsApp</span>
-                            </a>
-                        </div>
-                        <!-- 50x -->
-                        <div class="btn-floating bg-slate-900/90 border border-slate-800 hover:border-vw-accent p-5 rounded-3xl flex flex-col justify-between shadow-xl">
-                            <div>
-                                <span class="text-xs font-bold text-vw-accent bg-vw-accent/10 px-2.5 py-1 rounded-md">50 MESES</span>
-                                <div class="mt-4 mb-2">
-                                    <span class="text-slate-400 text-xs">Parcela de</span>
-                                    <div class="text-2xl sm:text-3xl font-black text-white">R$ 1.836<span class="text-lg text-slate-300">,58</span></div>
-                                </div>
-                            </div>
-                            <a href="https://wa.me/5598981578787?text=Ol%C3%A1%20Hyago!%20Vi%20no%20site%20o%20Polo%200km%20(2026/2027)%20em%2050x%20de%20R$%201.836,58%20e%20quero%20reservar." target="_blank" rel="noopener noreferrer" class="btn-floating mt-4 w-full bg-emerald-600 hover:bg-emerald-500 text-white font-bold py-3 px-4 rounded-2xl text-center text-sm flex items-center justify-center space-x-2 shadow-lg glow-green">
-                                <i class="fa-brands fa-whatsapp text-lg"></i>
-                                <span>Reservar no WhatsApp</span>
-                            </a>
-                        </div>
-                        <!-- 36x -->
-                        <div class="btn-floating bg-slate-900/90 border border-vw-light hover:border-vw-accent p-5 rounded-3xl flex flex-col justify-between sm:col-span-2 lg:col-span-1 shadow-xl">
-                            <div>
-                                <span class="text-xs font-bold text-white bg-vw-light px-2.5 py-1 rounded-md">PLANO ACELERADO 36X</span>
-                                <div class="mt-4 mb-2">
-                                    <span class="text-slate-400 text-xs">Parcela de</span>
-                                    <div class="text-2xl sm:text-3xl font-black text-white">R$ 2.524<span class="text-lg text-slate-300">,33</span></div>
-                                </div>
-                            </div>
-                            <a href="https://wa.me/5598981578787?text=Ol%C3%A1%20Hyago!%20Vi%20no%20site%20o%20Polo%200km%20(2026/2027)%20em%2036x%20de%20R$%202.524,33%20e%20quero%20reservar." target="_blank" rel="noopener noreferrer" class="btn-floating mt-4 w-full bg-emerald-600 hover:bg-emerald-500 text-white font-bold py-3 px-4 rounded-2xl text-center text-sm flex items-center justify-center space-x-2 shadow-lg glow-green">
-                                <i class="fa-brands fa-whatsapp text-lg"></i>
-                                <span>Reservar no WhatsApp</span>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- TAB 2 CONTENT: POLO 2025 SEMINOVO -->
-            <div id="content-polo2025" class="tab-content hidden">
-                <div class="glass-card border border-vw-light/40 rounded-3xl p-6 sm:p-8 max-w-5xl mx-auto shadow-2xl relative overflow-hidden">
-                    <div class="flex flex-col md:flex-row items-center justify-between border-b border-slate-800 pb-6 mb-8 gap-4">
-                        <div>
-                            <span class="inline-block bg-sky-500/20 text-sky-400 text-xs font-bold px-3 py-1 rounded-full mb-2">SEMINOVO SELEVISIONADO REVISADO</span>
-                            <h3 class="text-2xl sm:text-3xl font-black text-white">Volkswagen Polo 2025 Seminovo</h3>
-                            <p class="text-slate-400 text-sm mt-1">Condições especiais com baixa quilometragem e garantia.</p>
-                        </div>
-                        <div class="btn-floating text-right flex items-center space-x-2 bg-slate-900/80 px-4 py-2 rounded-2xl border border-slate-800 shadow-md cursor-default">
-                            <i class="fa-solid fa-tags text-sky-400"></i>
-                            <span class="text-xs text-sky-300 font-bold uppercase tracking-wider">Parcelas Reduzidas</span>
-                        </div>
-                    </div>
-
-                    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
-                        <!-- 100x -->
-                        <div class="btn-floating bg-slate-900/90 border border-slate-800 hover:border-vw-accent p-5 rounded-3xl flex flex-col justify-between shadow-xl">
-                            <div>
-                                <span class="text-xs font-bold text-vw-accent bg-vw-accent/10 px-2.5 py-1 rounded-md">100 MESES</span>
-                                <div class="mt-4 mb-2">
-                                    <span class="text-slate-400 text-xs">Parcela de</span>
-                                    <div class="text-2xl sm:text-3xl font-black text-white">R$ 649<span class="text-lg text-slate-300">,00</span></div>
-                                </div>
-                            </div>
-                            <a href="https://wa.me/5598981578787?text=Ol%C3%A1%20Hyago!%20Vi%20no%20site%20o%20Polo%202025%20Seminovo%20em%20100x%20de%20R$%20649,00%20e%20quero%20reservar." target="_blank" rel="noopener noreferrer" class="btn-floating mt-4 w-full bg-emerald-600 hover:bg-emerald-500 text-white font-bold py-3 px-4 rounded-2xl text-center text-sm flex items-center justify-center space-x-2 shadow-lg glow-green">
-                                <i class="fa-brands fa-whatsapp text-lg"></i>
-                                <span>Reservar no WhatsApp</span>
-                            </a>
-                        </div>
-                        <!-- 90x -->
-                        <div class="btn-floating bg-slate-900/90 border border-slate-800 hover:border-vw-accent p-5 rounded-3xl flex flex-col justify-between shadow-xl">
-                            <div>
-                                <span class="text-xs font-bold text-vw-accent bg-vw-accent/10 px-2.5 py-1 rounded-md">90 MESES</span>
-                                <div class="mt-4 mb-2">
-                                    <span class="text-slate-400 text-xs">Parcela de</span>
-                                    <div class="text-2xl sm:text-3xl font-black text-white">R$ 714<span class="text-lg text-slate-300">,33</span></div>
-                                </div>
-                            </div>
-                            <a href="https://wa.me/5598981578787?text=Ol%C3%A1%20Hyago!%20Vi%20no%20site%20o%20Polo%202025%20Seminovo%20em%2090x%20de%20R$%20714,33%20e%20quero%20reservar." target="_blank" rel="noopener noreferrer" class="btn-floating mt-4 w-full bg-emerald-600 hover:bg-emerald-500 text-white font-bold py-3 px-4 rounded-2xl text-center text-sm flex items-center justify-center space-x-2 shadow-lg glow-green">
-                                <i class="fa-brands fa-whatsapp text-lg"></i>
-                                <span>Reservar no WhatsApp</span>
-                            </a>
-                        </div>
-                        <!-- 80x -->
-                        <div class="btn-floating bg-slate-900/90 border border-slate-800 hover:border-vw-accent p-5 rounded-3xl flex flex-col justify-between shadow-xl">
-                            <div>
-                                <span class="text-xs font-bold text-vw-accent bg-vw-accent/10 px-2.5 py-1 rounded-md">80 MESES</span>
-                                <div class="mt-4 mb-2">
-                                    <span class="text-slate-400 text-xs">Parcela de</span>
-                                    <div class="text-2xl sm:text-3xl font-black text-white">R$ 1.043<span class="text-lg text-slate-300">,01</span></div>
-                                </div>
-                            </div>
-                            <a href="https://wa.me/5598981578787?text=Ol%C3%A1%20Hyago!%20Vi%20no%20site%20o%20Polo%202025%20Seminovo%20em%2080x%20de%20R$%201.043,01%20e%20quero%20reservar." target="_blank" rel="noopener noreferrer" class="btn-floating mt-4 w-full bg-emerald-600 hover:bg-emerald-500 text-white font-bold py-3 px-4 rounded-2xl text-center text-sm flex items-center justify-center space-x-2 shadow-lg glow-green">
-                                <i class="fa-brands fa-whatsapp text-lg"></i>
-                                <span>Reservar no WhatsApp</span>
-                            </a>
-                        </div>
-                        <!-- 70x -->
-                        <div class="btn-floating bg-slate-900/90 border border-slate-800 hover:border-vw-accent p-5 rounded-3xl flex flex-col justify-between shadow-xl">
-                            <div>
-                                <span class="text-xs font-bold text-vw-accent bg-vw-accent/10 px-2.5 py-1 rounded-md">70 MESES</span>
-                                <div class="mt-4 mb-2">
-                                    <span class="text-slate-400 text-xs">Parcela de</span>
-                                    <div class="text-2xl sm:text-3xl font-black text-white">R$ 1.183<span class="text-lg text-slate-300">,37</span></div>
-                                </div>
-                            </div>
-                            <a href="https://wa.me/5598981578787?text=Ol%C3%A1%20Hyago!%20Vi%20no%20site%20o%20Polo%202025%20Seminovo%20em%2070x%20de%20R$%201.183,37%20e%20quero%20reservar." target="_blank" rel="noopener noreferrer" class="btn-floating mt-4 w-full bg-emerald-600 hover:bg-emerald-500 text-white font-bold py-3 px-4 rounded-2xl text-center text-sm flex items-center justify-center space-x-2 shadow-lg glow-green">
-                                <i class="fa-brands fa-whatsapp text-lg"></i>
-                                <span>Reservar no WhatsApp</span>
-                            </a>
-                        </div>
-                        <!-- 60x -->
-                        <div class="btn-floating bg-slate-900/90 border border-slate-800 hover:border-vw-accent p-5 rounded-3xl flex flex-col justify-between shadow-xl">
-                            <div>
-                                <span class="text-xs font-bold text-vw-accent bg-vw-accent/10 px-2.5 py-1 rounded-md">60 MESES</span>
-                                <div class="mt-4 mb-2">
-                                    <span class="text-slate-400 text-xs">Parcela de</span>
-                                    <div class="text-2xl sm:text-3xl font-black text-white">R$ 1.370<span class="text-lg text-slate-300">,51</span></div>
-                                </div>
-                            </div>
-                            <a href="https://wa.me/5598981578787?text=Ol%C3%A1%20Hyago!%20Vi%20no%20site%20o%20Polo%202025%20Seminovo%20em%2060x%20de%20R$%201.370,51%20e%20quero%20reservar." target="_blank" rel="noopener noreferrer" class="btn-floating mt-4 w-full bg-emerald-600 hover:bg-emerald-500 text-white font-bold py-3 px-4 rounded-2xl text-center text-sm flex items-center justify-center space-x-2 shadow-lg glow-green">
-                                <i class="fa-brands fa-whatsapp text-lg"></i>
-                                <span>Reservar no WhatsApp</span>
-                            </a>
-                        </div>
-                        <!-- 50x -->
-                        <div class="btn-floating bg-slate-900/90 border border-slate-800 hover:border-vw-accent p-5 rounded-3xl flex flex-col justify-between shadow-xl">
-                            <div>
-                                <span class="text-xs font-bold text-vw-accent bg-vw-accent/10 px-2.5 py-1 rounded-md">50 MESES</span>
-                                <div class="mt-4 mb-2">
-                                    <span class="text-slate-400 text-xs">Parcela de</span>
-                                    <div class="text-2xl sm:text-3xl font-black text-white">R$ 1.632<span class="text-lg text-slate-300">,51</span></div>
-                                </div>
-                            </div>
-                            <a href="https://wa.me/5598981578787?text=Ol%C3%A1%20Hyago!%20Vi%20no%20site%20o%20Polo%202025%20Seminovo%20em%2050x%20de%20R$%201.632,51%20e%20quero%20reservar." target="_blank" rel="noopener noreferrer" class="btn-floating mt-4 w-full bg-emerald-600 hover:bg-emerald-500 text-white font-bold py-3 px-4 rounded-2xl text-center text-sm flex items-center justify-center space-x-2 shadow-lg glow-green">
-                                <i class="fa-brands fa-whatsapp text-lg"></i>
-                                <span>Reservar no WhatsApp</span>
-                            </a>
-                        </div>
-                        <!-- 36x -->
-                        <div class="btn-floating bg-slate-900/90 border border-vw-light hover:border-vw-accent p-5 rounded-3xl flex flex-col justify-between sm:col-span-2 lg:col-span-1 shadow-xl">
-                            <div>
-                                <span class="text-xs font-bold text-white bg-vw-light px-2.5 py-1 rounded-md">PLANO ACELERADO 36X</span>
-                                <div class="mt-4 mb-2">
-                                    <span class="text-slate-400 text-xs">Parcela de</span>
-                                    <div class="text-2xl sm:text-3xl font-black text-white">R$ 2.243<span class="text-lg text-slate-300">,85</span></div>
-                                </div>
-                            </div>
-                            <a href="https://wa.me/5598981578787?text=Ol%C3%A1%20Hyago!%20Vi%20no%20site%20o%20Polo%202025%20Seminovo%20em%2036x%20de%20R$%202.243,85%20e%20quero%20reservar." target="_blank" rel="noopener noreferrer" class="btn-floating mt-4 w-full bg-emerald-600 hover:bg-emerald-500 text-white font-bold py-3 px-4 rounded-2xl text-center text-sm flex items-center justify-center space-x-2 shadow-lg glow-green">
-                                <i class="fa-brands fa-whatsapp text-lg"></i>
-                                <span>Reservar no WhatsApp</span>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- TAB 3 CONTENT: POLO 2024/2025 -->
-            <div id="content-polo2024" class="tab-content hidden">
-                <div class="glass-card border border-vw-light/40 rounded-3xl p-6 sm:p-8 max-w-5xl mx-auto shadow-2xl relative overflow-hidden">
-                    <div class="flex flex-col md:flex-row items-center justify-between border-b border-slate-800 pb-6 mb-8 gap-4">
-                        <div>
-                            <span class="inline-block bg-emerald-500/20 text-emerald-400 text-xs font-bold px-3 py-1 rounded-full mb-2">OPÇÃO MAIS ACESSÍVEL</span>
-                            <h3 class="text-2xl sm:text-3xl font-black text-white">Volkswagen Polo 2024/2025</h3>
-                            <p class="text-slate-400 text-sm mt-1">Valores super reduzidos com extrema facilidade de aprovação.</p>
-                        </div>
-                        <div class="btn-floating text-right flex items-center space-x-2 bg-slate-900/80 px-4 py-2 rounded-2xl border border-slate-800 shadow-md cursor-default">
-                            <i class="fa-solid fa-star text-emerald-400"></i>
-                            <span class="text-xs text-emerald-300 font-bold uppercase tracking-wider">Super Economia</span>
-                        </div>
-                    </div>
-
-                    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
-                        <!-- 100x -->
-                        <div class="btn-floating bg-slate-900/90 border border-slate-800 hover:border-vw-accent p-5 rounded-3xl flex flex-col justify-between shadow-xl">
-                            <div>
-                                <span class="text-xs font-bold text-vw-accent bg-vw-accent/10 px-2.5 py-1 rounded-md">100 MESES</span>
-                                <div class="mt-4 mb-2">
-                                    <span class="text-slate-400 text-xs">Parcela de</span>
-                                    <div class="text-2xl sm:text-3xl font-black text-white">R$ 567<span class="text-lg text-slate-300">,88</span></div>
-                                </div>
-                            </div>
-                            <a href="https://wa.me/5598981578787?text=Ol%C3%A1%20Hyago!%20Vi%20no%20site%20o%20Polo%202024/2025%20em%20100x%20de%20R$%20567,88%20e%20quero%20reservar." target="_blank" rel="noopener noreferrer" class="btn-floating mt-4 w-full bg-emerald-600 hover:bg-emerald-500 text-white font-bold py-3 px-4 rounded-2xl text-center text-sm flex items-center justify-center space-x-2 shadow-lg glow-green">
-                                <i class="fa-brands fa-whatsapp text-lg"></i>
-                                <span>Reservar no WhatsApp</span>
-                            </a>
-                        </div>
-                        <!-- 90x -->
-                        <div class="btn-floating bg-slate-900/90 border border-slate-800 hover:border-vw-accent p-5 rounded-3xl flex flex-col justify-between shadow-xl">
-                            <div>
-                                <span class="text-xs font-bold text-vw-accent bg-vw-accent/10 px-2.5 py-1 rounded-md">90 MESES</span>
-                                <div class="mt-4 mb-2">
-                                    <span class="text-slate-400 text-xs">Parcela de</span>
-                                    <div class="text-2xl sm:text-3xl font-black text-white">R$ 625<span class="text-lg text-slate-300">,04</span></div>
-                                </div>
-                            </div>
-                            <a href="https://wa.me/5598981578787?text=Ol%C3%A1%20Hyago!%20Vi%20no%20site%20o%20Polo%202024/2025%20em%2090x%20de%20R$%20625,04%20e%20quero%20reservar." target="_blank" rel="noopener noreferrer" class="btn-floating mt-4 w-full bg-emerald-600 hover:bg-emerald-500 text-white font-bold py-3 px-4 rounded-2xl text-center text-sm flex items-center justify-center space-x-2 shadow-lg glow-green">
-                                <i class="fa-brands fa-whatsapp text-lg"></i>
-                                <span>Reservar no WhatsApp</span>
-                            </a>
-                        </div>
-                        <!-- 80x -->
-                        <div class="btn-floating bg-slate-900/90 border border-slate-800 hover:border-vw-accent p-5 rounded-3xl flex flex-col justify-between shadow-xl">
-                            <div>
-                                <span class="text-xs font-bold text-vw-accent bg-vw-accent/10 px-2.5 py-1 rounded-md">80 MESES</span>
-                                <div class="mt-4 mb-2">
-                                    <span class="text-slate-400 text-xs">Parcela de</span>
-                                    <div class="text-2xl sm:text-3xl font-black text-white">R$ 912<span class="text-lg text-slate-300">,64</span></div>
-                                </div>
-                            </div>
-                            <a href="https://wa.me/5598981578787?text=Ol%C3%A1%20Hyago!%20Vi%20no%20site%20o%20Polo%202024/2025%20em%2080x%20de%20R$%20912,64%20e%20quero%20reservar." target="_blank" rel="noopener noreferrer" class="btn-floating mt-4 w-full bg-emerald-600 hover:bg-emerald-500 text-white font-bold py-3 px-4 rounded-2xl text-center text-sm flex items-center justify-center space-x-2 shadow-lg glow-green">
-                                <i class="fa-brands fa-whatsapp text-lg"></i>
-                                <span>Reservar no WhatsApp</span>
-                            </a>
-                        </div>
-                        <!-- 70x -->
-                        <div class="btn-floating bg-slate-900/90 border border-slate-800 hover:border-vw-accent p-5 rounded-3xl flex flex-col justify-between shadow-xl">
-                            <div>
-                                <span class="text-xs font-bold text-vw-accent bg-vw-accent/10 px-2.5 py-1 rounded-md">70 MESES</span>
-                                <div class="mt-4 mb-2">
-                                    <span class="text-slate-400 text-xs">Parcela de</span>
-                                    <div class="text-2xl sm:text-3xl font-black text-white">R$ 1.035<span class="text-lg text-slate-300">,45</span></div>
-                                </div>
-                            </div>
-                            <a href="https://wa.me/5598981578787?text=Ol%C3%A1%20Hyago!%20Vi%20no%20site%20o%20Polo%202024/2025%20em%2070x%20de%20R$%201.035,45%20e%20quero%20reservar." target="_blank" rel="noopener noreferrer" class="btn-floating mt-4 w-full bg-emerald-600 hover:bg-emerald-500 text-white font-bold py-3 px-4 rounded-2xl text-center text-sm flex items-center justify-center space-x-2 shadow-lg glow-green">
-                                <i class="fa-brands fa-whatsapp text-lg"></i>
-                                <span>Reservar no WhatsApp</span>
-                            </a>
-                        </div>
-                        <!-- 60x -->
-                        <div class="btn-floating bg-slate-900/90 border border-slate-800 hover:border-vw-accent p-5 rounded-3xl flex flex-col justify-between shadow-xl">
-                            <div>
-                                <span class="text-xs font-bold text-vw-accent bg-vw-accent/10 px-2.5 py-1 rounded-md">60 MESES</span>
-                                <div class="mt-4 mb-2">
-                                    <span class="text-slate-400 text-xs">Parcela de</span>
-                                    <div class="text-2xl sm:text-3xl font-black text-white">R$ 1.199<span class="text-lg text-slate-300">,20</span></div>
-                                </div>
-                            </div>
-                            <a href="https://wa.me/5598981578787?text=Ol%C3%A1%20Hyago!%20Vi%20no%20site%20o%20Polo%202024/2025%20em%2060x%20de%20R$%201.199,20%20e%20quero%20reservar." target="_blank" rel="noopener noreferrer" class="btn-floating mt-4 w-full bg-emerald-600 hover:bg-emerald-500 text-white font-bold py-3 px-4 rounded-2xl text-center text-sm flex items-center justify-center space-x-2 shadow-lg glow-green">
-                                <i class="fa-brands fa-whatsapp text-lg"></i>
-                                <span>Reservar no WhatsApp</span>
-                            </a>
-                        </div>
-                        <!-- 50x -->
-                        <div class="btn-floating bg-slate-900/90 border border-slate-800 hover:border-vw-accent p-5 rounded-3xl flex flex-col justify-between shadow-xl">
-                            <div>
-                                <span class="text-xs font-bold text-vw-accent bg-vw-accent/10 px-2.5 py-1 rounded-md">50 MESES</span>
-                                <div class="mt-4 mb-2">
-                                    <span class="text-slate-400 text-xs">Parcela de</span>
-                                    <div class="text-2xl sm:text-3xl font-black text-white">R$ 1.428<span class="text-lg text-slate-300">,45</span></div>
-                                </div>
-                            </div>
-                            <a href="https://wa.me/5598981578787?text=Ol%C3%A1%20Hyago!%20Vi%20no%20site%20o%20Polo%202024/2025%20em%2050x%20de%20R$%201.428,45%20e%20quero%20reservar." target="_blank" rel="noopener noreferrer" class="btn-floating mt-4 w-full bg-emerald-600 hover:bg-emerald-500 text-white font-bold py-3 px-4 rounded-2xl text-center text-sm flex items-center justify-center space-x-2 shadow-lg glow-green">
-                                <i class="fa-brands fa-whatsapp text-lg"></i>
-                                <span>Reservar no WhatsApp</span>
-                            </a>
-                        </div>
-                        <!-- 36x -->
-                        <div class="btn-floating bg-slate-900/90 border border-vw-light hover:border-vw-accent p-5 rounded-3xl flex flex-col justify-between sm:col-span-2 lg:col-span-1 shadow-xl">
-                            <div>
-                                <span class="text-xs font-bold text-white bg-vw-light px-2.5 py-1 rounded-md">PLANO ACELERADO 36X</span>
-                                <div class="mt-4 mb-2">
-                                    <span class="text-slate-400 text-xs">Parcela de</span>
-                                    <div class="text-2xl sm:text-3xl font-black text-white">R$ 1.963<span class="text-lg text-slate-300">,36</span></div>
-                                </div>
-                            </div>
-                            <a href="https://wa.me/5598981578787?text=Ol%C3%A1%20Hyago!%20Vi%20no%20site%20o%20Polo%202024/2025%20em%2036x%20de%20R$%201.963,36%20e%20quero%20reservar." target="_blank" rel="noopener noreferrer" class="btn-floating mt-4 w-full bg-emerald-600 hover:bg-emerald-500 text-white font-bold py-3 px-4 rounded-2xl text-center text-sm flex items-center justify-center space-x-2 shadow-lg glow-green">
-                                <i class="fa-brands fa-whatsapp text-lg"></i>
-                                <span>Reservar no WhatsApp</span>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-        </div>
-    </section>
-
-    <!-- BANK CENTRAL & CREDIBILITY SECTION -->
-    <section class="py-16 bg-slate-950 border-t border-slate-900">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-                <!-- Card 1 -->
-                <div class="glass-card btn-floating p-6 rounded-3xl space-y-4 hover:border-vw-accent/50 shadow-xl">
-                    <div class="w-12 h-12 rounded-2xl bg-vw-blue border border-vw-accent/30 flex items-center justify-center text-vw-accent text-2xl font-bold shadow-inner">
-                        <i class="fa-solid fa-building-columns"></i>
-                    </div>
-                    <h3 class="text-xl font-bold text-white">Banco Central do Brasil</h3>
-                    <p class="text-slate-400 text-sm leading-relaxed">
-                        Totalmente regulamentado e fiscalizado pelo Banco Central. A máxima segurança financeira garantida pela Volkswagen Administradora de Consórcios.
-                    </p>
-                </div>
-
-                <!-- Card 2 -->
-                <div class="glass-card btn-floating p-6 rounded-3xl space-y-4 hover:border-vw-accent/50 shadow-xl">
-                    <div class="w-12 h-12 rounded-2xl bg-vw-blue border border-vw-accent/30 flex items-center justify-center text-vw-accent text-2xl font-bold shadow-inner">
-                        <i class="fa-solid fa-handshake-angle"></i>
-                    </div>
-                    <h3 class="text-xl font-bold text-white">Grupo Libra & VW</h3>
-                    <p class="text-slate-400 text-sm leading-relaxed">
-                        Parceria sólida que proporciona agilidade no atendimento, facilidade em lances e suporte completo até a entrega da chave na sua mão.
-                    </p>
-                </div>
-
-                <!-- Card 3 -->
-                <div class="glass-card btn-floating p-6 rounded-3xl space-y-4 hover:border-vw-accent/50 shadow-xl">
-                    <div class="w-12 h-12 rounded-2xl bg-vw-blue border border-vw-accent/30 flex items-center justify-center text-vw-accent text-2xl font-bold shadow-inner">
-                        <i class="fa-solid fa-fire text-amber-400"></i>
-                    </div>
-                    <h3 class="text-xl font-bold text-white">Consultoria Pé Quente</h3>
-                    <p class="text-slate-400 text-sm leading-relaxed">
-                        Hyago orienta você na escolha do grupo e da melhor média de lance para acelerar sua contemplação no menor tempo possível.
-                    </p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- LIGHTBOX MODAL -->
-    <div id="lightboxModal" class="fixed inset-0 z-50 bg-black/90 backdrop-blur-md hidden flex items-center justify-center p-4 transition-all duration-300">
-        <div class="relative max-w-4xl w-full bg-slate-900 border border-slate-700 rounded-3xl overflow-hidden shadow-2xl">
-            <!-- Modal Close Button -->
-            <button onclick="closeLightbox()" class="btn-floating absolute top-4 right-4 z-10 w-10 h-10 rounded-full bg-slate-800/90 text-white hover:bg-slate-700 flex items-center justify-center text-xl shadow-lg">
-                <i class="fa-solid fa-xmark"></i>
-            </button>
-            <div class="max-h-[80vh] overflow-hidden flex items-center justify-center bg-black">
-                <img id="lightboxImg" src="" alt="Foto Entrega Ampliada" class="max-h-[75vh] w-auto object-contain">
-            </div>
-            <div class="p-4 bg-slate-900 text-center">
-                <h4 id="lightboxTitle" class="text-lg font-black text-white"></h4>
-                <p class="text-xs text-amber-400 font-bold mt-1">Hyago Pé Quente - Consórcio Volkswagen Grupo Libra</p>
-            </div>
-        </div>
+        <p class="nota">Condições da campanha vigente, sujeitas a alteração. Consulte o regulamento do grupo.</p>
+      </div>
+      <form class="sim" id="form" novalidate>
+        <h2>Faça sua simulação</h2>
+        <p>Conte o que você procura e o consultor Hyago responde pelo WhatsApp.</p>
+        <label>Seu nome<input id="fNome" autocomplete="given-name" placeholder="Como posso te chamar?"></label>
+        <label>O que você quer conquistar
+          <select id="fTipo"><option>Carro</option><option>Moto</option><option>Outro</option></select></label>
+        <label>Parcela que cabe no seu bolso (R$)<input id="fValor" inputmode="numeric" placeholder="Ex.: 500"></label>
+        <p class="aviso" id="aviso" role="status"></p>
+        <button class="btn" type="submit">Simular pelo WhatsApp</button>
+      </form>
     </div>
+  </section>
 
-    <!-- FOOTER -->
-    <footer class="bg-slate-950 py-10 border-t border-slate-900 text-slate-500 text-sm">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row items-center justify-between gap-6">
-            <div class="flex items-center space-x-3">
-                <div class="btn-floating w-9 h-9 rounded-xl bg-vw-blue flex items-center justify-center font-black text-white text-xs border border-vw-accent/40 shadow-md">
-                    VW
-                </div>
-                <div>
-                    <span class="text-slate-200 font-black block">Hyago - Grupo Libra</span>
-                    <span class="text-xs text-amber-400">Vendedor Pé Quente</span>
-                </div>
-            </div>
-            
-            <div class="flex items-center space-x-6 text-xs text-slate-400">
-                <a href="https://wa.me/5598981578787" target="_blank" class="btn-floating hover:text-white"><i class="fa-brands fa-whatsapp text-emerald-400 mr-1"></i>(98) 98157-8787</a>
-                <a href="https://www.instagram.com/hyagogrupolibra/" target="_blank" class="btn-floating hover:text-white"><i class="fa-brands fa-instagram text-pink-500 mr-1"></i>@hyagogrupolibra</a>
-            </div>
-
-            <div class="text-xs text-slate-600 text-center md:text-right">
-                Consórcio Volkswagen | Regulamentado pelo Banco Central do Brasil.<br>
-                © 2026 Hyago Grupo Libra. Todos os direitos reservados.
-            </div>
-        </div>
-    </footer>
-
-    <!-- FLOATING ACTION BUTTONS MENU (FIXED AT BOTTOM RIGHT) -->
-    <div class="fixed bottom-6 right-6 z-50 flex flex-col items-end space-y-3">
-        <!-- Scroll to Top Floating Button -->
-        <button onclick="window.scrollTo({top: 0, behavior: 'smooth'})" class="btn-floating w-12 h-12 rounded-2xl bg-slate-800/90 hover:bg-slate-700 text-slate-200 border border-slate-600/80 flex items-center justify-center text-lg shadow-xl backdrop-blur-md" title="Voltar ao Topo">
-            <i class="fa-solid fa-arrow-up"></i>
-        </button>
-
-        <!-- Instagram Floating Button -->
-        <a href="https://www.instagram.com/hyagogrupolibra/" target="_blank" rel="noopener noreferrer" class="btn-floating w-14 h-14 rounded-2xl bg-gradient-to-tr from-yellow-500 via-pink-500 to-purple-600 text-white flex items-center justify-center text-2xl shadow-xl hover:scale-110 transition-transform" title="Instagram Hyago">
-            <i class="fa-brands fa-instagram"></i>
-        </a>
-
-        <!-- WhatsApp Floating Button -->
-        <a href="https://wa.me/5598981578787?text=Ol%C3%A1%20Hyago!%20Vim%20pelo%20site%20e%20gostaria%20de%20fazer%20uma%20simula%C3%A7%C3%A3o." target="_blank" rel="noopener noreferrer" class="btn-floating w-14 h-14 rounded-2xl bg-emerald-500 text-white flex items-center justify-center text-2xl shadow-2xl glow-green hover:scale-110 transition-transform" title="Falar no WhatsApp">
-            <i class="fa-brands fa-whatsapp"></i>
-        </a>
+  <section class="papel" id="como" aria-labelledby="t-como">
+    <div class="wrap">
+      <h2 id="t-como" class="rev">Como funciona o consórcio</h2>
+      <p class="lead rev">Um grupo de pessoas paga parcelas todo mês e, a cada assembleia, alguém recebe o crédito para comprar o bem.</p>
+      <ol class="passos">
+        <li class="rev"><h3>Escolha o crédito</h3><p>Carro ou moto, no valor e no prazo que cabem no seu planejamento.</p></li>
+        <li class="rev"><h3>Entre em um grupo</h3><p>Você paga a parcela mensal junto com os demais participantes do grupo.</p></li>
+        <li class="rev"><h3>Concorra todo mês</h3><p>A contemplação acontece por sorteio ou por lance, em assembleia. Não existe data garantida.</p></li>
+        <li class="rev"><h3>Use a carta de crédito</h3><p>Contemplado, você escolhe o bem e conclui a compra.</p></li>
+      </ol>
+      <p class="custos rev"><b>Sem juros, mas com custos previstos em contrato:</b> taxa de administração, fundo de reserva, seguro (quando contratado) e reajuste do crédito e das parcelas. O consultor mostra tudo antes de você assinar.</p>
     </div>
+  </section>
 
-    <!-- JAVASCRIPT -->
-    <script>
-        function switchTab(tabId) {
-            const contents = document.querySelectorAll('.tab-content');
-            contents.forEach(content => {
-                content.classList.add('hidden');
-                content.classList.remove('block');
-            });
+  <section id="planos" aria-labelledby="t-planos">
+    <div class="wrap">
+      <h2 id="t-planos" class="rev">Exemplos de planos Volkswagen Polo</h2>
+      <p class="lead rev">Parcela mensal por prazo. Valores de referência: peça a simulação atualizada para o seu caso.</p>
+      <div class="abas" role="tablist" aria-label="Modelos" id="abas"></div>
+      <table class="tab rev" aria-live="polite"><thead><tr><th>PRAZO</th><th>PARCELA A PARTIR DE</th><th></th></tr></thead><tbody id="linhas"></tbody></table>
+      <p class="rodape-plano" id="rodapePlano">Valores de referência. A parcela final depende do grupo, do valor da carta de crédito e dos encargos do contrato (taxa de administração, fundo de reserva e seguro, quando contratado). Condições sujeitas a alteração.</p>
+    </div>
+  </section>
 
-            const buttons = [
-                document.getElementById('tab-polo0km'),
-                document.getElementById('tab-polo2025'),
-                document.getElementById('tab-polo2024')
-            ];
-            
-            buttons.forEach(btn => {
-                btn.classList.remove('bg-vw-light', 'text-white', 'shadow-lg');
-                btn.classList.add('text-slate-400');
-            });
+  <section class="papel" id="consultor" aria-labelledby="t-cons">
+    <div class="wrap cons">
+      <div class="foto"><img src="WhatsApp%20Image%202026-11-03%20at%2018.43.22.jpeg" alt="Hyago Matheus, consultor do Grupo Libra" width="720" height="900" loading="lazy" id="fotoHyago"></div>
+      <div class="rev">
+        <h2 id="t-cons">Hyago Matheus</h2>
+        <p>Consultor do Grupo Libra. Meu trabalho é ajudar você a transformar seus planos em conquistas por meio do consórcio, seja para o primeiro veículo, a casa própria ou um novo projeto.</p>
+        <p>Atendimento personalizado e transparente: eu explico as regras, os custos e as opções de lance antes de você decidir.</p>
+        <p class="assina">Grupo Libra Consórcio, realizando sonhos junto com você.</p>
+      </div>
+    </div>
+  </section>
 
-            const activeContent = document.getElementById('content-' + tabId);
-            if (activeContent) {
-                activeContent.classList.remove('hidden');
-                activeContent.classList.add('block');
-            }
+  <section id="entregas" aria-labelledby="t-ent">
+    <div class="wrap">
+      <h2 id="t-ent" class="rev">Quem já realizou o plano</h2>
+      <p class="lead rev">Entregas de clientes do Hyago. Toque em uma foto para ampliar.</p>
+      <div class="galeria" id="galeria"></div>
+    </div>
+  </section>
 
-            const activeBtn = document.getElementById('tab-' + tabId);
-            if (activeBtn) {
-                activeBtn.classList.add('bg-vw-light', 'text-white', 'shadow-lg');
-                activeBtn.classList.remove('text-slate-400');
-            }
-        }
+  <section class="papel" id="duvidas" aria-labelledby="t-faq">
+    <div class="wrap faq">
+      <h2 id="t-faq" class="rev">Dúvidas frequentes</h2>
+      <details><summary>Consórcio é a mesma coisa que financiamento?</summary><p>Não. No financiamento você recebe o bem na hora e paga juros. No consórcio, o grupo forma um fundo e você recebe uma carta de crédito quando é contemplado, por sorteio ou lance.</p></details>
+      <details><summary>Tem juros?</summary><p>O consórcio não cobra juros. Há taxa de administração, fundo de reserva, seguro (quando contratado) e reajuste anual do crédito e das parcelas, todos previstos no contrato.</p></details>
+      <details><summary>Quando serei contemplado?</summary><p>Não há data garantida. A contemplação acontece nas assembleias, por sorteio ou por lance, e ninguém pode prometer o mês em que isso vai acontecer.</p></details>
+      <details><summary>O que é lance?</summary><p>É uma oferta feita para aumentar a sua chance de contemplação em uma assembleia. As modalidades seguem as regras de cada grupo, e o consultor explica antes de você decidir.</p></details>
+      <details><summary>Preciso dar entrada?</summary><p>Na campanha vigente do Grupo Libra, não há entrada. Confirme as condições na sua simulação.</p></details>
+      <details><summary>Posso desistir do consórcio?</summary><p>As regras de desistência e de devolução dos valores estão no contrato e na lei dos consórcios. Peça ao consultor para explicar com calma antes de assinar.</p></details>
+      <details><summary>Quem administra o consórcio?</summary><p>Os grupos são conduzidos por administradoras autorizadas e fiscalizadas pelo Banco Central do Brasil. O nome da administradora do seu grupo consta no contrato.</p></details>
+    </div>
+  </section>
 
-        // LIGHTBOX MODAL FUNCTIONS
-        function openLightbox(imgSrc, title) {
-            const modal = document.getElementById('lightboxModal');
-            const img = document.getElementById('lightboxImg');
-            const titleEl = document.getElementById('lightboxTitle');
+  <section class="contato" id="contato" aria-labelledby="t-cont">
+    <div class="wrap cgrid">
+      <div class="rev">
+        <h2 id="t-cont">Não deixe para depois o que você pode começar hoje.</h2>
+        <p class="lead">Fale com o Hyago e faça uma simulação sem compromisso.</p>
+        <a class="btn" id="zapContato" href="#contato" target="_blank" rel="noopener">Falar no WhatsApp</a>
+      </div>
+      <div class="rev" style="display:grid;gap:1rem">
+        <div class="cartao"><h3>Hyago Matheus</h3><a id="zapNum" href="#contato" target="_blank" rel="noopener">(98) 98157-8787</a><a href="https://www.instagram.com/hyagogrupolibra/" target="_blank" rel="noopener">@hyagogrupolibra</a></div>
+        <div class="cartao"><h3>Grupo Libra</h3><p>Avenida dos Franceses, 40, Barreto, São Luís (MA), CEP 65036-281</p><a href="tel:+559884582795">(98) 8458-2795</a><a href="mailto:grupolibra.br@gmail.com">grupolibra.br@gmail.com</a><a href="https://www.instagram.com/grupolibraslz/" target="_blank" rel="noopener">@grupolibraslz</a></div>
+      </div>
+    </div>
+  </section>
+</main>
 
-            img.src = imgSrc;
-            titleEl.textContent = title;
-            modal.classList.remove('hidden');
-        }
+<footer>
+  <div class="wrap">
+    <p><b>Grupo Libra Consórcios e Serviços Ltda.</b> · CNPJ 38.333.730/0001-87 · Avenida dos Franceses, 40, Barreto, São Luís (MA), CEP 65036-281 · grupolibra.br@gmail.com</p>
+    <p id="admins"></p>
+    <p>O consórcio é regulamentado e fiscalizado pelo Banco Central do Brasil. A contemplação ocorre por sorteio ou lance, sem data garantida. Valores e condições sujeitos a alteração. Imagens ilustrativas.</p>
+    <p>© <span id="ano"></span> Grupo Libra Consórcio. Realizando sonhos junto com você.</p>
+  </div>
+</footer>
 
-        function closeLightbox() {
-            const modal = document.getElementById('lightboxModal');
-            modal.classList.add('hidden');
-        }
+<a class="fab" id="fab" href="#contato" target="_blank" rel="noopener" aria-label="Falar no WhatsApp"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 6h14a1 1 0 0 1 1 1v8a1 1 0 0 1-1 1H11l-4 3v-3H5a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1z"/></svg></a>
 
-        // Close on ESC key
-        document.addEventListener('keydown', function(e) {
-            if (e.key === 'Escape') {
-                closeLightbox();
-            }
-        });
-    </script>
+<dialog id="lb" aria-label="Foto ampliada"><img id="lbImg" alt=""><div class="lb-rod"><span id="lbCap"></span><button type="button" id="lbX">Fechar</button></div></dialog>
+
+<script>
+/* ===== CONFIGURE AQUI ===== */
+var CFG = {
+  whatsapp: "5598981578787",            // WhatsApp do Hyago (DDI + DDD + número)
+  atualizadoEm: "",                      // ex.: "nov/2026". Se ficar vazio, a data não aparece
+  administradoras: ""                    // ex.: "Consórcio Nacional Volkswagen, Yamaha Consórcio". Vazio = linha não aparece
+};
+// Preços: para atualizar todo mês, mexa só nos números. [prazo em meses, parcela]
+var PLANOS = {
+  "0km":  {nome: "Polo 0km (2026/2027)", linhas: [[100,"730,13"],[90,"803,63"],[80,"1.173,39"],[70,"1.331,29"],[60,"1.541,83"],[50,"1.836,58"],[36,"2.524,33"]]},
+  "2025": {nome: "Polo 2025 (seminovo)", linhas: [[100,"649,00"],[90,"714,33"],[80,"1.043,01"],[70,"1.183,37"],[60,"1.370,51"],[50,"1.632,51"],[36,"2.243,85"]]},
+  "2024": {nome: "Polo 2024/2025 (seminovo)", linhas: [[100,"567,88"],[90,"625,04"],[80,"912,64"],[70,"1.035,45"],[60,"1.199,20"],[50,"1.428,45"],[36,"1.963,36"]]}
+};
+// Fotos de entregas. Se um arquivo não existir, a foto some sozinha (não aparece quebrada).
+var FOTOS = [
+  ["hyagoecasal.jpeg","Fiat Argo"],
+  ["WhatsApp Image 2026-11-03 at 18.21.32.jpeg","Entrega em família"],
+  ["argo.jpeg","Chave na mão"],
+  ["WhatsApp Image 2026-11-03 at 18.21.33.jpeg","Toyota Corolla"],
+  ["hyago2.jpeg","Yamaha XTZ Lander 250"],
+  ["hyagocronos.jpeg","Fiat Cronos"],
+  ["hyagofazer.jpeg","Yamaha Fazer 250"]
+];
+/* ========================== */
+(function(){
+var $=function(s){return document.querySelector(s)};
+function zap(m){return "https://wa.me/"+CFG.whatsapp+"?text="+encodeURIComponent(m)}
+var base="Olá, Hyago! Vim pelo site do Grupo Libra e quero fazer uma simulação.";
+["#zapContato","#zapNum","#fab"].forEach(function(s){$(s).href=zap(base)});
+$("#ano").textContent=new Date().getFullYear();
+if(CFG.administradoras)$("#admins").textContent="Administradoras: "+CFG.administradoras+"."; else $("#admins").remove();
+
+/* simulador -> WhatsApp */
+$("#form").addEventListener("submit",function(e){e.preventDefault();
+  var n=$("#fNome").value.trim(),v=$("#fValor").value.trim();
+  if(!n){$("#aviso").textContent="Diga seu nome para eu te responder.";$("#fNome").focus();return}
+  $("#aviso").textContent="";
+  window.open(zap("Olá, Hyago! Quero fazer uma simulação de consórcio.\nNome: "+n+"\nInteresse: "+$("#fTipo").value+"\nParcela que cabe no bolso: "+(v?"R$ "+v:"a definir")),"_blank","noopener")});
+
+/* planos em abas */
+var abas=$("#abas"),corpo=$("#linhas"),atual="0km";
+function monta(){
+  var p=PLANOS[atual];
+  corpo.innerHTML=p.linhas.map(function(l){
+    var msg="Olá, Hyago! Vim pelo site e quero simular o "+p.nome+" em "+l[0]+"x de R$ "+l[1]+".";
+    return '<tr><td>'+l[0]+' meses</td><td>R$ '+l[1]+'</td><td><a class="btn peq" href="'+zap(msg)+'" target="_blank" rel="noopener" aria-label="Simular '+p.nome+' em '+l[0]+' meses">Simular</a></td></tr>'}).join("");
+  Array.prototype.forEach.call(abas.children,function(b){b.setAttribute("aria-selected",b.getAttribute("data-k")===atual?"true":"false")})}
+Object.keys(PLANOS).forEach(function(k){var b=document.createElement("button");b.type="button";b.setAttribute("role","tab");b.setAttribute("data-k",k);b.textContent=PLANOS[k].nome;
+  b.addEventListener("click",function(){atual=k;monta()});abas.appendChild(b)});
+monta();
+if(CFG.atualizadoEm)$("#rodapePlano").textContent="Valores de referência atualizados em "+CFG.atualizadoEm+". "+$("#rodapePlano").textContent;
+
+/* foto do consultor: se faltar, mostra iniciais */
+var fh=$("#fotoHyago");function semFoto(){var d=document.createElement("div");d.className="ini";d.textContent="HM";fh.parentNode.replaceChild(d,fh)}
+fh.addEventListener("error",semFoto);if(fh.complete&&fh.naturalWidth===0)semFoto();
+
+/* galeria + ampliação */
+var lb=$("#lb"),gal=$("#galeria");
+FOTOS.forEach(function(f){
+  var fig=document.createElement("figure"),btn=document.createElement("button"),img=new Image(),cap=document.createElement("figcaption");
+  btn.type="button";btn.setAttribute("aria-label","Ampliar: "+f[1]);
+  img.src=encodeURI(f[0]);img.alt="Entrega: "+f[1];img.loading="lazy";img.width=400;img.height=500;
+  img.addEventListener("error",function(){fig.remove()});
+  cap.textContent=f[1];btn.appendChild(img);fig.appendChild(btn);fig.appendChild(cap);gal.appendChild(fig);
+  btn.addEventListener("click",function(){$("#lbImg").src=img.src;$("#lbImg").alt=img.alt;$("#lbCap").textContent=f[1];if(lb.showModal)lb.showModal();else lb.setAttribute("open","")})});
+function fecha(){if(lb.close)lb.close();else lb.removeAttribute("open")}
+$("#lbX").addEventListener("click",fecha);
+lb.addEventListener("click",function(e){if(e.target===lb)fecha()});
+
+/* aparecer ao rolar e botão fixo */
+var io="IntersectionObserver" in window?new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add("vis");io.unobserve(e.target)}})},{threshold:.12}):null;
+Array.prototype.forEach.call(document.querySelectorAll(".rev"),function(el){io?io.observe(el):el.classList.add("vis")});
+if("IntersectionObserver" in window){var fab=$("#fab");var n=0;
+  new IntersectionObserver(function(es){es.forEach(function(e){n+=e.isIntersecting?1:-1});fab.classList.toggle("some",n>0)}).observe($("#simular"));
+  new IntersectionObserver(function(es){es.forEach(function(e){n+=e.isIntersecting?1:-1});fab.classList.toggle("some",n>0)}).observe($("#contato"))}
+})();
+</script>
 </body>
 </html>
