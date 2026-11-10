@@ -16,7 +16,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500..700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 <style>
 :root{--ink:#0e1f33;--ink2:#16314f;--azul:#2f5d8a;--papel:#f6f3ed;--cobre:#c4601a;--cobre2:#a94e12;--texto:#1b2635;--muda:#5a6676;--linha:#e3ddd2;
-  --foto:url("apresentacao.jpeg");
+  --foto:url("Logo%20premium%20de%20consorcio%20HM.png");
   --apresentacao:url("fundodeimagem.jpeg");
   --serif:"Fraunces",Georgia,"Times New Roman",serif;--sans:"Manrope","Segoe UI",Roboto,Arial,sans-serif;color-scheme:light}
 *,*::before,*::after{box-sizing:border-box}*{margin:0;padding:0}
@@ -47,9 +47,9 @@ header{position:sticky;top:0;z-index:50;background:rgba(14,31,51,.92);color:#fff
 .nav a:not(.btn){display:none}
 @media(min-width:900px){.nav a:not(.btn){display:inline}}
 
-/* TOPO COM A FOTO DO HYAGO DE FUNDO */
+/* TOPO COM A LOGO HM COMO ELEMENTO DE FUNDO */
 .hero{position:relative;overflow:hidden;background:var(--ink);color:#fff;min-height:min(92svh,820px);display:flex;align-items:flex-end}
-.hero::before{content:"";position:absolute;inset:0;background:var(--foto) 45% 18%/cover no-repeat;z-index:0}
+.hero::before{content:"";position:absolute;inset:0;background:var(--foto) center 12%/min(78vw,360px) auto no-repeat;opacity:.2;z-index:0}
 .hero::after{content:"";position:absolute;inset:0;z-index:1;pointer-events:none;
   background:linear-gradient(180deg,rgba(14,31,51,.35) 0%,rgba(14,31,51,0) 28%,rgba(14,31,51,.78) 62%,var(--ink) 100%)}
 .hero .wrap{position:relative;z-index:2;padding:7rem 0 2.6rem}
@@ -63,7 +63,7 @@ header{position:sticky;top:0;z-index:50;background:rgba(14,31,51,.92);color:#fff
 .nota{font-size:.8rem;color:#b9c6d6}
 @media(min-width:900px){
   .hero{min-height:min(88svh,780px)}
-  .hero::before{left:34%;background-position:50% 22%;-webkit-mask-image:linear-gradient(90deg,transparent 0,#000 38%);mask-image:linear-gradient(90deg,transparent 0,#000 38%)}
+  .hero::before{background-position:right 9% center;background-size:min(48vw,600px) auto;opacity:.34;-webkit-mask-image:linear-gradient(90deg,transparent 0,#000 30%);mask-image:linear-gradient(90deg,transparent 0,#000 30%)}
   .hero::after{background:linear-gradient(0deg,var(--ink) 0,rgba(14,31,51,0) 28%)}
   .hero .wrap{padding:8rem 0 3.2rem}
   .hero .txt{max-width:560px}
@@ -107,6 +107,33 @@ section{padding:clamp(3rem,8vw,5.5rem) 0}.papel{background:var(--papel)}
 .sim input,.sim select{display:block;width:100%;min-height:50px;margin-top:.3rem;padding:.7rem .9rem;font:600 1rem var(--sans);color:var(--texto);background:var(--papel);border:2px solid transparent;border-radius:10px}
 .sim input:focus,.sim select:focus{outline:0;border-color:var(--azul)}
 .sim .btn{width:100%}.sim .aviso{min-height:1.3em;color:var(--cobre2);font-weight:700;font-size:.9rem;margin-bottom:.6rem}
+.sim h3{margin-bottom:.9rem}
+.prog{height:6px;background:var(--papel);border-radius:99px;overflow:hidden;margin-bottom:1rem}
+.prog i{display:block;height:100%;width:0;background:var(--cobre);border-radius:99px;transition:width .35s}
+.sim .passo{font:800 .78rem var(--sans);letter-spacing:.1em;text-transform:uppercase;color:var(--cobre2);margin-bottom:.6rem}
+.sim fieldset{border:0;min-width:0}
+.sim legend{font:600 1.55rem/1.15 var(--serif);color:var(--ink);margin-bottom:.4rem;padding:0}
+.sim .dica{color:var(--muda);font-size:.95rem;margin-bottom:1rem}
+.sim .ops{display:grid;gap:.6rem;margin-bottom:.9rem}
+.sim .op{position:relative;display:block;margin:0;font-weight:700}
+.sim .op input{position:absolute;opacity:0;width:1px;height:1px;min-height:0;margin:0;padding:0}
+.sim .op span{display:flex;align-items:center;gap:.8rem;min-height:58px;padding:.7rem 1rem;border:2px solid var(--linha);border-radius:12px;background:#fff;font-size:1.05rem;cursor:pointer;transition:border-color .2s,background .2s;-webkit-tap-highlight-color:transparent}
+.sim .op span::before{content:"";flex:none;width:22px;height:22px;border-radius:50%;border:2px solid #c9c2b4;background:#fff}
+.sim .op:hover span{border-color:#d3b9a3}
+.sim .op input:checked+span{border-color:var(--cobre);background:#fff7f0}
+.sim .op input:checked+span::before{border-color:var(--cobre);background:radial-gradient(circle,var(--cobre) 0 45%,#fff 50%)}
+.sim .op input:focus-visible+span{outline:3px solid var(--cobre);outline-offset:2px}
+.sim fieldset>input[type=text]{margin-bottom:.9rem;font-size:1.1rem}
+.sim .navs{display:flex;gap:.6rem}
+.sim .navs .btn{flex:1;width:auto}
+.sim .navs .btn.voltar{flex:0 0 auto;background:transparent;color:var(--ink);box-shadow:inset 0 0 0 2px var(--linha)}
+.sim .navs .btn.voltar:hover{background:var(--papel)}
+.btn[hidden]{display:none}
+.resumo h4{font:600 1.55rem/1.15 var(--serif);color:var(--ink);margin-bottom:.4rem}
+.sim .resumo p{margin-bottom:0}
+.resumo dl{display:grid;gap:.1rem;margin:.9rem 0 1.1rem;padding:1rem 1.1rem;background:var(--papel);border-radius:12px}
+.resumo dt{font-size:.74rem;font-weight:800;letter-spacing:.06em;text-transform:uppercase;color:var(--muda)}
+.resumo dd{font-weight:700;margin:0 0 .55rem}.resumo dd:last-child{margin:0}
 
 /* como funciona */
 .passos{display:grid;gap:1rem;list-style:none;counter-reset:p}
@@ -270,13 +297,14 @@ dialog button:hover{background:var(--cobre)}
       </div>
       <form class="sim rev" id="form" novalidate>
         <h3>Faça sua simulação</h3>
-        <p>Leva menos de um minuto. O Hyago responde pelo WhatsApp.</p>
-        <label>Seu nome<input id="fNome" autocomplete="given-name" placeholder="Como posso te chamar?"></label>
-        <label>O que você quer conquistar
-          <select id="fTipo"><option>Carro</option><option>Moto</option><option>Imóvel</option><option>Outro</option></select></label>
-        <label>Parcela que cabe no seu bolso (R$)<input id="fValor" inputmode="numeric" placeholder="Ex.: 500"></label>
+        <div class="prog" aria-hidden="true"><i id="progBar"></i></div>
+        <p class="passo" id="passoTxt" aria-live="polite"></p>
+        <div id="etapa"></div>
         <p class="aviso" id="aviso" role="status"></p>
-        <button class="btn" type="submit">Simular pelo WhatsApp</button>
+        <div class="navs">
+          <button class="btn voltar" type="button" id="voltar" hidden>Voltar</button>
+          <button class="btn" type="submit" id="avancar">Continuar</button>
+        </div>
       </form>
     </div>
   </section>
@@ -365,8 +393,8 @@ var CFG = {
   administradoras: "Consórcio Banco Volkswagen"  // Vazio = linha não aparece
 };
 // FOTOS: ficam na mesma pasta deste arquivo.
-// apresentacao.jpeg = fundo do topo (--foto) | fundodeimagem.jpeg = foto da seção "Sobre" (--apresentacao). Troque no começo do CSS.
-// (ou troque o nome na variável --foto, no começo do CSS).
+// A logo HM é usada como elemento de fundo do topo (--foto).
+// fundodeimagem.jpeg continua sendo a imagem da seção "Sobre" (--apresentacao).
 
 // Planos: cada item vira uma aba, na ordem abaixo.
 // aba = texto curto da aba | nome = nome completo (vai na mensagem do WhatsApp) | selos = destaques (opcional)
@@ -400,6 +428,26 @@ var FOTOS = [
 // p1.jpeg até p26.jpeg (a p25 não existe na pasta, por isso é pulada)
 for(var i=1;i<=26;i++){ if(i!==25) FOTOS.push(["p"+i+".jpeg",""]); }
 var FOTOS_VISIVEIS = 8; // quantas aparecem antes do botão "Ver todas as fotos"
+
+// Perguntas da simulação (uma por tela, em linguagem simples). Para mudar, edite o texto.
+// tipo "opcoes" = a pessoa toca numa resposta | tipo "texto" = digita | so = só aparece se a função devolver true
+// rotulo = como a resposta aparece na mensagem que chega no WhatsApp do Hyago
+var PERGUNTAS = [
+  {id:"nome", tipo:"texto", rotulo:"Nome", titulo:"Como posso te chamar?", dica:"Só o primeiro nome já ajuda.", ph:"Seu nome", obrig:true, erro:"Diga seu nome para eu te responder."},
+  {id:"quer", tipo:"opcoes", rotulo:"Quero conquistar", titulo:"O que você quer conquistar?", opcoes:["Carro","Moto","Casa ou terreno","Ainda não sei"]},
+  {id:"estado", tipo:"opcoes", rotulo:"Novo ou usado", titulo:"Você prefere novo ou usado?", dica:"Zero km é novo, direto da fábrica. Seminovo é usado, já rodou um pouco.",
+    opcoes:["Zero km (novo)","Seminovo (usado)","Tanto faz"], so:function(r){return r.quer==="Carro"||r.quer==="Moto"}},
+  {id:"modelo", tipo:"texto", rotulo:"Modelo que tenho em mente", titulo:"Tem algum modelo em mente?", dica:"Se ainda não escolheu, pode deixar em branco.", ph:"Ex.: Polo, Saveiro, Fazer 250",
+    so:function(r){return r.quer==="Carro"||r.quer==="Moto"}},
+  {id:"parcela", tipo:"opcoes", rotulo:"Parcela que cabe no bolso", titulo:"Quanto cabe no seu bolso por mês?", dica:"Pense num valor que não aperte o seu orçamento.",
+    opcoes:["Até R$ 400","De R$ 400 a R$ 600","De R$ 600 a R$ 800","De R$ 800 a R$ 1.200","Mais de R$ 1.200","Ainda não sei, me ajude"]},
+  {id:"lance", tipo:"opcoes", rotulo:"Dinheiro guardado (lance)", titulo:"Você tem algum dinheiro guardado?", dica:"Um valor a mais ajuda a ser contemplado mais rápido. Isso se chama lance. Não é obrigatório.",
+    opcoes:["Sim, tenho","Não tenho agora","Quero entender melhor"]},
+  {id:"quando", tipo:"opcoes", rotulo:"Para quando", titulo:"Para quando você quer?", dica:"Lembrando: a contemplação não tem data garantida. Eu explico como funciona.",
+    opcoes:["O quanto antes","Em até 1 ano","Mais para frente","Só estou pesquisando"]},
+  {id:"conhece", tipo:"opcoes", rotulo:"Já participou de consórcio", titulo:"Você já participou de algum consórcio?", dica:"Assim eu sei se explico do começo.",
+    opcoes:["Nunca participei","Já participei"]}
+];
 /* ========================== */
 (function(){
 var $=function(s){return document.querySelector(s)};
@@ -409,12 +457,49 @@ var base="Olá, Hyago! Vim pelo seu site e quero fazer uma simulação de consó
 $("#ano").textContent=new Date().getFullYear();
 if(CFG.administradoras)$("#admins").textContent="Representante do "+CFG.administradoras+" no Maranhão."; else $("#admins").remove();
 
-/* simulador -> WhatsApp */
-$("#form").addEventListener("submit",function(e){e.preventDefault();
-  var n=$("#fNome").value.trim(),v=$("#fValor").value.trim();
-  if(!n){$("#aviso").textContent="Diga seu nome para eu te responder.";$("#fNome").focus();return}
-  $("#aviso").textContent="";
-  window.open(zap("Olá, Hyago! Quero fazer uma simulação de consórcio.\nNome: "+n+"\nInteresse: "+$("#fTipo").value+"\nParcela que cabe no bolso: "+(v?"R$ "+v:"a definir")),"_blank","noopener")});
+/* simulador em etapas -> WhatsApp */
+var R={},passo=0,box=$("#etapa"),btnAv=$("#avancar"),btnVo=$("#voltar"),aviso=$("#aviso");
+function ativos(){return PERGUNTAS.filter(function(p){return !p.so||p.so(R)})}
+function esc(s){return String(s).replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/"/g,"&quot;")}
+function desenha(foco){
+  var A=ativos(),h,p;
+  aviso.textContent="";
+  $("#progBar").style.width=Math.round(Math.min(passo,A.length)/A.length*100)+"%";
+  btnVo.hidden=passo===0;
+  if(passo>=A.length){
+    h='<div class="resumo"><h4>Tudo certo'+(R.nome?", "+esc(R.nome):"")+'!</h4><p>Confira suas respostas. Se algo estiver errado, toque em Voltar.</p><dl>';
+    A.forEach(function(q){if(R[q.id])h+="<dt>"+esc(q.rotulo)+"</dt><dd>"+esc(R[q.id])+"</dd>"});
+    box.innerHTML=h+"</dl></div>";
+    $("#passoTxt").textContent="Última etapa";
+    btnAv.textContent="Enviar pelo WhatsApp";return}
+  p=A[passo];
+  $("#passoTxt").textContent="Pergunta "+(passo+1)+" de "+A.length;
+  btnAv.textContent=passo===A.length-1?"Ver resumo":"Continuar";
+  h="<fieldset><legend>"+esc(p.titulo)+"</legend>"+(p.dica?'<p class="dica">'+esc(p.dica)+"</p>":"");
+  if(p.tipo==="texto"){
+    h+='<input id="resp" type="text" autocomplete="'+(p.id==="nome"?"given-name":"off")+'" placeholder="'+esc(p.ph||"")+'" maxlength="60">'}
+  else{
+    h+='<div class="ops">'+p.opcoes.map(function(o){return '<label class="op"><input type="radio" name="q" value="'+esc(o)+'"'+(R[p.id]===o?" checked":"")+"><span>"+esc(o)+"</span></label>"}).join("")+"</div>"}
+  box.innerHTML=h+"</fieldset>";
+  if(p.tipo==="texto"){var r=$("#resp");r.value=R[p.id]||"";if(foco)r.focus()}
+  else Array.prototype.forEach.call(box.querySelectorAll("input"),function(inp){
+    inp.addEventListener("click",function(e){R[p.id]=inp.value;if(e.detail>0)setTimeout(function(){passo++;desenha(true)},220)})})}
+function avanca(){
+  var A=ativos(),p;
+  if(passo>=A.length){
+    var m="Olá, Hyago! Vim pelo seu site e quero fazer uma simulação de consórcio.\n";
+    A.forEach(function(q){if(R[q.id])m+="\n"+q.rotulo+": "+R[q.id]});
+    window.open(zap(m),"_blank","noopener");return}
+  p=A[passo];
+  if(p.tipo==="texto"){
+    var v=$("#resp").value.trim();
+    if(p.obrig&&!v){aviso.textContent=p.erro||"Escreva sua resposta para continuar.";$("#resp").focus();return}
+    R[p.id]=v}
+  else if(!R[p.id]){aviso.textContent="Toque em uma das opções para continuar.";return}
+  passo++;desenha(true)}
+$("#form").addEventListener("submit",function(e){e.preventDefault();avanca()});
+btnVo.addEventListener("click",function(){if(passo>0){passo--;desenha(true)}});
+desenha(false);
 
 /* planos em abas */
 var abas=$("#abas"),corpo=$("#linhas"),selos=$("#selos"),atual=0;
