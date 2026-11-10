@@ -4,17 +4,19 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <meta name="theme-color" content="#0e1f33">
-<title>Hyago Matheus | Consultor Grupo Libra Consórcio em São Luís</title>
-<meta name="description" content="Chegou a hora de tirar seu plano do papel. Consórcio de carros e motos com o Grupo Libra. Faça uma simulação com o consultor Hyago Matheus.">
+<title>Hyago Matheus | Consultor de Vendas Grupo Libra Consórcios em São Luís</title>
+<meta name="description" content="Hyago Matheus, consultor de vendas do GrupoLibra Consórcios, representante do Consórcio Banco Volkswagen no Maranhão. Atendimento personalizado, transparente e seguro. Faça sua simulação.">
 <meta property="og:type" content="website">
 <meta property="og:locale" content="pt_BR">
-<meta property="og:title" content="Hyago Matheus | Consultor Grupo Libra Consórcio">
-<meta property="og:description" content="Chegou a hora de tirar seu plano do papel. Faça uma simulação.">
+<meta property="og:title" content="Hyago Matheus | Consultor de Vendas Grupo Libra Consórcios">
+<meta property="og:description" content="Planejamento, transparência e segurança para conquistar seu veículo ou imóvel por meio do consórcio.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500..700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 <style>
 :root{--ink:#0e1f33;--ink2:#16314f;--azul:#2f5d8a;--papel:#f6f3ed;--cobre:#c4601a;--cobre2:#a94e12;--texto:#1b2635;--muda:#5a6676;--linha:#e3ddd2;
+  --foto:url("fundodeimagem.jpeg");
+  --apresentacao:url("apresentacao.jpeg");
   --serif:"Fraunces",Georgia,"Times New Roman",serif;--sans:"Manrope","Segoe UI",Roboto,Arial,sans-serif;color-scheme:light}
 *,*::before,*::after{box-sizing:border-box}*{margin:0;padding:0}
 html{scroll-behavior:smooth;scroll-padding-top:5rem;-webkit-text-size-adjust:100%}
@@ -25,40 +27,82 @@ img{max-width:100%;display:block}a{color:inherit}
 h1,h2,h3{font-family:var(--serif);font-weight:600;line-height:1.1;letter-spacing:-.01em}
 h2{font-size:clamp(1.9rem,1.3rem + 2.8vw,3rem);margin-bottom:.6rem;text-wrap:balance}
 p{text-wrap:pretty}
-.lead{color:var(--muda);max-width:56ch;margin-bottom:2rem}
+.eyebrow{display:inline-block;font:800 .78rem var(--sans);letter-spacing:.16em;text-transform:uppercase;color:var(--cobre);margin-bottom:.8rem}
+.lead{color:var(--muda);max-width:58ch;margin-bottom:2rem}
 .btn{display:inline-flex;align-items:center;justify-content:center;gap:.5rem;min-height:52px;padding:.85rem 1.6rem;border:0;border-radius:10px;background:var(--cobre);color:#fff;font:700 1rem var(--sans);text-decoration:none;cursor:pointer;transition:background .2s,transform .15s;-webkit-tap-highlight-color:transparent}
 .btn:hover{background:var(--cobre2)}.btn:active{transform:scale(.98)}
-.btn.sec{background:transparent;color:inherit;box-shadow:inset 0 0 0 2px currentColor}.btn.sec:hover{background:rgba(255,255,255,.1)}
+.btn.sec{background:rgba(255,255,255,.08);color:#fff;box-shadow:inset 0 0 0 2px rgba(255,255,255,.7)}.btn.sec:hover{background:rgba(255,255,255,.18)}
 .btn.peq{min-height:44px;padding:.5rem 1.1rem;font-size:.95rem}
 
-header{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.94);-webkit-backdrop-filter:blur(10px);backdrop-filter:blur(10px);border-bottom:1px solid var(--linha)}
+header{position:sticky;top:0;z-index:50;background:rgba(14,31,51,.92);color:#fff;-webkit-backdrop-filter:blur(10px);backdrop-filter:blur(10px);border-bottom:1px solid rgba(255,255,255,.1)}
 .barra{display:flex;align-items:center;justify-content:space-between;gap:1rem;padding:.6rem 0}
-.marca{display:flex;align-items:center;gap:.6rem;text-decoration:none}
-.marca svg{width:34px;height:34px;color:var(--ink)}
-.marca b{display:block;font:700 1.15rem/1 var(--serif);color:var(--ink)}.marca small{display:block;font-size:.72rem;letter-spacing:.14em;color:var(--muda);font-weight:700}
-.nav{display:flex;gap:1.6rem;align-items:center}.nav a{text-decoration:none;font-weight:600;font-size:.95rem}.nav a:not(.btn):hover{color:var(--cobre)}
+.marca{display:flex;align-items:center;gap:.7rem;text-decoration:none}
+.marca svg{width:34px;height:34px;color:#fff}
+.marca b{display:block;font:700 1.15rem/1.05 var(--serif)}.marca small{display:block;font-size:.68rem;letter-spacing:.14em;color:#b9c6d6;font-weight:700;text-transform:uppercase}
+.nav{display:flex;gap:1.6rem;align-items:center}.nav a{text-decoration:none;font-weight:600;font-size:.95rem}.nav a:not(.btn):hover{color:#ffb785}
 .nav a:not(.btn){display:none}
-@media(min-width:860px){.nav a:not(.btn){display:inline}}
+@media(min-width:900px){.nav a:not(.btn){display:inline}}
 
-/* topo */
-.hero{background:linear-gradient(160deg,var(--ink),var(--ink2));color:#fff;position:relative;overflow:hidden;padding:clamp(2.6rem,7vw,5.5rem) 0}
-.hero::after{content:"";position:absolute;right:-8%;bottom:-18%;width:min(560px,90vw);aspect-ratio:1;background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64' fill='none' stroke='white' stroke-width='1.2'%3E%3Cpath d='M32 8v46M20 54h24M10 18h44M10 18l-6 16h12zM54 18l-6 16h12z'/%3E%3C/svg%3E") center/contain no-repeat;opacity:.05;pointer-events:none}
-.hero-grid{display:grid;gap:2.2rem;align-items:center;position:relative;z-index:1}
-@media(min-width:900px){.hero-grid{grid-template-columns:1.1fr .9fr}}
-.hero h1{font-size:clamp(2.4rem,1rem + 5.6vw,4.6rem);margin-bottom:1rem;text-wrap:balance}
-.hero p.sub{font-size:1.15rem;color:#cfd8e3;max-width:46ch;margin-bottom:1.6rem}
-.ofertas{display:flex;flex-wrap:wrap;gap:.6rem;margin-bottom:.7rem}
-.ofertas span{padding:.55rem 1rem;border:1px solid rgba(255,255,255,.25);border-radius:10px;font-weight:700;font-size:.95rem;background:rgba(255,255,255,.06)}
+/* TOPO COM A FOTO DO HYAGO DE FUNDO */
+.hero{position:relative;overflow:hidden;background:var(--ink);color:#fff;min-height:min(92svh,820px);display:flex;align-items:flex-end}
+.hero::before{content:"";position:absolute;inset:0;background:var(--foto) 45% 18%/cover no-repeat;z-index:0}
+.hero::after{content:"";position:absolute;inset:0;z-index:1;pointer-events:none;
+  background:linear-gradient(180deg,rgba(14,31,51,.35) 0%,rgba(14,31,51,0) 28%,rgba(14,31,51,.78) 62%,var(--ink) 100%)}
+.hero .wrap{position:relative;z-index:2;padding:7rem 0 2.6rem}
+.hero h1{font-size:clamp(2.8rem,1.2rem + 7vw,5.4rem);line-height:1;margin-bottom:.5rem;text-wrap:balance}
+.cargo{font:800 .85rem var(--sans);letter-spacing:.14em;text-transform:uppercase;color:#ffb785;margin-bottom:1rem}
+.hero p.sub{font-size:1.15rem;color:#e2e9f1;max-width:44ch;margin-bottom:1.6rem}
+.cta{display:flex;flex-wrap:wrap;gap:.7rem;margin-bottom:1.6rem}
+.ofertas{display:flex;flex-wrap:wrap;gap:.5rem;margin-bottom:.7rem}
+.ofertas span{padding:.45rem .9rem;border:1px solid rgba(255,255,255,.28);border-radius:999px;font-weight:700;font-size:.88rem;background:rgba(14,31,51,.55);-webkit-backdrop-filter:blur(6px);backdrop-filter:blur(6px)}
 .ofertas b{color:#ffb785}
-.nota{font-size:.82rem;color:#9fb0c4}
-.sim{background:#fff;color:var(--texto);border-radius:18px;padding:1.6rem;box-shadow:0 30px 60px -30px rgba(0,0,0,.6)}
-.sim h2{font-size:1.6rem;margin-bottom:.3rem}.sim p{color:var(--muda);font-size:.95rem;margin-bottom:1.1rem}
+.nota{font-size:.8rem;color:#b9c6d6}
+@media(min-width:900px){
+  .hero{min-height:min(88svh,780px)}
+  .hero::before{left:34%;background-position:50% 22%;-webkit-mask-image:linear-gradient(90deg,transparent 0,#000 38%);mask-image:linear-gradient(90deg,transparent 0,#000 38%)}
+  .hero::after{background:linear-gradient(0deg,var(--ink) 0,rgba(14,31,51,0) 28%)}
+  .hero .wrap{padding:8rem 0 3.2rem}
+  .hero .txt{max-width:560px}
+}
+
+/* faixa de credibilidade */
+.faixa{background:var(--ink);color:#fff;border-top:1px solid rgba(255,255,255,.1)}
+.faixa ul{list-style:none;display:grid;gap:.9rem;padding:1.4rem 0}
+@media(min-width:760px){.faixa ul{grid-template-columns:repeat(4,1fr)}}
+.faixa li{display:flex;gap:.7rem;align-items:center;font-weight:700;font-size:.92rem;line-height:1.3}
+.faixa svg{flex:none;width:26px;height:26px;color:#ffb785;fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+
+section{padding:clamp(3rem,8vw,5.5rem) 0}.papel{background:var(--papel)}
+
+/* sobre */
+.cons{display:grid;gap:2.2rem;align-items:center}
+@media(min-width:860px){.cons{grid-template-columns:.85fr 1.15fr;gap:3.4rem}}
+.foto{width:min(400px,100%);margin-inline:auto;aspect-ratio:4/5;border-radius:16px;overflow:hidden;background:var(--ink) var(--apresentacao) center top/cover no-repeat;box-shadow:0 24px 48px -28px rgba(14,31,51,.6);position:relative}
+.foto span{position:absolute;left:0;right:0;bottom:0;padding:2.4rem 1.1rem .9rem;background:linear-gradient(0deg,rgba(14,31,51,.92),transparent);color:#fff;font:700 .9rem var(--sans)}
+.cons h2{margin-bottom:.4rem}.cons .cargo2{font:800 .85rem var(--sans);letter-spacing:.12em;text-transform:uppercase;color:var(--cobre);margin-bottom:1.2rem}
+.cons p{max-width:56ch;color:var(--muda)}.cons p+p{margin-top:1rem}
+.cons p.destaque{color:var(--texto);font-weight:600}
+.assina{margin-top:1.6rem;padding-left:1rem;border-left:4px solid var(--cobre);font:600 1.3rem/1.3 var(--serif);color:var(--ink)!important}
+
+/* pilares */
+.pilares{display:grid;gap:1rem;margin-top:3rem}
+@media(min-width:760px){.pilares{grid-template-columns:repeat(3,1fr)}}
+.pilar{background:#fff;border:1px solid var(--linha);border-radius:14px;padding:1.5rem}
+.pilar svg{width:34px;height:34px;color:var(--cobre);fill:none;stroke:currentColor;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round;margin-bottom:.8rem}
+.pilar h3{font-size:1.35rem;margin-bottom:.3rem}.pilar p{color:var(--muda);font-size:.97rem}
+
+/* simulação */
+.simbloco{display:grid;gap:2rem;align-items:center}
+@media(min-width:900px){.simbloco{grid-template-columns:1fr 1fr;gap:3.4rem}}
+.simbloco ul{list-style:none;display:grid;gap:.6rem;margin-top:1rem}
+.simbloco li{padding-left:1.7rem;position:relative;font-weight:600}
+.simbloco li::before{content:"";position:absolute;left:0;top:.45em;width:.9rem;height:.5rem;border-left:3px solid var(--cobre);border-bottom:3px solid var(--cobre);transform:rotate(-45deg)}
+.sim{background:#fff;color:var(--texto);border-radius:18px;padding:1.6rem;border:1px solid var(--linha);box-shadow:0 30px 60px -36px rgba(14,31,51,.5)}
+.sim h3{font-size:1.6rem;margin-bottom:.3rem}.sim p{color:var(--muda);font-size:.95rem;margin-bottom:1.1rem}
 .sim label{display:block;font-weight:700;font-size:.9rem;margin-bottom:.9rem}
 .sim input,.sim select{display:block;width:100%;min-height:50px;margin-top:.3rem;padding:.7rem .9rem;font:600 1rem var(--sans);color:var(--texto);background:var(--papel);border:2px solid transparent;border-radius:10px}
 .sim input:focus,.sim select:focus{outline:0;border-color:var(--azul)}
 .sim .btn{width:100%}.sim .aviso{min-height:1.3em;color:var(--cobre2);font-weight:700;font-size:.9rem;margin-bottom:.6rem}
-
-section{padding:clamp(3rem,8vw,5.5rem) 0}.papel{background:var(--papel)}
 
 /* como funciona */
 .passos{display:grid;gap:1rem;list-style:none;counter-reset:p}
@@ -80,18 +124,9 @@ section{padding:clamp(3rem,8vw,5.5rem) 0}.papel{background:var(--papel)}
 .tab td:nth-child(2){font:600 1.35rem var(--serif)}.tab td:last-child{text-align:right}
 .rodape-plano{margin-top:1rem;font-size:.88rem;color:var(--muda);max-width:70ch}
 
-/* consultor */
-.cons{display:grid;gap:2rem;align-items:center}
-@media(min-width:820px){.cons{grid-template-columns:.8fr 1.2fr}}
-.foto{width:min(380px,100%);margin-inline:auto;aspect-ratio:4/5;border-radius:16px;overflow:hidden;background:var(--ink);box-shadow:0 24px 48px -28px rgba(14,31,51,.6)}
-.foto img{width:100%;height:100%;object-fit:cover}
-.foto .ini{height:100%;display:grid;place-items:center;color:#fff;font:600 4rem var(--serif)}
-.cons p{max-width:54ch;color:var(--muda)}.cons p+p{margin-top:1rem}
-.assina{margin-top:1.6rem;padding-left:1rem;border-left:4px solid var(--cobre);font:600 1.3rem/1.3 var(--serif);color:var(--ink)!important}
-
 /* entregas */
 .galeria{display:flex;gap:1rem;overflow-x:auto;scroll-snap-type:x mandatory;padding-bottom:1rem;-webkit-overflow-scrolling:touch}
-.galeria figure{flex:0 0 min(72%,280px);scroll-snap-align:start;cursor:zoom-in}
+.galeria figure{flex:0 0 min(72%,280px);scroll-snap-align:start}
 .galeria button{all:unset;display:block;width:100%;cursor:zoom-in;border-radius:14px;overflow:hidden;aspect-ratio:4/5;background:var(--ink)}
 .galeria img{width:100%;height:100%;object-fit:cover;transition:transform .5s}.galeria button:hover img{transform:scale(1.04)}
 .galeria button:focus-visible{outline:3px solid var(--cobre);outline-offset:3px}
@@ -135,23 +170,28 @@ dialog button{min-height:44px;padding:.4rem 1rem;border:0;border-radius:8px;back
 
 <header>
   <div class="wrap barra">
-    <a class="marca" href="#topo" aria-label="Grupo Libra Consórcio, início">
+    <a class="marca" href="#topo" aria-label="Hyago Matheus, consultor Grupo Libra Consórcios, início">
       <svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M32 8v46M20 54h24M10 18h44M10 18l-6 16h12zM54 18l-6 16h12z"/></svg>
-      <span><b>Grupo Libra</b><small>CONSÓRCIO</small></span>
+      <span><b>Hyago Matheus</b><small>Consultor · Grupo Libra</small></span>
     </a>
     <nav class="nav" aria-label="Principal">
-      <a href="#como">Como funciona</a><a href="#planos">Planos</a><a href="#consultor">Consultor</a><a href="#duvidas">Dúvidas</a>
+      <a href="#sobre">Sobre</a><a href="#como">Como funciona</a><a href="#planos">Planos</a><a href="#entregas">Entregas</a><a href="#duvidas">Dúvidas</a>
       <a class="btn peq" href="#simular">Simular</a>
     </nav>
   </div>
 </header>
 
 <main id="topo">
-  <section class="hero" id="simular" style="padding-top:clamp(2.6rem,7vw,5rem)">
-    <div class="wrap hero-grid">
-      <div>
-        <h1>Chegou a hora de tirar seu plano do papel.</h1>
-        <p class="sub">Conquiste o seu carro com o Grupo Libra Consórcio. Fale com nossa equipe e faça uma simulação.</p>
+  <section class="hero" aria-labelledby="t-hero" style="padding:0">
+    <div class="wrap">
+      <div class="txt">
+        <p class="cargo">Consultor de Vendas · GrupoLibra Consórcios</p>
+        <h1 id="t-hero">Hyago Matheus</h1>
+        <p class="sub">Grandes conquistas começam com boas decisões. Vamos planejar a sua com transparência e segurança.</p>
+        <div class="cta">
+          <a class="btn" id="zapHero" href="#contato" target="_blank" rel="noopener">Falar no WhatsApp</a>
+          <a class="btn sec" href="#simular">Fazer simulação</a>
+        </div>
         <div class="ofertas">
           <span>Carros a partir de <b>R$ 446</b></span>
           <span>Motos a partir de <b>R$ 327</b></span>
@@ -159,12 +199,62 @@ dialog button{min-height:44px;padding:.4rem 1rem;border:0;border-radius:8px;back
         </div>
         <p class="nota">Condições da campanha vigente, sujeitas a alteração. Consulte o regulamento do grupo.</p>
       </div>
-      <form class="sim" id="form" novalidate>
-        <h2>Faça sua simulação</h2>
-        <p>Conte o que você procura e o consultor Hyago responde pelo WhatsApp.</p>
+    </div>
+  </section>
+
+  <div class="faixa">
+    <div class="wrap">
+      <ul>
+        <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3l8 3v6c0 4.5-3.2 8-8 9-4.8-1-8-4.5-8-9V6z"/><path d="M9 12l2 2 4-4"/></svg>Representante do Consórcio Banco Volkswagen no Maranhão</li>
+        <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 10l9-6 9 6M5 10v9h14v-9M9 19v-5h6v5"/></svg>Consórcio regulado e fiscalizado pelo Banco Central</li>
+        <li><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="8" r="4"/><path d="M4 20c1-4 4-6 8-6s7 2 8 6"/></svg>Atendimento personalizado, do início ao fim</li>
+        <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s7-6.2 7-11.5A7 7 0 0 0 5 9.5C5 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg>Escritório em São Luís (MA)</li>
+      </ul>
+    </div>
+  </div>
+
+  <section class="papel" id="sobre" aria-labelledby="t-cons">
+    <div class="wrap">
+      <div class="cons">
+        <div class="foto rev" role="img" aria-label="Hyago Matheus, consultor do GrupoLibra Consórcios"><span>Hyago Matheus · GrupoLibra Consórcios</span></div>
+        <div class="rev">
+          <span class="eyebrow">Quem vai te atender</span>
+          <h2 id="t-cons">Hyago Matheus</h2>
+          <p class="cargo2">Consultor de Vendas | GrupoLibra Consórcios</p>
+          <p class="destaque">Sou Hyago Matheus, profissional de vendas do GrupoLibra Consórcios, empresa representante do Consórcio Banco Volkswagen no Maranhão.</p>
+          <p>Meu compromisso é oferecer soluções inteligentes para quem deseja conquistar seu veículo ou realizar o sonho de adquirir um imóvel por meio do consórcio, com planejamento financeiro, transparência e segurança em cada etapa.</p>
+          <p>Acredito que grandes conquistas começam com boas decisões. Por isso, trabalho com atendimento personalizado, buscando compreender os objetivos de cada cliente e apresentar as melhores oportunidades de acordo com suas necessidades e possibilidades.</p>
+          <p>Mais do que comercializar consórcios, meu propósito é ajudar pessoas a transformarem planos em conquistas reais, construindo uma relação de confiança que vai além da venda.</p>
+          <p class="assina">GrupoLibra Consórcios: planejamento, credibilidade e o caminho para suas conquistas.</p>
+        </div>
+      </div>
+
+      <div class="pilares">
+        <div class="pilar rev"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 20V10M10 20V4M16 20v-7M22 20H2"/></svg><h3>Planejamento financeiro</h3><p>Entendo o seu objetivo e a parcela que cabe no seu bolso antes de indicar o melhor caminho.</p></div>
+        <div class="pilar rev"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M2 12s4-7 10-7 10 7 10 7-4 7-10 7S2 12 2 12z"/><circle cx="12" cy="12" r="3"/></svg><h3>Transparência</h3><p>Explico regras, custos e opções de lance com clareza, para você decidir com tranquilidade.</p></div>
+        <div class="pilar rev"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3l8 3v6c0 4.5-3.2 8-8 9-4.8-1-8-4.5-8-9V6z"/></svg><h3>Segurança em cada etapa</h3><p>Acompanho você da simulação à conquista, com o respaldo do Consórcio Banco Volkswagen.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="simular" aria-labelledby="t-sim">
+    <div class="wrap simbloco">
+      <div class="rev">
+        <span class="eyebrow">Simulação sem compromisso</span>
+        <h2 id="t-sim">Seu plano pode começar hoje.</h2>
+        <p class="lead" style="margin-bottom:0">Conte o que você procura e eu respondo pessoalmente pelo WhatsApp, com uma simulação pensada para o seu momento.</p>
+        <ul>
+          <li>Carro, moto ou imóvel</li>
+          <li>Parcela que cabe no seu orçamento</li>
+          <li>Regras, custos e lances explicados antes de você decidir</li>
+        </ul>
+      </div>
+      <form class="sim rev" id="form" novalidate>
+        <h3>Faça sua simulação</h3>
+        <p>Leva menos de um minuto. O Hyago responde pelo WhatsApp.</p>
         <label>Seu nome<input id="fNome" autocomplete="given-name" placeholder="Como posso te chamar?"></label>
         <label>O que você quer conquistar
-          <select id="fTipo"><option>Carro</option><option>Moto</option><option>Outro</option></select></label>
+          <select id="fTipo"><option>Carro</option><option>Moto</option><option>Imóvel</option><option>Outro</option></select></label>
         <label>Parcela que cabe no seu bolso (R$)<input id="fValor" inputmode="numeric" placeholder="Ex.: 500"></label>
         <p class="aviso" id="aviso" role="status"></p>
         <button class="btn" type="submit">Simular pelo WhatsApp</button>
@@ -177,12 +267,12 @@ dialog button{min-height:44px;padding:.4rem 1rem;border:0;border-radius:8px;back
       <h2 id="t-como" class="rev">Como funciona o consórcio</h2>
       <p class="lead rev">Um grupo de pessoas paga parcelas todo mês e, a cada assembleia, alguém recebe o crédito para comprar o bem.</p>
       <ol class="passos">
-        <li class="rev"><h3>Escolha o crédito</h3><p>Carro ou moto, no valor e no prazo que cabem no seu planejamento.</p></li>
+        <li class="rev"><h3>Escolha o crédito</h3><p>Veículo ou imóvel, no valor e no prazo que cabem no seu planejamento.</p></li>
         <li class="rev"><h3>Entre em um grupo</h3><p>Você paga a parcela mensal junto com os demais participantes do grupo.</p></li>
         <li class="rev"><h3>Concorra todo mês</h3><p>A contemplação acontece por sorteio ou por lance, em assembleia. Não existe data garantida.</p></li>
         <li class="rev"><h3>Use a carta de crédito</h3><p>Contemplado, você escolhe o bem e conclui a compra.</p></li>
       </ol>
-      <p class="custos rev"><b>Sem juros, mas com custos previstos em contrato:</b> taxa de administração, fundo de reserva, seguro (quando contratado) e reajuste do crédito e das parcelas. O consultor mostra tudo antes de você assinar.</p>
+      <p class="custos rev"><b>Sem juros, mas com custos previstos em contrato:</b> taxa de administração, fundo de reserva, seguro (quando contratado) e reajuste do crédito e das parcelas. Eu mostro tudo antes de você assinar.</p>
     </div>
   </section>
 
@@ -196,19 +286,7 @@ dialog button{min-height:44px;padding:.4rem 1rem;border:0;border-radius:8px;back
     </div>
   </section>
 
-  <section class="papel" id="consultor" aria-labelledby="t-cons">
-    <div class="wrap cons">
-      <div class="foto"><img src="WhatsApp%20Image%202026-11-03%20at%2018.43.22.jpeg" alt="Hyago Matheus, consultor do Grupo Libra" width="720" height="900" loading="lazy" id="fotoHyago"></div>
-      <div class="rev">
-        <h2 id="t-cons">Hyago Matheus</h2>
-        <p>Consultor do Grupo Libra. Meu trabalho é ajudar você a transformar seus planos em conquistas por meio do consórcio, seja para o primeiro veículo, a casa própria ou um novo projeto.</p>
-        <p>Atendimento personalizado e transparente: eu explico as regras, os custos e as opções de lance antes de você decidir.</p>
-        <p class="assina">Grupo Libra Consórcio, realizando sonhos junto com você.</p>
-      </div>
-    </div>
-  </section>
-
-  <section id="entregas" aria-labelledby="t-ent">
+  <section class="papel" id="entregas" aria-labelledby="t-ent">
     <div class="wrap">
       <h2 id="t-ent" class="rev">Quem já realizou o plano</h2>
       <p class="lead rev">Entregas de clientes do Hyago. Toque em uma foto para ampliar.</p>
@@ -216,15 +294,15 @@ dialog button{min-height:44px;padding:.4rem 1rem;border:0;border-radius:8px;back
     </div>
   </section>
 
-  <section class="papel" id="duvidas" aria-labelledby="t-faq">
+  <section id="duvidas" aria-labelledby="t-faq">
     <div class="wrap faq">
       <h2 id="t-faq" class="rev">Dúvidas frequentes</h2>
       <details><summary>Consórcio é a mesma coisa que financiamento?</summary><p>Não. No financiamento você recebe o bem na hora e paga juros. No consórcio, o grupo forma um fundo e você recebe uma carta de crédito quando é contemplado, por sorteio ou lance.</p></details>
       <details><summary>Tem juros?</summary><p>O consórcio não cobra juros. Há taxa de administração, fundo de reserva, seguro (quando contratado) e reajuste anual do crédito e das parcelas, todos previstos no contrato.</p></details>
       <details><summary>Quando serei contemplado?</summary><p>Não há data garantida. A contemplação acontece nas assembleias, por sorteio ou por lance, e ninguém pode prometer o mês em que isso vai acontecer.</p></details>
-      <details><summary>O que é lance?</summary><p>É uma oferta feita para aumentar a sua chance de contemplação em uma assembleia. As modalidades seguem as regras de cada grupo, e o consultor explica antes de você decidir.</p></details>
+      <details><summary>O que é lance?</summary><p>É uma oferta feita para aumentar a sua chance de contemplação em uma assembleia. As modalidades seguem as regras de cada grupo, e eu explico antes de você decidir.</p></details>
       <details><summary>Preciso dar entrada?</summary><p>Na campanha vigente do Grupo Libra, não há entrada. Confirme as condições na sua simulação.</p></details>
-      <details><summary>Posso desistir do consórcio?</summary><p>As regras de desistência e de devolução dos valores estão no contrato e na lei dos consórcios. Peça ao consultor para explicar com calma antes de assinar.</p></details>
+      <details><summary>Posso desistir do consórcio?</summary><p>As regras de desistência e de devolução dos valores estão no contrato e na lei dos consórcios. Explico com calma antes de você assinar.</p></details>
       <details><summary>Quem administra o consórcio?</summary><p>Os grupos são conduzidos por administradoras autorizadas e fiscalizadas pelo Banco Central do Brasil. O nome da administradora do seu grupo consta no contrato.</p></details>
     </div>
   </section>
@@ -232,12 +310,12 @@ dialog button{min-height:44px;padding:.4rem 1rem;border:0;border-radius:8px;back
   <section class="contato" id="contato" aria-labelledby="t-cont">
     <div class="wrap cgrid">
       <div class="rev">
-        <h2 id="t-cont">Não deixe para depois o que você pode começar hoje.</h2>
+        <h2 id="t-cont">Será um prazer fazer parte da sua próxima realização.</h2>
         <p class="lead">Fale com o Hyago e faça uma simulação sem compromisso.</p>
         <a class="btn" id="zapContato" href="#contato" target="_blank" rel="noopener">Falar no WhatsApp</a>
       </div>
       <div class="rev" style="display:grid;gap:1rem">
-        <div class="cartao"><h3>Hyago Matheus</h3><a id="zapNum" href="#contato" target="_blank" rel="noopener">(98) 98157-8787</a><a href="https://www.instagram.com/hyagogrupolibra/" target="_blank" rel="noopener">@hyagogrupolibra</a></div>
+        <div class="cartao"><h3>Hyago Matheus</h3><p>Consultor de Vendas | GrupoLibra Consórcios</p><a id="zapNum" href="#contato" target="_blank" rel="noopener">(98) 98157-8787</a><a href="https://www.instagram.com/hyagogrupolibra/" target="_blank" rel="noopener">@hyagogrupolibra</a></div>
         <div class="cartao"><h3>Grupo Libra</h3><p>Avenida dos Franceses, 40, Barreto, São Luís (MA), CEP 65036-281</p><a href="tel:+559884582795">(98) 8458-2795</a><a href="mailto:grupolibra.br@gmail.com">grupolibra.br@gmail.com</a><a href="https://www.instagram.com/grupolibraslz/" target="_blank" rel="noopener">@grupolibraslz</a></div>
       </div>
     </div>
@@ -249,7 +327,7 @@ dialog button{min-height:44px;padding:.4rem 1rem;border:0;border-radius:8px;back
     <p><b>Grupo Libra Consórcios e Serviços Ltda.</b> · CNPJ 38.333.730/0001-87 · Avenida dos Franceses, 40, Barreto, São Luís (MA), CEP 65036-281 · grupolibra.br@gmail.com</p>
     <p id="admins"></p>
     <p>O consórcio é regulamentado e fiscalizado pelo Banco Central do Brasil. A contemplação ocorre por sorteio ou lance, sem data garantida. Valores e condições sujeitos a alteração. Imagens ilustrativas.</p>
-    <p>© <span id="ano"></span> Grupo Libra Consórcio. Realizando sonhos junto com você.</p>
+    <p>© <span id="ano"></span> Grupo Libra Consórcios. Planejamento, credibilidade e o caminho para suas conquistas.</p>
   </div>
 </footer>
 
@@ -262,8 +340,12 @@ dialog button{min-height:44px;padding:.4rem 1rem;border:0;border-radius:8px;back
 var CFG = {
   whatsapp: "5598981578787",            // WhatsApp do Hyago (DDI + DDD + número)
   atualizadoEm: "",                      // ex.: "nov/2026". Se ficar vazio, a data não aparece
-  administradoras: ""                    // ex.: "Consórcio Nacional Volkswagen, Yamaha Consórcio". Vazio = linha não aparece
+  administradoras: "Consórcio Banco Volkswagen"  // Vazio = linha não aparece
 };
+// FOTOS: ficam na mesma pasta deste arquivo.
+// fundodeimagem.jpeg = fundo do topo | apresentacao.jpeg = foto da seção "Sobre" (troque no começo do CSS: --foto e --apresentacao)
+// (ou troque o nome na variável --foto, no começo do CSS).
+
 // Preços: para atualizar todo mês, mexa só nos números. [prazo em meses, parcela]
 var PLANOS = {
   "0km":  {nome: "Polo 0km (2026/2027)", linhas: [[100,"730,13"],[90,"803,63"],[80,"1.173,39"],[70,"1.331,29"],[60,"1.541,83"],[50,"1.836,58"],[36,"2.524,33"]]},
@@ -284,10 +366,10 @@ var FOTOS = [
 (function(){
 var $=function(s){return document.querySelector(s)};
 function zap(m){return "https://wa.me/"+CFG.whatsapp+"?text="+encodeURIComponent(m)}
-var base="Olá, Hyago! Vim pelo site do Grupo Libra e quero fazer uma simulação.";
-["#zapContato","#zapNum","#fab"].forEach(function(s){$(s).href=zap(base)});
+var base="Olá, Hyago! Vim pelo seu site e quero fazer uma simulação de consórcio.";
+["#zapHero","#zapContato","#zapNum","#fab"].forEach(function(s){$(s).href=zap(base)});
 $("#ano").textContent=new Date().getFullYear();
-if(CFG.administradoras)$("#admins").textContent="Administradoras: "+CFG.administradoras+"."; else $("#admins").remove();
+if(CFG.administradoras)$("#admins").textContent="Representante do "+CFG.administradoras+" no Maranhão."; else $("#admins").remove();
 
 /* simulador -> WhatsApp */
 $("#form").addEventListener("submit",function(e){e.preventDefault();
@@ -301,17 +383,13 @@ var abas=$("#abas"),corpo=$("#linhas"),atual="0km";
 function monta(){
   var p=PLANOS[atual];
   corpo.innerHTML=p.linhas.map(function(l){
-    var msg="Olá, Hyago! Vim pelo site e quero simular o "+p.nome+" em "+l[0]+"x de R$ "+l[1]+".";
+    var msg="Olá, Hyago! Vim pelo seu site e quero simular o "+p.nome+" em "+l[0]+"x de R$ "+l[1]+".";
     return '<tr><td>'+l[0]+' meses</td><td>R$ '+l[1]+'</td><td><a class="btn peq" href="'+zap(msg)+'" target="_blank" rel="noopener" aria-label="Simular '+p.nome+' em '+l[0]+' meses">Simular</a></td></tr>'}).join("");
   Array.prototype.forEach.call(abas.children,function(b){b.setAttribute("aria-selected",b.getAttribute("data-k")===atual?"true":"false")})}
 Object.keys(PLANOS).forEach(function(k){var b=document.createElement("button");b.type="button";b.setAttribute("role","tab");b.setAttribute("data-k",k);b.textContent=PLANOS[k].nome;
   b.addEventListener("click",function(){atual=k;monta()});abas.appendChild(b)});
 monta();
 if(CFG.atualizadoEm)$("#rodapePlano").textContent="Valores de referência atualizados em "+CFG.atualizadoEm+". "+$("#rodapePlano").textContent;
-
-/* foto do consultor: se faltar, mostra iniciais */
-var fh=$("#fotoHyago");function semFoto(){var d=document.createElement("div");d.className="ini";d.textContent="HM";fh.parentNode.replaceChild(d,fh)}
-fh.addEventListener("error",semFoto);if(fh.complete&&fh.naturalWidth===0)semFoto();
 
 /* galeria + ampliação */
 var lb=$("#lb"),gal=$("#galeria");
@@ -330,8 +408,8 @@ lb.addEventListener("click",function(e){if(e.target===lb)fecha()});
 var io="IntersectionObserver" in window?new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add("vis");io.unobserve(e.target)}})},{threshold:.12}):null;
 Array.prototype.forEach.call(document.querySelectorAll(".rev"),function(el){io?io.observe(el):el.classList.add("vis")});
 if("IntersectionObserver" in window){var fab=$("#fab");var n=0;
-  new IntersectionObserver(function(es){es.forEach(function(e){n+=e.isIntersecting?1:-1});fab.classList.toggle("some",n>0)}).observe($("#simular"));
-  new IntersectionObserver(function(es){es.forEach(function(e){n+=e.isIntersecting?1:-1});fab.classList.toggle("some",n>0)}).observe($("#contato"))}
+  var ob=function(){return new IntersectionObserver(function(es){es.forEach(function(e){n+=e.isIntersecting?1:-1});fab.classList.toggle("some",n>0)})};
+  ob().observe($("#simular"));ob().observe($("#contato"))}
 })();
 </script>
 </body>
