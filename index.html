@@ -47,9 +47,9 @@ header{position:sticky;top:0;z-index:50;background:rgba(14,31,51,.92);color:#fff
 .nav a:not(.btn){display:none}
 @media(min-width:900px){.nav a:not(.btn){display:inline}}
 
-/* TOPO COM IMAGEM DE FUNDO (essa.jpeg) LEVEMENTE DESFOCADA */
+/* TOPO COM IMAGEM DE FUNDO (essa.jpeg) COM DESFOQUE SUTIL */
 .hero{position:relative;overflow:hidden;background:var(--ink);color:#fff;min-height:min(92svh,820px);display:flex;align-items:flex-end}
-.hero::before{content:"";position:absolute;inset:-12px;background:var(--foto) center center/cover no-repeat;filter:blur(3px);-webkit-filter:blur(3px);opacity:1;z-index:0}
+.hero::before{content:"";position:absolute;inset:-8px;background:var(--foto) center center/cover no-repeat;filter:blur(1.5px);-webkit-filter:blur(1.5px);opacity:1;z-index:0}
 .hero::after{content:"";position:absolute;inset:0;z-index:1;pointer-events:none;
   background:linear-gradient(180deg,rgba(14,31,51,.78) 0%,rgba(14,31,51,0.62) 40%,rgba(14,31,51,.9) 80%,var(--ink) 100%)}
 .hero .wrap{position:relative;z-index:2;padding:7rem 0 2.6rem}
@@ -393,7 +393,7 @@ var CFG = {
   administradoras: "Consórcio Banco Volkswagen"  // Vazio = linha não aparece
 };
 // FOTOS: ficam na mesma pasta deste arquivo.
-// essa.jpeg é a imagem de fundo do topo (--foto), levemente desfocada.
+// essa.jpeg é a imagem de fundo do topo (--foto), com desfoque sutil.
 // fundodeimagem.jpeg continua sendo a imagem da seção "Sobre" (--apresentacao).
 
 // Planos: cada item vira uma aba, na ordem abaixo.
