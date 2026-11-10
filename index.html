@@ -10,6 +10,7 @@
 <meta property="og:locale" content="pt_BR">
 <meta property="og:title" content="Hyago Matheus | Consultor de Vendas Grupo Libra Consórcios">
 <meta property="og:description" content="Planejamento, transparência e segurança para conquistar seu veículo ou imóvel por meio do consórcio.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%230e1f33'/%3E%3Cg fill='none' stroke='white' stroke-width='3.5' stroke-linecap='round' stroke-linejoin='round'%3E%3Ccircle cx='32' cy='32' r='22' stroke-dasharray='39 7.07' transform='rotate(-70 32 32)'/%3E%3Ccircle cx='32' cy='26' r='5'/%3E%3Cpath d='M32 31v16M32 38h6M32 44h4'/%3E%3C/g%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500..700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
@@ -114,9 +115,16 @@ section{padding:clamp(3rem,8vw,5.5rem) 0}.papel{background:var(--papel)}
 .custos b{color:var(--texto)}
 
 /* planos */
-.abas{display:flex;gap:.4rem;flex-wrap:wrap;margin-bottom:1.4rem}
-.abas button{min-height:46px;padding:.5rem 1.1rem;border:2px solid var(--ink);background:transparent;color:var(--ink);border-radius:10px;font:700 .95rem var(--sans);cursor:pointer}
-.abas button[aria-selected="true"]{background:var(--ink);color:#fff}
+.abas{display:flex;gap:.4rem;margin:0 0 1.2rem;padding:.35rem;background:var(--papel);border-radius:14px;overflow-x:auto;scrollbar-width:none;-webkit-overflow-scrolling:touch}
+.abas::-webkit-scrollbar{display:none}
+.abas button{flex:none;min-height:46px;padding:.5rem 1.2rem;border:0;background:transparent;color:var(--muda);border-radius:10px;font:700 .95rem var(--sans);cursor:pointer;white-space:nowrap;transition:background .2s,color .2s}
+.abas button:hover{color:var(--ink)}
+.abas button[aria-selected="true"]{background:var(--ink);color:#fff;box-shadow:0 8px 18px -10px rgba(14,31,51,.8)}
+.selos{list-style:none;display:flex;flex-wrap:wrap;gap:.5rem;margin:0 0 1.1rem}
+.selos[hidden]{display:none}
+.selos li{padding:.4rem .85rem;border-radius:999px;background:#fff;border:1px solid var(--linha);font-weight:700;font-size:.82rem;color:var(--ink)}
+.selos li:first-child{background:var(--ink);border-color:var(--ink);color:#fff}
+.selos li:not(:first-child)::before{content:"";display:inline-block;width:.55rem;height:.3rem;margin-right:.45rem;border-left:2px solid var(--cobre);border-bottom:2px solid var(--cobre);transform:translateY(-.15em) rotate(-45deg)}
 .tab{width:100%;border-collapse:collapse;background:#fff;border:1px solid var(--linha);border-radius:14px;overflow:hidden}
 .tab th,.tab td{padding:.9rem 1.1rem;text-align:left;border-bottom:1px solid var(--linha)}
 .tab th{font-size:.8rem;letter-spacing:.08em;color:var(--muda);background:#faf8f4}
@@ -124,14 +132,18 @@ section{padding:clamp(3rem,8vw,5.5rem) 0}.papel{background:var(--papel)}
 .tab td:nth-child(2){font:600 1.35rem var(--serif)}.tab td:last-child{text-align:right}
 .rodape-plano{margin-top:1rem;font-size:.88rem;color:var(--muda);max-width:70ch}
 
-/* entregas */
-.galeria{display:flex;gap:1rem;overflow-x:auto;scroll-snap-type:x mandatory;padding-bottom:1rem;-webkit-overflow-scrolling:touch}
-.galeria figure{flex:0 0 min(72%,280px);scroll-snap-align:start}
-.galeria button{all:unset;display:block;width:100%;cursor:zoom-in;border-radius:14px;overflow:hidden;aspect-ratio:4/5;background:var(--ink)}
-.galeria img{width:100%;height:100%;object-fit:cover;transition:transform .5s}.galeria button:hover img{transform:scale(1.04)}
+/* conquistas / premiações */
+.galeria{display:grid;grid-template-columns:repeat(2,1fr);gap:.7rem}
+@media(min-width:760px){.galeria{grid-template-columns:repeat(4,1fr);gap:1rem}}
+.galeria figure[hidden]{display:none}
+.galeria button{all:unset;display:block;position:relative;width:100%;aspect-ratio:4/5;cursor:zoom-in;border-radius:14px;overflow:hidden;background:var(--ink);box-shadow:0 14px 28px -20px rgba(14,31,51,.7);-webkit-tap-highlight-color:transparent}
+.galeria img{width:100%;height:100%;object-fit:cover;transition:transform .6s}
+.galeria button::after{content:"+";position:absolute;right:.6rem;bottom:.6rem;display:grid;place-items:center;width:34px;height:34px;border-radius:50%;background:rgba(14,31,51,.78);color:#fff;font:400 1.4rem/1 var(--serif);opacity:0;transform:translateY(6px);transition:opacity .3s,transform .3s}
+.galeria button:hover img{transform:scale(1.05)}.galeria button:hover::after,.galeria button:focus-visible::after{opacity:1;transform:none}
+@media(hover:none){.galeria button::after{opacity:.9;transform:none}}
 .galeria button:focus-visible{outline:3px solid var(--cobre);outline-offset:3px}
-.galeria figcaption{margin-top:.5rem;font-weight:700;font-size:.95rem}
-@media(min-width:900px){.galeria{display:grid;grid-template-columns:repeat(4,1fr);overflow:visible}.galeria figure{flex:none}}
+.mais-wrap{display:flex;justify-content:center;margin-top:1.8rem}
+.btn.escuro{background:var(--ink)}.btn.escuro:hover{background:var(--ink2)}
 
 /* faq */
 .faq{max-width:800px}
@@ -156,11 +168,14 @@ footer .wrap{display:grid;gap:1rem}footer b{color:#fff}footer p{max-width:90ch}
 .fab{position:fixed;right:1rem;bottom:calc(1rem + env(safe-area-inset-bottom,0px));z-index:45;display:grid;place-items:center;width:58px;height:58px;border-radius:50%;background:var(--cobre);color:#fff;box-shadow:0 10px 24px rgba(0,0,0,.3);transition:transform .3s,opacity .3s}
 .fab svg{width:28px;height:28px;fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
 .fab.some{transform:scale(.6);opacity:0;pointer-events:none}
-dialog{margin:auto;border:0;border-radius:14px;background:#000;max-width:min(92vw,560px);max-height:92vh;overflow:auto;color:#fff}
-dialog::backdrop{background:rgba(5,12,20,.85)}
-dialog img{width:100%;height:auto}
-.lb-rod{display:flex;justify-content:space-between;align-items:center;gap:1rem;padding:.8rem 1rem}
-dialog button{min-height:44px;padding:.4rem 1rem;border:0;border-radius:8px;background:var(--cobre);color:#fff;font:700 .95rem var(--sans);cursor:pointer}
+dialog{margin:auto;padding:0;border:0;border-radius:16px;background:var(--ink);width:min(94vw,520px);max-height:94vh;overflow:hidden;color:#fff}
+dialog::backdrop{background:rgba(5,12,20,.9)}
+dialog img{display:block;width:100%;max-height:74vh;object-fit:contain;background:#000}
+.lb-rod{display:flex;align-items:center;gap:.6rem;padding:.8rem 1rem}
+.lb-rod .info{flex:1;min-width:0;font-weight:700;font-size:.92rem;line-height:1.3}
+.lb-rod small{display:block;color:#b9c6d6;font-weight:600}
+dialog button{min-width:44px;min-height:44px;padding:.3rem .8rem;border:0;border-radius:10px;background:rgba(255,255,255,.12);color:#fff;font:600 1.3rem var(--sans);cursor:pointer;transition:background .2s}
+dialog button:hover{background:var(--cobre)}
 .js .rev{opacity:0;transform:translateY(14px);transition:opacity .7s,transform .7s}.js .rev.vis{opacity:1;transform:none}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.js .rev{transform:none;transition:opacity .01s}*{transition-duration:.01ms!important}}
 </style>
@@ -171,7 +186,7 @@ dialog button{min-height:44px;padding:.4rem 1rem;border:0;border-radius:8px;back
 <header>
   <div class="wrap barra">
     <a class="marca" href="#topo" aria-label="Hyago Matheus, consultor Grupo Libra Consórcios, início">
-      <svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M32 8v46M20 54h24M10 18h44M10 18l-6 16h12zM54 18l-6 16h12z"/></svg>
+      <svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="32" cy="32" r="26" stroke-dasharray="46 8.45" transform="rotate(-70 32 32)"/><circle cx="32" cy="24" r="6"/><path d="M32 30v17M32 38h7M32 44h5"/></svg>
       <span><b>Hyago Matheus</b><small>Consultor · Grupo Libra</small></span>
     </a>
     <nav class="nav" aria-label="Principal">
@@ -278,9 +293,10 @@ dialog button{min-height:44px;padding:.4rem 1rem;border:0;border-radius:8px;back
 
   <section id="planos" aria-labelledby="t-planos">
     <div class="wrap">
-      <h2 id="t-planos" class="rev">Exemplos de planos Volkswagen Polo</h2>
-      <p class="lead rev">Parcela mensal por prazo. Valores de referência: peça a simulação atualizada para o seu caso.</p>
+      <h2 id="t-planos" class="rev">Planos Volkswagen</h2>
+      <p class="lead rev">Escolha o modelo e veja a parcela mensal por prazo. Valores de referência: peça a simulação atualizada para o seu caso.</p>
       <div class="abas" role="tablist" aria-label="Modelos" id="abas"></div>
+      <ul class="selos" id="selos" hidden></ul>
       <table class="tab rev" aria-live="polite"><thead><tr><th>PRAZO</th><th>PARCELA A PARTIR DE</th><th></th></tr></thead><tbody id="linhas"></tbody></table>
       <p class="rodape-plano" id="rodapePlano">Valores de referência. A parcela final depende do grupo, do valor da carta de crédito e dos encargos do contrato (taxa de administração, fundo de reserva e seguro, quando contratado). Condições sujeitas a alteração.</p>
     </div>
@@ -288,9 +304,11 @@ dialog button{min-height:44px;padding:.4rem 1rem;border:0;border-radius:8px;back
 
   <section class="papel" id="entregas" aria-labelledby="t-ent">
     <div class="wrap">
+      <span class="eyebrow rev">Entregas e premiações</span>
       <h2 id="t-ent" class="rev">Quem já realizou o plano</h2>
-      <p class="lead rev">Entregas de clientes do Hyago. Toque em uma foto para ampliar.</p>
+      <p class="lead rev">Clientes que transformaram o planejamento em conquista. Toque em uma foto para ampliar.</p>
       <div class="galeria" id="galeria"></div>
+      <div class="mais-wrap"><button class="btn escuro" type="button" id="maisFotos" hidden>Ver todas as fotos</button></div>
     </div>
   </section>
 
@@ -333,7 +351,7 @@ dialog button{min-height:44px;padding:.4rem 1rem;border:0;border-radius:8px;back
 
 <a class="fab" id="fab" href="#contato" target="_blank" rel="noopener" aria-label="Falar no WhatsApp"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 6h14a1 1 0 0 1 1 1v8a1 1 0 0 1-1 1H11l-4 3v-3H5a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1z"/></svg></a>
 
-<dialog id="lb" aria-label="Foto ampliada"><img id="lbImg" alt=""><div class="lb-rod"><span id="lbCap"></span><button type="button" id="lbX">Fechar</button></div></dialog>
+<dialog id="lb" aria-label="Foto ampliada"><img id="lbImg" alt=""><div class="lb-rod"><button type="button" id="lbPrev" aria-label="Foto anterior">&#8249;</button><div class="info"><span id="lbCap"></span><small id="lbNum"></small></div><button type="button" id="lbNext" aria-label="Próxima foto">&#8250;</button><button type="button" id="lbX" aria-label="Fechar">&#10005;</button></div></dialog>
 
 <script>
 /* ===== CONFIGURE AQUI ===== */
@@ -346,22 +364,38 @@ var CFG = {
 // apresentacao.jpeg = fundo do topo (--foto) | fundodeimagem.jpeg = foto da seção "Sobre" (--apresentacao). Troque no começo do CSS.
 // (ou troque o nome na variável --foto, no começo do CSS).
 
-// Preços: para atualizar todo mês, mexa só nos números. [prazo em meses, parcela]
-var PLANOS = {
-  "0km":  {nome: "Polo 0km (2026/2027)", linhas: [[100,"730,13"],[90,"803,63"],[80,"1.173,39"],[70,"1.331,29"],[60,"1.541,83"],[50,"1.836,58"],[36,"2.524,33"]]},
-  "2025": {nome: "Polo 2025 (seminovo)", linhas: [[100,"649,00"],[90,"714,33"],[80,"1.043,01"],[70,"1.183,37"],[60,"1.370,51"],[50,"1.632,51"],[36,"2.243,85"]]},
-  "2024": {nome: "Polo 2024/2025 (seminovo)", linhas: [[100,"567,88"],[90,"625,04"],[80,"912,64"],[70,"1.035,45"],[60,"1.199,20"],[50,"1.428,45"],[36,"1.963,36"]]}
-};
-// Fotos de entregas. Se um arquivo não existir, a foto some sozinha (não aparece quebrada).
+// Planos: cada item vira uma aba, na ordem abaixo.
+// aba = texto curto da aba | nome = nome completo (vai na mensagem do WhatsApp) | selos = destaques (opcional)
+// linhas = [prazo em meses, parcela]. Para atualizar todo mês, mexa só nos números.
+var PLANOS = [
+  {aba:"Novo Tera 2027", nome:"Novo Tera 2027 (manual)",
+   selos:["Proposta Consórcio Volkswagen direto de fábrica","Vagas limitadas","Condições garantidas por reservas"],
+   linhas:[[100,"973,50"],[90,"1.071,13"],[80,"1.564,52"],[70,"1.775,77"],[60,"2.055,77"],[50,"2.448,77"],[36,"3.365,77"]]},
+  {aba:"Virtus 2027", nome:"Virtus 2027 0km",
+   selos:["Proposta Consórcio Volkswagen direto de fábrica","Vagas limitadas","Condições garantidas por reservas"],
+   linhas:[[100,"973,50"],[90,"1.071,13"],[80,"1.564,52"],[70,"1.775,77"],[60,"2.055,77"],[50,"2.448,77"],[36,"3.365,77"]]},
+  {aba:"Saveiro 2027", nome:"Saveiro 2027",
+   selos:["Proposta Consórcio Volkswagen direto de fábrica","Vagas limitadas","Grupo em andamento","Parcelas fixas"],
+   linhas:[[100,"811,25"],[90,"892,92"],[80,"1.303,77"],[70,"1.479,21"],[60,"1.713,14"],[50,"2.040,64"],[36,"2.804,81"]]},
+  {aba:"Polo 0km", nome:"Polo 0km (2026/2027)",
+   linhas:[[100,"730,13"],[90,"803,63"],[80,"1.173,39"],[70,"1.331,29"],[60,"1.541,83"],[50,"1.836,58"],[36,"2.524,33"]]},
+  {aba:"Polo 2025", nome:"Polo 2025 (seminovo)",
+   linhas:[[100,"649,00"],[90,"714,33"],[80,"1.043,01"],[70,"1.183,37"],[60,"1.370,51"],[50,"1.632,51"],[36,"2.243,85"]]},
+  {aba:"Polo 2024/25", nome:"Polo 2024/2025 (seminovo)",
+   linhas:[[100,"567,88"],[90,"625,04"],[80,"912,64"],[70,"1.035,45"],[60,"1.199,20"],[50,"1.428,45"],[36,"1.963,36"]]}
+];
+// Galeria de entregas e premiações. Se um arquivo não existir, a foto some sozinha (não aparece quebrada).
+// ["arquivo.jpeg","Legenda"]  (legenda vazia = usa "Conquista Grupo Libra")
 var FOTOS = [
   ["hyagoecasal.jpeg","Fiat Argo"],
-  ["WhatsApp Image 2026-11-03 at 18.21.32.jpeg","Entrega em família"],
   ["argo.jpeg","Chave na mão"],
-  ["WhatsApp Image 2026-11-03 at 18.21.33.jpeg","Toyota Corolla"],
-  ["hyago2.jpeg","Yamaha XTZ Lander 250"],
   ["hyagocronos.jpeg","Fiat Cronos"],
+  ["hyago2.jpeg","Yamaha XTZ Lander 250"],
   ["hyagofazer.jpeg","Yamaha Fazer 250"]
 ];
+// p1.jpeg até p26.jpeg (a p25 não existe na pasta, por isso é pulada)
+for(var i=1;i<=26;i++){ if(i!==25) FOTOS.push(["p"+i+".jpeg",""]); }
+var FOTOS_VISIVEIS = 8; // quantas aparecem antes do botão "Ver todas as fotos"
 /* ========================== */
 (function(){
 var $=function(s){return document.querySelector(s)};
@@ -379,30 +413,49 @@ $("#form").addEventListener("submit",function(e){e.preventDefault();
   window.open(zap("Olá, Hyago! Quero fazer uma simulação de consórcio.\nNome: "+n+"\nInteresse: "+$("#fTipo").value+"\nParcela que cabe no bolso: "+(v?"R$ "+v:"a definir")),"_blank","noopener")});
 
 /* planos em abas */
-var abas=$("#abas"),corpo=$("#linhas"),atual="0km";
+var abas=$("#abas"),corpo=$("#linhas"),selos=$("#selos"),atual=0;
 function monta(){
   var p=PLANOS[atual];
+  selos.innerHTML=(p.selos||[]).map(function(s){return "<li>"+s+"</li>"}).join("");
+  selos.hidden=!(p.selos&&p.selos.length);
   corpo.innerHTML=p.linhas.map(function(l){
     var msg="Olá, Hyago! Vim pelo seu site e quero simular o "+p.nome+" em "+l[0]+"x de R$ "+l[1]+".";
     return '<tr><td>'+l[0]+' meses</td><td>R$ '+l[1]+'</td><td><a class="btn peq" href="'+zap(msg)+'" target="_blank" rel="noopener" aria-label="Simular '+p.nome+' em '+l[0]+' meses">Simular</a></td></tr>'}).join("");
-  Array.prototype.forEach.call(abas.children,function(b){b.setAttribute("aria-selected",b.getAttribute("data-k")===atual?"true":"false")})}
-Object.keys(PLANOS).forEach(function(k){var b=document.createElement("button");b.type="button";b.setAttribute("role","tab");b.setAttribute("data-k",k);b.textContent=PLANOS[k].nome;
-  b.addEventListener("click",function(){atual=k;monta()});abas.appendChild(b)});
+  Array.prototype.forEach.call(abas.children,function(b,i){b.setAttribute("aria-selected",i===atual?"true":"false")})}
+PLANOS.forEach(function(p,i){var b=document.createElement("button");b.type="button";b.setAttribute("role","tab");b.textContent=p.aba||p.nome;
+  b.addEventListener("click",function(){atual=i;monta()});abas.appendChild(b)});
 monta();
 if(CFG.atualizadoEm)$("#rodapePlano").textContent="Valores de referência atualizados em "+CFG.atualizadoEm+". "+$("#rodapePlano").textContent;
 
-/* galeria + ampliação */
-var lb=$("#lb"),gal=$("#galeria");
+/* galeria + ampliação com navegação */
+var lb=$("#lb"),gal=$("#galeria"),mais=$("#maisFotos"),lista=[],visiveis=FOTOS_VISIVEIS,idx=0;
+function atualiza(){
+  lista.forEach(function(it,i){it.fig.hidden=i>=visiveis});
+  if(lista.length>visiveis){mais.hidden=false;mais.textContent="Ver todas as fotos ("+lista.length+")"}else{mais.hidden=true}}
 FOTOS.forEach(function(f){
-  var fig=document.createElement("figure"),btn=document.createElement("button"),img=new Image(),cap=document.createElement("figcaption");
-  btn.type="button";btn.setAttribute("aria-label","Ampliar: "+f[1]);
-  img.src=encodeURI(f[0]);img.alt="Entrega: "+f[1];img.loading="lazy";img.width=400;img.height=500;
-  img.addEventListener("error",function(){fig.remove()});
-  cap.textContent=f[1];btn.appendChild(img);fig.appendChild(btn);fig.appendChild(cap);gal.appendChild(fig);
-  btn.addEventListener("click",function(){$("#lbImg").src=img.src;$("#lbImg").alt=img.alt;$("#lbCap").textContent=f[1];if(lb.showModal)lb.showModal();else lb.setAttribute("open","")})});
+  var fig=document.createElement("figure"),btn=document.createElement("button"),img=new Image(),
+      it={fig:fig,img:img,cap:f[1]||"Conquista Grupo Libra"};
+  btn.type="button";btn.setAttribute("aria-label","Ampliar foto: "+it.cap);
+  img.src=encodeURI(f[0]);img.alt="Cliente do Grupo Libra: "+it.cap;img.loading="lazy";img.decoding="async";img.width=400;img.height=500;
+  img.addEventListener("error",function(){fig.remove();var k=lista.indexOf(it);if(k>-1)lista.splice(k,1);atualiza()});
+  btn.appendChild(img);fig.appendChild(btn);gal.appendChild(fig);lista.push(it);
+  btn.addEventListener("click",function(){mostra(lista.indexOf(it));if(lb.showModal)lb.showModal();else lb.setAttribute("open","")})});
+atualiza();
+mais.addEventListener("click",function(){visiveis=lista.length;atualiza();mais.hidden=true});
+function mostra(i){
+  if(!lista.length)return;
+  idx=(i+lista.length)%lista.length;var it=lista[idx];
+  $("#lbImg").src=it.img.src;$("#lbImg").alt=it.img.alt;
+  $("#lbCap").textContent=it.cap;$("#lbNum").textContent=(idx+1)+" de "+lista.length}
 function fecha(){if(lb.close)lb.close();else lb.removeAttribute("open")}
 $("#lbX").addEventListener("click",fecha);
+$("#lbPrev").addEventListener("click",function(){mostra(idx-1)});
+$("#lbNext").addEventListener("click",function(){mostra(idx+1)});
 lb.addEventListener("click",function(e){if(e.target===lb)fecha()});
+lb.addEventListener("keydown",function(e){if(e.key==="ArrowLeft")mostra(idx-1);else if(e.key==="ArrowRight")mostra(idx+1)});
+var tx=null;
+lb.addEventListener("touchstart",function(e){tx=e.touches[0].clientX},{passive:true});
+lb.addEventListener("touchend",function(e){if(tx===null)return;var d=e.changedTouches[0].clientX-tx;tx=null;if(Math.abs(d)>50)mostra(idx+(d<0?1:-1))},{passive:true});
 
 /* aparecer ao rolar e botão fixo */
 var io="IntersectionObserver" in window?new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add("vis");io.unobserve(e.target)}})},{threshold:.12}):null;
