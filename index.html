@@ -16,7 +16,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500..700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 <style>
 :root{--ink:#0e1f33;--ink2:#16314f;--azul:#2f5d8a;--papel:#f6f3ed;--cobre:#c4601a;--cobre2:#a94e12;--texto:#1b2635;--muda:#5a6676;--linha:#e3ddd2;
-  --foto:url("Logo%20premium%20de%20consorcio%20HM.png");
+  --foto:url("hyagofundo.jpeg");
   --apresentacao:url("fundodeimagem.jpeg");
   --serif:"Fraunces",Georgia,"Times New Roman",serif;--sans:"Manrope","Segoe UI",Roboto,Arial,sans-serif;color-scheme:light}
 *,*::before,*::after{box-sizing:border-box}*{margin:0;padding:0}
@@ -47,9 +47,18 @@ header{position:sticky;top:0;z-index:50;background:rgba(14,31,51,.92);color:#fff
 .nav a:not(.btn){display:none}
 @media(min-width:900px){.nav a:not(.btn){display:inline}}
 
-/* TOPO COM A LOGO HM COMO ELEMENTO DE FUNDO */
+/* TOPO COM A FOTO DO HYAGO DE FUNDO */
 .hero{position:relative;overflow:hidden;background:var(--ink);color:#fff;min-height:min(92svh,820px);display:flex;align-items:flex-end}
-.hero::before{content:"";position:absolute;inset:0;background:var(--foto) center 12%/min(78vw,360px) auto no-repeat;opacity:.2;z-index:0}
+.hero::before{
+  content:"";
+  position:absolute;
+  inset:0;
+  background-image:var(--foto);
+  background-position:center 32%;
+  background-size:cover;
+  background-repeat:no-repeat;
+  z-index:0
+}
 .hero::after{content:"";position:absolute;inset:0;z-index:1;pointer-events:none;
   background:linear-gradient(180deg,rgba(14,31,51,.35) 0%,rgba(14,31,51,0) 28%,rgba(14,31,51,.78) 62%,var(--ink) 100%)}
 .hero .wrap{position:relative;z-index:2;padding:7rem 0 2.6rem}
@@ -63,7 +72,12 @@ header{position:sticky;top:0;z-index:50;background:rgba(14,31,51,.92);color:#fff
 .nota{font-size:.8rem;color:#b9c6d6}
 @media(min-width:900px){
   .hero{min-height:min(88svh,780px)}
-  .hero::before{background-position:right 9% center;background-size:min(48vw,600px) auto;opacity:.34;-webkit-mask-image:linear-gradient(90deg,transparent 0,#000 30%);mask-image:linear-gradient(90deg,transparent 0,#000 30%)}
+  .hero::before{
+    left:30%;
+    background-position:center 38%;
+    -webkit-mask-image:linear-gradient(90deg,transparent 0,#000 38%);
+    mask-image:linear-gradient(90deg,transparent 0,#000 38%)
+  }
   .hero::after{background:linear-gradient(0deg,var(--ink) 0,rgba(14,31,51,0) 28%)}
   .hero .wrap{padding:8rem 0 3.2rem}
   .hero .txt{max-width:560px}
@@ -393,8 +407,8 @@ var CFG = {
   administradoras: "Consórcio Banco Volkswagen"  // Vazio = linha não aparece
 };
 // FOTOS: ficam na mesma pasta deste arquivo.
-// A logo HM é usada como elemento de fundo do topo (--foto).
-// fundodeimagem.jpeg continua sendo a imagem da seção "Sobre" (--apresentacao).
+// apresentacao.jpeg = fundo do topo (--foto) | fundodeimagem.jpeg = foto da seção "Sobre" (--apresentacao). Troque no começo do CSS.
+// (ou troque o nome na variável --foto, no começo do CSS).
 
 // Planos: cada item vira uma aba, na ordem abaixo.
 // aba = texto curto da aba | nome = nome completo (vai na mensagem do WhatsApp) | selos = destaques (opcional)
