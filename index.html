@@ -51,9 +51,9 @@ header{position:sticky;top:0;z-index:50;background:rgba(14,31,51,.92);color:#fff
 
 /* TOPO COM IMAGEM DE FUNDO (essa.jpeg) COM DESFOQUE SUTIL */
 .hero{position:relative;overflow:hidden;background:var(--ink);color:#fff;min-height:min(92svh,820px);display:flex;align-items:flex-end}
-.hero::before{content:"";position:absolute;inset:-8px;background:var(--foto) var(--foto-pos,80% 24%)/cover no-repeat;filter:blur(1.0px);-webkit-filter:blur(1.0px);opacity:1;z-index:0}
+.hero::before{content:"";position:absolute;inset:-8px;background:var(--foto) var(--foto-pos,80% 30%)/cover no-repeat;filter:blur(1.0px);-webkit-filter:blur(1.0px);opacity:1;z-index:0}
 .hero::after{content:"";position:absolute;inset:0;z-index:1;pointer-events:none;
-  background:linear-gradient(180deg,rgba(14,31,51,.78) 0%,rgba(14,31,51,0.62) 40%,rgba(14,31,51,.9) 80%,var(--ink) 100%)}
+  background:linear-gradient(180deg,rgba(14,31,51,.4) 0%,rgba(14,31,51,0) 28%,rgba(14,31,51,.85) 62%,var(--ink) 100%)}
 .hero .wrap{position:relative;z-index:2;padding:7rem 0 2.6rem}
 .hero h1{font-size:clamp(2.8rem,1.2rem + 7vw,5.4rem);line-height:1;margin-bottom:.5rem;text-wrap:balance;text-shadow: 0 2px 8px rgba(0,0,0,0.4)}
 .cargo{font:800 .85rem var(--sans);letter-spacing:.14em;text-transform:uppercase;color:#ffb785;margin-bottom:1rem}
@@ -65,8 +65,8 @@ header{position:sticky;top:0;z-index:50;background:rgba(14,31,51,.92);color:#fff
 .nota{font-size:.8rem;color:#b9c6d6}
 @media(min-width:900px){
   .hero{min-height:min(88svh,780px)}
-  .hero::before{background-position:var(--foto-pos,80% 24%);background-size:cover;opacity:1}
-  .hero::after{background:linear-gradient(270deg,rgba(14,31,51,0.3) 0%,rgba(14,31,51,0.85) 60%,var(--ink) 100%)}
+  .hero::before{left:30%;background-position:var(--foto-pos,80% 30%);background-size:cover;opacity:1;-webkit-mask-image:linear-gradient(90deg,transparent 0,#000 38%);mask-image:linear-gradient(90deg,transparent 0,#000 38%)}
+  .hero::after{background:linear-gradient(90deg,rgba(14,31,51,.88) 0%,rgba(14,31,51,.66) 43%,rgba(14,31,51,.08) 100%),linear-gradient(0deg,rgba(14,31,51,.8),transparent 38%)}
   .hero .wrap{padding:8rem 0 3.2rem}
   .hero .txt{max-width:580px}
 }
